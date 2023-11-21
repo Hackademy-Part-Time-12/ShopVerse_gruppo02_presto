@@ -38,22 +38,22 @@
             <div class="text-center my-3 collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link text-primary fw-bolder" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Chi Siamo</a>
+                        <a class="nav-link text-primary fw-bolder" href="#">Chi Siamo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contattaci</a>
+                        <a class="nav-link text-primary fw-bolder" href="#">Contattaci</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link dropdown-toggle text-primary  " href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Accedi
+                             Accedi
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="login.html">Login</a></li>
-                            <li><a class="dropdown-item" href="./register.html">Registrati</a></li>
+                        <ul class="dropdown-menu bg-light " aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item text-primary fw-bolder" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item text-primary fw-bolder" href="./register.html">Registrati</a></li>
                             <!-- <li><a class="dropdown-item" href="#">Contact us</a></li> -->
                         </ul>
                     </li>
