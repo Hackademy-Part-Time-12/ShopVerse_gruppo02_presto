@@ -30,6 +30,7 @@
     top:0;
     left:0;
     width:100%;
+   
 
 
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
@@ -38,19 +39,8 @@
   }
   #navbarNavDropdown.collapsing .navbar-nav,
   #navbarNavDropdown.show .navbar-nav{
-    background:#037582;
+    /* background:#037582; */
     padding:12px;
   }
 
 
-  .circle {
-    height: 24px;
-    width: 24px;
-    border-radius: 24px;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 99999999; /* so that it stays on top of all other elements */
-  }

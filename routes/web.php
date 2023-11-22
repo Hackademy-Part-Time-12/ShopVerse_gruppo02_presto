@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\AdvertisementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Rotte  rpincipali
+Route::get('/',[PublicController::class,'home'])->name('home');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//
+Route::get('/create/annunci',[AdvertisementController::class,'create'])->name('advertisement.create');

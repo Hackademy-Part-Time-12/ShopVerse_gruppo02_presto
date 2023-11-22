@@ -1,0 +1,28 @@
+:root {
+
+   --form-shadow: box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
+
+    --gradient: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
+    --primary-color:#46c4ea;
+    --secondary-color: #005BFD;
+
+}
+
+
+.primary{
+     color:var(--primary-color);
+
+
+    font-family:'Mukta', sans-serif;
+}
+.second{
+    color:var(--secondary-color);
+    font-family:'Exo 2', sans-serif;
+}
+
+.gradient{
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

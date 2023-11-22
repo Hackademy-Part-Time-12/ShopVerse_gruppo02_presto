@@ -4,5 +4,8 @@
 @import'./navbar.css';
 @import'./pointer.css';
 @import'./headerHome.css';
-@import'./PrimaryFont.css';
-@import'./imgHome.css'
+@import'./register.css';
+@import './rootcolors.css';
+@import './button.css';
+@import'./sectionHome.css';
+

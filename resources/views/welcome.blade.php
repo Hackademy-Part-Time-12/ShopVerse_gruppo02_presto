@@ -1,9 +1,10 @@
 <x-layout>
-    <x-navbar/>
-    <x-HeaderHome/>
+
+    {{-- <x-HeaderHome/> --}}
 
 
     <x-sectionHome/>
+    <x-sectionHome2/>
 
 
 
