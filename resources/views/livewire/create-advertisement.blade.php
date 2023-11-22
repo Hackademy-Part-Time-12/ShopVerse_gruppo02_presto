@@ -15,11 +15,10 @@
                     @enderror
                 </div>
 
-                {{-- Form password --}}
+                {{-- Form Prezzo --}}
                 <div class="inputbox">
-                <ion-icon name="lock-closed-outline"><i class="fa-solid fa-eye see" onclick='seepassword()' style="color: #0b5fef;"></i></ion-icon>
-                <input type="password" id="password" name="password">
-                <label for="password">Password</label>
+                <input type="number" id="price" wire:model.live = "price">
+                <label for="price">Prezzo</label>
               </div>
                  {{-- Form description  --}}
                  <div class="inputbox">

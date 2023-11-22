@@ -25,4 +25,6 @@
 
 </body>
 
+<x-script/>
+
 </html>
