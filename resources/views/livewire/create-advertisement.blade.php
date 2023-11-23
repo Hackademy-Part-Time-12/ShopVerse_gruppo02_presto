@@ -6,7 +6,7 @@
                 @csrf
                 <h2 class="h2">Inserisci Annuncio</h2>
                 @if (session('PostCreate'))
-                <div class="alert alert-success ">{{ session('PostCreate') }}</div>
+                <p class="text-success ">{{ session('PostCreate') }}</p>
                 @endif
                 {{-- Form title --}}
                 <div class="inputbox">
@@ -19,23 +19,9 @@
 
                 {{-- Form prezzo --}}
                 <div class="inputbox">
-                    <ion-icon name="lock-closed-outline"><i class="fa-solid fa-eye see" onclick='seepassword()' style="color: #0b5fef;"></i></ion-icon>
-                    <input type="password" id="password" name="password">
-                    <label for="password">Password</label>
+                    <input type="number" wire:model.live="price" id="price">
+                    <label for="price">Price</label>
                 </div>
-                {{-- Form description  --}}
-                <div class="inputbox">
-                    <label for="description"></label>
-
-                    <textarea class="form-control border-0 " placeholder='Descrizione' id="description" cols="15" rows="6">{{ old('description') }}</textarea>
-
-
-                    @error('description')
-                    <p class="text-danger ">{{ $message }}</p>
-                    @enderror
-
-                </div>
-
                 <div class="inputbox">
 
                     <select class="border-0 w-100 primary" wire:model.defer="category" id="category">
