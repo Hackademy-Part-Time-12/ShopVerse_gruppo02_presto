@@ -5,12 +5,13 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Advertisement;
 use Livewire\Attributes\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class CreateAdvertisement extends Component
 {
     #[Rule("required|min:5|max:30")]
     public $title;
-    
+
     #[Rule("required")]
     public $price;
 
@@ -23,6 +24,7 @@ class CreateAdvertisement extends Component
             "title"=> $this->title,
             "price"=> $this->price,
             "body"=> $this->body,
+            'user_id' => Auth::user()->id
         ]);
         session()->flash("PostCreate","Articolo aggiunto con successo");
         $this->reset();
