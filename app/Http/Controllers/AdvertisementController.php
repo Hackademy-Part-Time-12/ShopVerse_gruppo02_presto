@@ -33,7 +33,7 @@ class AdvertisementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //creata nel componente Livewire
     }
 
     /**
