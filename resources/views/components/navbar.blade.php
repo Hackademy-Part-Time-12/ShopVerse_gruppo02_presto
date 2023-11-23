@@ -19,7 +19,7 @@
                   class="max-width-100 foto" width="200" height="100">
               </div>
             </nav>
-            <div class="text-center   my-3 collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="text-center d-flex my-3 collapse navbar-collapse" id="navbarNavDropdown" style="height: 4vh;">
                 <ul class="navbar-nav mx-auto ">
 
 
