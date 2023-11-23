@@ -1,4 +1,4 @@
-<section class="sezione2 tutto mt-5 pt-5">
+<section class="sezione2 primary tutto mt-5 pt-5">
 
     <div class="form-box">
         <div class="form-value">

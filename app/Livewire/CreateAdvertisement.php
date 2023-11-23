@@ -14,7 +14,7 @@ class CreateAdvertisement extends Component
 
     #[Rule("required")]
     public $price;
-
+ 
     #[Rule("required|min:10|max:1500")]
     public $body;
     public function store(){
