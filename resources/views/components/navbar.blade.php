@@ -59,15 +59,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-primary fw-bolder" href="{{ Route('home') }}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <select class="border-0 w-100 primary" wire:model.defer="category" id="category">
-                            <option value="">Scegli la categoria</option>
-                            @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                            @endforeach
-                        </select>
-
-                    </li>
+                  
                     <li class="nav-item">
                         <a class="nav-link text-primary fw-bolder" href="{{ route('advertisement.create') }}">Inserisci annunci</a>
                     </li>

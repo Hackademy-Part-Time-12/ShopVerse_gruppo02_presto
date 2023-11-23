@@ -1,4 +1,4 @@
-<div class="container my-3 col-12 col-md-8 ">
+<div class="container my-3 col-12 col-md-3  ">
     <div class="card-sl">
         <div class="card-image">
             <img class="img-fluid"
