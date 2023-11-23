@@ -6,23 +6,32 @@
                 @csrf
                 <h2 class="h2">Inserisci Annuncio</h2>
                 @if (session('PostCreate'))
-                    <div class="alert alert-success ">{{ session('PostCreate') }}</div>
+                <div class="alert alert-success ">{{ session('PostCreate') }}</div>
                 @endif
                 {{-- Form title --}}
                 <div class="inputbox">
                     <input type="text" wire:model.live="title" id="title" @error('text') is-invalid @enderror>
                     <label for="title">Titolo annuncio</label>
                     @error('title')
-                        <p class=" text-danger ">{{ $message }}</p>
+                    <p class=" text-danger ">{{ $message }}</p>
                     @enderror
                 </div>
 
                 {{-- Form prezzo --}}
                 <div class="inputbox">
-                    <input type="number" wire:model.live="price"id="price" @error('price') is-invalid @enderror>
-                    <label for="price">Prezzo</label>
-                    @error('price')
-                        <p class="text-danger ">{{ $message }}</p>
+                    <ion-icon name="lock-closed-outline"><i class="fa-solid fa-eye see" onclick='seepassword()' style="color: #0b5fef;"></i></ion-icon>
+                    <input type="password" id="password" name="password">
+                    <label for="password">Password</label>
+                </div>
+                {{-- Form description  --}}
+                <div class="inputbox">
+                    <label for="description"></label>
+
+                    <textarea class="form-control border-0 " placeholder='Descrizione' id="description" cols="15" rows="6">{{ old('description') }}</textarea>
+
+
+                    @error('description')
+                    <p class="text-danger ">{{ $message }}</p>
                     @enderror
 
                 </div>
