@@ -10,7 +10,7 @@
 
 
         <div class="col-10 col-md-4">
-            <div class="d-flex ">
+            <div class="row ">
                 @foreach ($annunci as $annunci)
                     <x-cardsHome :advertisement="$annunci" />
                 @endforeach

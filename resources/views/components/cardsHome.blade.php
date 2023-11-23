@@ -7,14 +7,15 @@
 
         <a class="card-action" href="#"><i class="fa-solid fa-right-long"></i></a>
         <div class="card-heading">
-            {{ $advertisement->title }}
+            <h5>{{ $advertisement->title }}</h5>
+
         </div>
         <div class="card-text">
-            Audi Q8 is a full-size luxury crossover SUV coupé made by Audi that was launched in
-            2018.
+         <p class="text-truncate"><b>Informazioni</b><br>{{ $advertisement->body }}</p>
         </div>
         <div class="card-text">
-            $67,400
+            <p ><b>Prezzo</b>:{{ $advertisement->price }}€ </p>
+
         </div>
         <a href="#" class="card-button"> Purchase</a>
     </div>
