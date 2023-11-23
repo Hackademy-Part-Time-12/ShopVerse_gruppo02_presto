@@ -1,24 +1,27 @@
 <section class="sezione2 tutto mt-5 pt-5">
-    <link rel="stylesheet" href="register.css">
+
     <div class="form-box">
         <div class="form-value">
-            <form class="" action="{{ route('register') }}" method="POST">
+            <form class="" wire:submit.privent="store">
                 @csrf
                 <h2 class="h2">Inserisci Annuncio</h2>
+                @if (session('PostCreate'))
+                    <div class="alert alert-success ">{{ session('PostCreate') }}</div>
+                @endif
                 {{-- Form title --}}
                 <div class="inputbox">
-                    <input type="text" wire:model.live='title' id="title" value="{{ old('title') }}">
-
+                    <input type="text" wire:model.live='title' id="title">
                     <label for="title">Titolo annuncio</label>
                     @error('title')
                         <p class=" text-danger ">{{ $message }}</p>
                     @enderror
                 </div>
 
-                {{-- Form Prezzo --}}
+                {{-- Form password --}}
                 <div class="inputbox">
-                <input type="number" id="price" wire:model.live = "price">
-                <label for="price">Prezzo</label>
+                <ion-icon name="lock-closed-outline"><i class="fa-solid fa-eye see" onclick='seepassword()' style="color: #0b5fef;"></i></ion-icon>
+                <input type="password" id="password" name="password">
+                <label for="password">Password</label>
               </div>
                  {{-- Form description  --}}
                  <div class="inputbox">
