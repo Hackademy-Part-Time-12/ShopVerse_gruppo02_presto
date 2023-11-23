@@ -9,7 +9,7 @@ class Advertisement extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "title","description","price",
+        "title","body","price","user_id",
     ];
     public function user(){
         return $this->belongsTo(User::class);

@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('advertisements', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
+            $table->text('body');
+            $table->decimal('price',8,2);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->decimal('price',8,2);
+
             $table->timestamps();
         });
     }

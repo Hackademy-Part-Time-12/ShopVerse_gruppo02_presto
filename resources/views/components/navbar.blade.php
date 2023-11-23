@@ -3,12 +3,7 @@
 
 
     <div id="mainNavigation" class="z-3 ">
-        <nav role="navigation">
-            {{-- img logo navbar --}}
-            <div class="py-3 text-center" id="logo">
-                <img src="\Media\logo.svg" class="max-width-100" width="150" height="100">
-            </div>
-        </nav>
+        
         {{-- pulsante e home --}}
         <div class="navbar-expand-md mukta">
             <div class="navbar-dark text-center my-2">
@@ -18,7 +13,13 @@
                     <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
                 </button>
             </div>
-            <div class="text-center   my-3 collapse navbar-collapse" id="navbarNavDropdown">
+            <nav role="navigation" class="mx-auto" id="nav" style="height: 15vh;">
+              <div class="py-3 text-center logo" id="logo">
+                <img src="\Media\logo.svg"
+                  class="max-width-100 foto" width="200" height="100">
+              </div>
+            </nav>
+            <div class="text-center d-flex my-3 collapse navbar-collapse" id="navbarNavDropdown" style="height: 4vh;">
                 <ul class="navbar-nav mx-auto ">
 
 

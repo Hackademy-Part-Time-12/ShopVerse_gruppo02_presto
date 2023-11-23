@@ -36,7 +36,7 @@
 
                         {{-- Form password --}}
                         <div class="inputbox">
-                        <ion-icon name="lock-closed-outline"><i class="fa-solid fa-eye see" onclick='seepassword()' style="color: #0b5fef;"></i></ion-icon>
+                        <ion-icon name="lock-closed-outline"><i class="fa-solid fa-eye see" onclick="seepassword()" style="color: #0b5fef;"></i></ion-icon>
                         <input type="password" id="password" name="password">
                         <label for="password">Password</label>
                       </div>
@@ -44,7 +44,7 @@
 
                         {{-- Form Confirmed password --}}
                         <div class="inputbox">
-                            <ion-icon name="lock-closed-outline"><i class="fa-solid fa-eye see" onclick='seeconfirmpassword()' style="color: #0b5fef;" style="cursor:pointer;"></i></ion-icon>
+                            <ion-icon name="lock-closed-outline"><i class="fa-solid fa-eye see" onclick="seeconfirmpassword()" style="color: #0b5fef;" style="cursor:pointer;"></i></ion-icon>
                             <input type="password" id="password_confirmation" name="password_confirmation" >
                             <label for="password_confirmation">Confirm Password</label>
                           </div>
@@ -65,5 +65,5 @@
             </div>
         </section>
 
-
+        <x-script/>
 </x-layout>
