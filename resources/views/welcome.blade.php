@@ -9,8 +9,8 @@
         <h3 class="fs-2 fw-bold  gradient">Ultime inserzioni aggiunte</h3>
 
 
-        <div class="col-11">
-            <div class="row ms-3">
+        <div class="col-10 col-md-4">
+            <div class="d-flex card-container">
                 @foreach ($annunci as $annunci)
                     <x-cardsHome :advertisement="$annunci" />
                 @endforeach
