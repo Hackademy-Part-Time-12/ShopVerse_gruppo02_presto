@@ -3,9 +3,10 @@
 
 @import'./navbar.css';
 @import'./pointer.css';
-@import'./headerHome.css';
 @import'./register.css';
 @import './rootcolors.css';
 @import './button.css';
 @import'./sectionHome.css';
+@import'./footer.css';
+@import'./cardHome.css'
 

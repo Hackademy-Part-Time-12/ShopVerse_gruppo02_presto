@@ -7,12 +7,18 @@ use Illuminate\Http\Request;
 
 class AdvertisementController extends Controller
 {
+    public function __construct(){
+        $this->middleware("auth")->except("index","show");
+
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+         $advertisement = Advertisement::all();
+         return view("advertisement.index", compact("advertisement"));
     }
 
     /**
@@ -28,7 +34,7 @@ class AdvertisementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //creata nel componente Livewire
     }
 
     /**
@@ -36,7 +42,7 @@ class AdvertisementController extends Controller
      */
     public function show(Advertisement $advertisement)
     {
-        //
+       return view("advertisement.show", compact("advertisement"));
     }
 
     /**

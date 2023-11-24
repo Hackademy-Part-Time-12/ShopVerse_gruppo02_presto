@@ -42,6 +42,6 @@
             </div>
         </section>
     </section>
-
+    <x-script/>
 </x-layout>
 
