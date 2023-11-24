@@ -3,7 +3,7 @@
     <div class="navbar-expand-md z-3 mukta" id="mainNavigation">
         <nav role="navigation" class="mx-auto" id="nav">
             <div class="py-3 text-center logo" id="logo">
-                <img src="\Media\logo.svg" class="" width="200" height="100">
+                <img src="\Media\Logo_ShopVerse_02.svg" class="" width="200" height="100">
             </div>
 
             <div class=" text-center my-2">
