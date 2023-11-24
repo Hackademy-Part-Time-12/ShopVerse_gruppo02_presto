@@ -1,10 +1,15 @@
+body {
+    margin: 0; /* Rimuovi il margine del corpo */
+    padding: 0; /* Rimuovi il padding del corpo */
+    min-height: 100vh; /* Imposta l'altezza minima del corpo al 100% della viewport height */
+}
+
 .pie {
     background: #fbfbfd;
     width: 100%;
-    
     background-size: cover;
-   /*   position: fixed;
-    bottom: 10px;
+    position: fixed;
+    bottom: 10px; /* Aggiunto "px" per correggere l'errore */
     left: 0;
     margin: 0; */
     background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
@@ -12,20 +17,21 @@
 
 .footer_bg {
     background-size: cover;
-   /*  position: fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
-    margin: 0; */
+    margin: 0;
 
 }
 
 .new_footer_area {
     background: #fbfbfd;
-   /*  position: fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
     margin: 0; */
     background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
+
 }
 
 .footer_bottom {
