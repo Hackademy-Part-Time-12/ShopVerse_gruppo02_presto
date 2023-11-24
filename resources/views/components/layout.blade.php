@@ -12,7 +12,7 @@
 
     {{-- Scafolding --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>Document</title>
+    <title>ShopVerse</title>
 </head>
 
 <body>
