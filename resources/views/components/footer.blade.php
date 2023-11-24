@@ -1,3 +1,4 @@
+
 <footer class="new_footer_area bg_color pie" >
     <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
         <h3 class="f-title f_600 t_color f_size_18 h3 d-none">Get in Touch</h3>
