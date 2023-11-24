@@ -8,16 +8,16 @@ body {
     background: #fbfbfd;
     width: 100%;
     background-size: cover;
-    position: fixed;
+    position: static;
     bottom: 10px; /* Aggiunto "px" per correggere l'errore */
     left: 0;
-    margin: 0; */
+    margin: 0;
     background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
 }
 
 .footer_bg {
     background-size: cover;
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
     margin: 0;
@@ -26,10 +26,10 @@ body {
 
 .new_footer_area {
     background: #fbfbfd;
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
-    margin: 0; */
+    margin: 0;
     background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
 
 }
