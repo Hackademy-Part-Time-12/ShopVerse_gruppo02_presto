@@ -1,22 +1,16 @@
-<div class="container my-3 col-12 col-md-3  ">
-    <div class="card-sl">
-        <div class="card-image">
-            <img class="img-fluid"
-                src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-        </div>
-
-        <a class="card-action" href="#"><i class="fa-solid fa-right-long"></i></a>
-        <div class="card-heading">
-            <h5>{{ $advertisement->title }}</h5>
-
-        </div>
-        <div class="card-text">
-         <p class="text-truncate"><b>Informazioni</b><br>{{ $advertisement->body }}</p>
-        </div>
-        <div class="card-text">
-            <p ><b>Prezzo</b>:{{ $advertisement->price }}€ </p>
-
-        </div>
-        <a href="#" class="card-button"> Purchase</a>
+<div class="card  my-2 mx-3 shadow" style="width: 18rem;">
+    <img src="https://picsum.photos/200/300" style="height: 220px;" class=" card-img-top mt-1" alt="...">
+    <div class="card-body ">
+      <h5 class="card-title">{{ $advertisement->title }}</h5>
+      <p class="card-text"><b>Descrizione:</b><br>{{ $advertisement->body }}</p>
+      <p class="card-text"><b>Prezzo:</b>{{ $advertisement->price}}</p>
     </div>
-</div>
+    <div class="row my-2">
+        <a href="#" class="link text-decoration-none ">Dettagli</a>
+        <a href="#" class="link text-decoration-none "><b>Categoria: </b>{{ $advertisement->category->name }}</a>
+    </div>
+    <div class="">
+        <p class="card-footer"><b>Pubblicato il: </b>{{ $advertisement->created_at->format('d/m/y')}}</p>
+
+    </div>
+  </div>
