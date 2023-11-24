@@ -19,7 +19,7 @@
                                     <p class="card-text">{{ $annunci->body }}</p>
                                     <p class="card-text">{{ $annunci->price }}</p>
                                     <div class="row">
-                                        <a href="" class="btn-link">
+                                        <a href="{{ route('advertisement.show',compact('advertisement')) }}" class="btn-link">
                                             Visualizza</a>
                                         <a href="">Categoria:
                                             {{ $annunci->category->name }}</a>

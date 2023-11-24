@@ -1,29 +1,30 @@
 .pie {
     background: #fbfbfd;
     width: 100%;
+    
     background-size: cover;
-    position: fixed;
-    bottom: 10px; /* Aggiunto "px" per correggere l'errore */
+   /*   position: fixed;
+    bottom: 10px;
     left: 0;
-    margin: 0;
+    margin: 0; */
     background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
 }
 
 .footer_bg {
     background-size: cover;
-    position: fixed;
+   /*  position: fixed;
     bottom: 0;
     left: 0;
-    margin: 0;
-    
+    margin: 0; */
+
 }
 
 .new_footer_area {
     background: #fbfbfd;
-    position: fixed;
+   /*  position: fixed;
     bottom: 0;
     left: 0;
-    margin: 0;
+    margin: 0; */
     background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
 }
 
@@ -33,7 +34,7 @@
     line-height: 20px;
     color: #7f88a6;
     padding: 27px 0px;
-    
+
 }
 
 .footer_bottom p {
@@ -122,17 +123,17 @@
 }
 
 .footer_bg {
-    position: absolute;
+
     bottom: 0;
     background: url("https://svgshare.com/i/1037.svg") no-repeat scroll center 0;
     background-size: cover;
     width: 100%;
-    height: 100px;
+    height: 10px;
 }
 
 .footer_bg .footer_bg_one {
     background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
-    width: 330px;
+    width: 200px;
     height: 105px;
     background-size: 100%;
     position: absolute;
@@ -146,7 +147,7 @@
     width: 88px;
     height: 100px;
     background-size: 100%;
-    position: relative;
+     position: relative;
     left: -25%;
     -webkit-animation: myfirst 30s linear infinite;
     animation: myfirst 30s linear infinite;
