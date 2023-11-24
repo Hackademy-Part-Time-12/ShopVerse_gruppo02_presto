@@ -20,7 +20,7 @@
                 {{-- Form prezzo --}}
                 <div class="inputbox">
                     <input type="number" wire:model.live="price" id="price">
-                    <label for="price">Price</label>
+                    <label for="price">Prezzo</label>
                 </div>
                 <div class="inputbox">
 

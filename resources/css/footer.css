@@ -2,26 +2,29 @@
     background: #fbfbfd;
     width: 100%;
     background-size: cover;
-    position: fixed; /* Modificato */
-    bottom: 10;
-    left: 0; /* Aggiunto */
+    position: fixed;
+    bottom: 10px; /* Aggiunto "px" per correggere l'errore */
+    left: 0;
     margin: 0;
+    background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
 }
 
 .footer_bg {
     background-size: cover;
-    position: fixed; /* Modificato */
+    position: fixed;
     bottom: 0;
-    left: 0; /* Aggiunto */
+    left: 0;
     margin: 0;
+    
 }
 
 .new_footer_area {
     background: #fbfbfd;
-    position: fixed; /* Modificato */
+    position: fixed;
     bottom: 0;
-    left: 0; /* Aggiunto */
+    left: 0;
     margin: 0;
+    background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
 }
 
 .footer_bottom {
@@ -30,6 +33,7 @@
     line-height: 20px;
     color: #7f88a6;
     padding: 27px 0px;
+    
 }
 
 .footer_bottom p {
@@ -175,5 +179,34 @@
 
     100% {
         left: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .creatori {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1201px) {
+    .new_footer_area .footer_bottom .copyright {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 1201px) {
+    .footer_bg .footer_bg_one {
+        width: 10vw; /* Modificato da percentuale a viewport width (vw) */
+        height: 10vh; /* Modificato da percentuale a viewport height (vh) */
+        position: absolute;
+        bottom: -3.5vh; /* Modificato da pixel a viewport height (vh) */
+    }
+
+    .footer_bg .footer_bg_two {
+        width: 5vw; /* Modificato da percentuale a viewport width (vw) */
+        height: 5vh; /* Modificato da percentuale a viewport height (vh) */
+        position: absolute;
+        bottom: 0vh; /* Modificato da pixel a viewport height (vh) */
     }
 }

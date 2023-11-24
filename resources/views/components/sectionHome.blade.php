@@ -10,5 +10,4 @@
             <img src="Media\header2.svg" class="rounded shadow" alt="">
         </div>
     </div>
-
 </section>
