@@ -41,9 +41,11 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bolder" href="{{route('advertisement.index')}}">Annunci</a>
+                </li>
+
                 {{-- CHI siamo --}}
-
-
                 @guest
                     <li class="nav-item">
                         <a class="nav-link text-primary fw-bolder" href="#">Chi Siamo</a>
@@ -73,26 +75,23 @@
 
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link text-primary fw-bolder" href="{{ Route('home') }}">Home</a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link text-primary fw-bolder" href="{{ route('advertisement.create') }}">Inserisci
                             annunci</a>
                     </li>
+
                     {{-- Chi siamo --}}
                     <li class="nav-item">
-                        <a class="nav-link text-primary fw-bolder" href="#">Chi Siamo</a>
+                        <a class="nav-link fw-bolder" href="#">Chi Siamo</a>
                     </li>
                     {{-- Contattaci --}}
                     <li class="nav-item">
-                        <a class="nav-link text-primary fw-bolder" href="#">Contattaci</a>
+                        <a class="nav-link text-primary  fw-bolder" href="#">Contattaci</a>
                     </li>
                     {{-- Sezione visione loggato --}}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-primary  " href="#" id="navbarDropdownMenuLink"
+                    <li class="nav-item dropdown fw-bolder">
+                        <a class="nav-link dropdown-toggle fw-bolder " href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <p class="text-primary fs-6">{{ Auth::user()->name }}</p>
+                           {{ Auth::user()->name }}
                         </a>
 
                         <ul class="dropdown-menu bg-light " aria-labelledby="navbarDropdownMenuLink">

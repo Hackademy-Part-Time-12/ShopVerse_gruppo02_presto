@@ -6,8 +6,8 @@
       <p class="card-text"><b>Prezzo:</b>{{ $advertisement->price}}</p>
     </div>
     <div class="row my-2">
-        <a href="#" class="link text-decoration-none ">Dettagli</a>
-        <a href="" class="link text-decoration-none "><b>Categoria: </b>{{ $advertisement->category->name }}</a>
+        <a href="{{ route('advertisement.show',$advertisement) }}" class="link text-decoration-none ">Dettagli</a>
+        <a href="{{ route('categoryShow',['category'=>$advertisement->category])}}" class="link text-decoration-none "><b>Categoria: </b>{{ $advertisement->category->name }}</a>
     </div>
     <div class="">
         <p class="card-footer"><b>Pubblicato il: </b>{{ $advertisement->created_at->format('d/m/y')}}</p>

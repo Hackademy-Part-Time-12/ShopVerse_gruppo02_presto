@@ -11,7 +11,7 @@
             @forelse ($category->advertisements as $announcement)
                 <div class="col-12 col-md-4 my-2">
                     <div class="card shadow " style="width:18rem;">
-                        <img src="http:/picsum.photos/200" class="card-img-top p-3 rounded" alt="">
+                        <img src="https://picsum.photos/200/300" class="card-img-top p-3 rounded" alt="">
                         <div class="card-body">
                             <h5 class="card-title">{{ $announcement->title }}</h5>
                             <p class="card-text">{{ $announcement->body }}</p>

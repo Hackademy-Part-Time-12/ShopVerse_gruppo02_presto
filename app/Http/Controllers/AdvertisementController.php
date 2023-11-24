@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AdvertisementController extends Controller
 {
     public function __construct(){
-        $this->middleware("auth");
+        $this->middleware("auth")->except("index","show");
 
     }
 
@@ -17,7 +17,8 @@ class AdvertisementController extends Controller
      */
     public function index()
     {
-        //
+         $advertisement = Advertisement::all();
+         return view("advertisement.index", compact("advertisement"));
     }
 
     /**
@@ -41,7 +42,7 @@ class AdvertisementController extends Controller
      */
     public function show(Advertisement $advertisement)
     {
-       return view("advertisement.show", compact(""));
+       return view("advertisement.show", compact("advertisement"));
     }
 
     /**
