@@ -6,14 +6,14 @@
                 @csrf
                 <h2 class="h2">Inserisci Annuncio</h2>
                 @if (session('PostCreate'))
-                <p class="text-success ">{{ session('PostCreate') }}</p>
+                    <p class="text-success ">{{ session('PostCreate') }}</p>
                 @endif
                 {{-- Form title --}}
                 <div class="inputbox">
                     <input type="text" wire:model.live="title" id="title" @error('text') is-invalid @enderror>
                     <label for="title">Titolo annuncio</label>
                     @error('title')
-                    <p class=" text-danger ">{{ $message }}</p>
+                        <p class=" text-danger ">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -24,7 +24,7 @@
                 </div>
                 <div class="inputbox">
 
-                    <select class="border-0 w-100 primary" wire:model.defer="category" id="category">
+                    <select class="border-0 w-100  " wire:model.defer="category" id="category">
                         <option value="">Scegli la categoria</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
