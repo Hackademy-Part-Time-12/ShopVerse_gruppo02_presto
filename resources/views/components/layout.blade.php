@@ -16,7 +16,7 @@
     <title>ShopVerse</title>
 </head>
 
-<body>
+<body class="color">
     <x-pointer/>
     <x-navbar/>
 

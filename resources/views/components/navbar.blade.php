@@ -22,7 +22,7 @@
 
                 {{-- Home --}}
                 <li class="nav-item">
-                    <a class="nav-link text-primary fw-bolder" href="{{ Route('home') }}">Home</a>
+                    <a class="nav-link fw-bolder" href="{{ Route('home') }}">Home</a>
                 </li>
                 {{-- Categorie --}}
                 <li class="nav-item dropdown  ">
@@ -48,24 +48,24 @@
                 {{-- CHI siamo --}}
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link text-primary fw-bolder" href="#">Chi Siamo</a>
+                        <a class="nav-link  fw-bolder" href="#">Chi Siamo</a>
                     </li>
                     {{-- Contattaci --}}
                     <li class="nav-item">
-                        <a class="nav-link text-primary fw-bolder" href="#">Contattaci</a>
+                        <a class="nav-link  fw-bolder" href="#">Contattaci</a>
                     </li>
                     {{-- Benvenuto utente --}}
                     <li class="nav-item dropdown  ">
-                        <a class="nav-link dropdown-toggle text-primary  " href="#" id="navbarDropdownMenuLink"
+                        <a class="nav-link dropdown-toggle   " href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <p class="text-primary">Benvenuto Utente</p>
+                            Benvenuto Utente
                         </a>
 
                         <ul class="dropdown-menu bg-light " aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item text-primary fw-bolder" href="{{ route('login') }}">Login</a>
                             </li>
-                            <li><a class="dropdown-item text-primary fw-bolder"
-                                    href="{{ Route('register') }}">Registrati</a></li>
+                            <li><a class="dropdown-item  text-primary fw-bolder"
+                                  href="{{ Route('register') }}">Registrati</a></li>
                             <!-- <li><a class="dropdown-item" href="#">Contact us</a></li> -->
                         </ul>
                     </li>
@@ -75,7 +75,7 @@
 
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link text-primary fw-bolder" href="{{ route('advertisement.create') }}">Inserisci
+                        <a class="nav-link fw-bolder" href="{{ route('advertisement.create') }}">Inserisci
                             annunci</a>
                     </li>
 
@@ -85,7 +85,7 @@
                     </li>
                     {{-- Contattaci --}}
                     <li class="nav-item">
-                        <a class="nav-link text-primary  fw-bolder" href="#">Contattaci</a>
+                        <a class="nav-link   fw-bolder" href="#">Contattaci</a>
                     </li>
                     {{-- Sezione visione loggato --}}
                     <li class="nav-item dropdown fw-bolder">
