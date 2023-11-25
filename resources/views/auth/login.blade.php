@@ -1,6 +1,6 @@
 <x-layout>
     <x-navbar/>
-    <section class="tutto my-5 pt-2">
+    <section class="tutto my-5 pt-4">
         <section class="sezione">
             <link rel="stylesheet" href="login.css">
             <div class="form-box">
