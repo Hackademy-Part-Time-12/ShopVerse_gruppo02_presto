@@ -1,4 +1,4 @@
-<section class=" container-fluid my-3 h">
+<section class=" container-fluid my-3 h ">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-6 text-center my-2">
             <h2 class="fs-1 fw-bold  gradient ">Una vasta scelta di prodotti usati</h2>

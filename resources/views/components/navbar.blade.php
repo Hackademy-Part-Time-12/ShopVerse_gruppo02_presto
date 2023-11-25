@@ -22,17 +22,17 @@
 
                 {{-- Home --}}
                 <li class="nav-item">
-                    <a class="nav-link text-primary fw-bolder" href="{{ Route('home') }}">Home</a>
+                    <a class="nav-link fw-bold navbarColor" href="{{ Route('home') }}">Home</a>
                 </li>
                 {{-- Categorie --}}
-                <li class="nav-item dropdown  ">
-                    <a class="nav-link dropdown-toggle text-primary  " href="#" id="categoriesDropdown"
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="categoriesDropdown"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie</a>
+                        <b class="navbarColor">Categorie</b></a>
 
-                    <ul class="dropdown-menu bg-light " aria-labelledby="categoriesDropdown">
+                    <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                         @foreach ($categories as $category)
-                            <li><a class="dropdown-item text-primary "
+                            <li><a class="dropdown-item  "
                                     href=" {{ route('categoryShow', compact('category')) }} ">{{ $category->name }}</a>
                             </li>
                             <li>
@@ -42,29 +42,29 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bolder" href="{{route('advertisement.index')}}">Annunci</a>
+                    <a class="nav-link navbarColor fw-bold" href="{{route('advertisement.index')}}">Annunci</a>
                 </li>
 
                 {{-- CHI siamo --}}
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link text-primary fw-bolder" href="#">Chi Siamo</a>
+                        <a class="nav-link navbarColor fw-bold" href="#">Chi Siamo</a>
                     </li>
                     {{-- Contattaci --}}
                     <li class="nav-item">
-                        <a class="nav-link text-primary fw-bolder" href="#">Contattaci</a>
+                        <a class="nav-link navbarColor fw-bold" href="#">Contattaci</a>
                     </li>
                     {{-- Benvenuto utente --}}
                     <li class="nav-item dropdown  ">
-                        <a class="nav-link dropdown-toggle text-primary  " href="#" id="navbarDropdownMenuLink"
+                        <a class="nav-link fw-bold dropdown-toggle navbarColor" href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <p class="text-primary">Benvenuto Utente</p>
+                            Benvenuto Utente
                         </a>
 
-                        <ul class="dropdown-menu bg-light " aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item text-primary fw-bolder" href="{{ route('login') }}">Login</a>
+                        <ul class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item fw-bold " href="{{ route('login') }}">Login</a>
                             </li>
-                            <li><a class="dropdown-item text-primary fw-bolder"
+                            <li><a class="dropdown-item fw-bold"
                                     href="{{ Route('register') }}">Registrati</a></li>
                             <!-- <li><a class="dropdown-item" href="#">Contact us</a></li> -->
                         </ul>
@@ -75,28 +75,28 @@
 
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link text-primary fw-bolder" href="{{ route('advertisement.create') }}">Inserisci
+                        <a class="nav-link navbarColor fw-bold" href="{{ route('advertisement.create') }}">Inserisci
                             annunci</a>
                     </li>
 
                     {{-- Chi siamo --}}
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="#">Chi Siamo</a>
+                        <a class="nav-link navbarColor fw-bold" href="#">Chi Siamo</a>
                     </li>
                     {{-- Contattaci --}}
                     <li class="nav-item">
-                        <a class="nav-link text-primary  fw-bolder" href="#">Contattaci</a>
+                        <a class="nav-link navbarColor fw-bold" href="#">Contattaci</a>
                     </li>
                     {{-- Sezione visione loggato --}}
-                    <li class="nav-item dropdown fw-bolder">
-                        <a class="nav-link dropdown-toggle fw-bolder " href="#" id="navbarDropdownMenuLink"
+                    <li class="nav-item dropdown fw-bold">
+                        <a class="nav-link dropdown-toggle fw-bold " href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           {{ Auth::user()->name }}
+                           <b class="navbarColor">{{ Auth::user()->name }}</b>
                         </a>
 
-                        <ul class="dropdown-menu bg-light " aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item text-primary fw-bolder" href="login.html">Profilo</a></li>
-                            <li><a class="dropdown-item text-primary fw-bolder" id="btn" href="#">logout</a>
+                        <ul class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item fw-bold" href="login.html">Profilo</a></li>
+                            <li><a class="dropdown-item fw-bold" id="btn" href="#">logout</a>
                             </li>
                             <form action="{{ route('logout') }}" method="POST" id="form">
                                 @csrf
