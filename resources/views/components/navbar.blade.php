@@ -58,8 +58,8 @@
                     <li class="nav-item dropdown  ">
                         <a class="nav-link fw-bold dropdown-toggle navbarColor" href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Benvenuto Utente
-                            Benvenuto Utente
+                           <b class="navbarColor">Benvenuto Utente</b>
+
                         </a>
 
                         <ul class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
