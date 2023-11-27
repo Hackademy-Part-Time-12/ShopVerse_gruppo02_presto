@@ -18,10 +18,10 @@
                                             <p class="card-text">{{ $annunci->body }}</p>
                                             <p class="card-text">{{ $annunci->price }}</p>
                                             <div class="row">
-                                                <a href="" class="btn-link">
+                                                <a href="{{route('advertisement.show',$annunci)}}" class="btn-link">
                                                     Visualizza</a>
-                                                <a href="">Categoria:
-                                                    {{ $annunci->category->name }}</a>
+
+                                                <a href="{{route('categoryShow',['category'=>$annunci->category])}}">Categoria:{{ $annunci->category->name}}</a>
                                                 <p class="card-footer">Pubblicata il: {{ $annunci->created_at->format('d/m/y') }} -
                                                     Autore {{ $annunci->user->name ?? 'Sconosciuto' }}</p>
 
