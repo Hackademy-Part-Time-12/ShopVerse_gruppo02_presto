@@ -48,7 +48,7 @@
 
                 </div>
                 <div class=" mt-5 card-footer">
-                    <a href="{{ route('categoryShow', ['category' => $advertisement->category]) }}"
+                    <a href="{{route('categoryShow', ['category' => $advertisement->category])}}"
                         class="btn-link border-top border-primary text-decoration-none "><b>Categoria:</b>
                         {{ $advertisement->category->name }}</a>
                     <p class="card-footer">Pubblicato il: {{ $advertisement->created_at->format('d/m/y') }} Autore
