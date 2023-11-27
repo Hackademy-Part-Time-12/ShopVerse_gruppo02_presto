@@ -1,20 +1,49 @@
 var lastScrollTop = 0;
-var animationInProgress = false;
+var logoOpacityAnimationInProgress = false;
+var heightAnimationInProgress = false;
 
 window.onscroll = function() {
     var st = window.scrollY || document.documentElement.scrollTop;
 
     if (st > lastScrollTop) {
         // Scroll verso il basso
-        logoSparisci(true);
+        if (!logoOpacityAnimationInProgress) {
+            logoSparisci(true);
+        }
     } else {
         if (st === 0) {
-            logoSparisci(false);
+            if (!heightAnimationInProgress) {
+                logoSparisci(false);
+            }
         }
     }
 
     lastScrollTop = st <= 0 ? 0 : st; // Impedisci valori negativi
 };
+
+function logoSparisci(scrollDown) {
+    var logo = document.getElementById("logo");
+    var nav = document.getElementById("nav");
+
+    if (scrollDown) {
+        logo.style.opacity = "0";
+        logo.style.transition = "opacity 1s";
+        logoOpacityAnimationInProgress = true; // Imposta la variabile di stato
+        riduciAltezzaGradualmente(nav);
+    } else {
+        if (!heightAnimationInProgress) {
+            aumentaAltezzaGradualmente(nav);
+            heightAnimationInProgress = true; // Imposta la variabile di stato
+
+            setTimeout(function() {
+                logo.style.transition = "opacity 1s";
+                logo.style.opacity = "1";
+                logoOpacityAnimationInProgress = false; // Resetta la variabile di stato
+                heightAnimationInProgress = false; // Resetta anche la variabile di stato dell'altezza
+            }, 1500);
+        }
+    }
+}
 
 function logoSparisci(scrollDown) {
     var logo = document.getElementById("logo");

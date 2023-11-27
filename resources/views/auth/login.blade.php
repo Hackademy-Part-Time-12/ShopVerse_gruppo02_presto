@@ -1,8 +1,8 @@
 <x-layout>
     <x-navbar/>
-    <section class="tutto my-5 pt-2">
-        <section class="sezione">
-            <link rel="stylesheet" href="login.css">
+    <section class="">
+        <section class="sezione tutto my-5 pt-4">
+            
             <div class="form-box">
                 <div class="form-value">
                     <form action="{{ route('login') }}" method="POST">
