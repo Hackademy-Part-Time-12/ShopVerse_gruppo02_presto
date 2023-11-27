@@ -2,7 +2,7 @@
     background: #fbfbfd;
     width: 100%;
     background-size: cover;
-    position: fixed;
+    position: static;
     bottom: 10px; /* Aggiunto "px" per correggere l'errore */
     left: 0;
     margin: 0;
@@ -11,7 +11,7 @@
 
 .footer_bg {
     background-size: cover;
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
     margin: 0;
@@ -20,7 +20,7 @@
 
 .new_footer_area {
     background: #fbfbfd;
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
     margin: 0;
@@ -122,7 +122,7 @@
 }
 
 .footer_bg {
-    position: absolute;
+    position: static;
     bottom: 0;
     background: url("https://svgshare.com/i/1037.svg") no-repeat scroll center 0;
     background-size: cover;
@@ -135,7 +135,7 @@
     width: 330px;
     height: 105px;
     background-size: 100%;
-    position: absolute;
+    position: relative;
     left: -25%;
     -webkit-animation: myfirst 22s linear infinite;
     animation: myfirst 22s linear infinite;
@@ -146,7 +146,7 @@
     width: 88px;
     height: 100px;
     background-size: 100%;
-    position: relative;
+    position:relative;
     left: -25%;
     -webkit-animation: myfirst 30s linear infinite;
     animation: myfirst 30s linear infinite;
@@ -199,14 +199,14 @@
     .footer_bg .footer_bg_one {
         width: 10vw; /* Modificato da percentuale a viewport width (vw) */
         height: 10vh; /* Modificato da percentuale a viewport height (vh) */
-        position: absolute;
+        position: static;
         bottom: -3.5vh; /* Modificato da pixel a viewport height (vh) */
     }
 
     .footer_bg .footer_bg_two {
         width: 5vw; /* Modificato da percentuale a viewport width (vw) */
         height: 5vh; /* Modificato da percentuale a viewport height (vh) */
-        position: absolute;
+        position: static;
         bottom: 0vh; /* Modificato da pixel a viewport height (vh) */
     }
 }

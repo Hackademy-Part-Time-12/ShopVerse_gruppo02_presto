@@ -24,14 +24,12 @@
     <div class="min-vh-100 mt-5 pt-5">
         <div class="pt-5 mt-5">
             {{ $slot }}
-
         </div>
-
-
+       
     </div>
-
+    <x-footer/>
 </body>
 
 <x-script/>
-<x-footer/>
+
 </html>
