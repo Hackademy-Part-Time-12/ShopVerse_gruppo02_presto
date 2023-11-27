@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Advertisement;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Advertisement extends Model
 {
@@ -16,5 +17,16 @@ class Advertisement extends Model
     }
     public function category(){
         return $this->belongsTo(Category::class);
+    }
+
+    public function setAccepted($value){
+        $this->is_accepted = $value;
+        $this->save();
+        return true;
+    }
+
+    public static function toBeRevisionedCount() {
+        
+        return Advertisement::where('is_accepted', null)->count();
     }
 }

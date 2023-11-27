@@ -129,7 +129,6 @@ body {
 }
 
 .footer_bg {
-    /* position: absolute; */
     bottom: 0;
     background: url("https://svgshare.com/i/1037.svg") no-repeat scroll center 0;
     background-size: cover;
@@ -207,14 +206,14 @@ body {
     .footer_bg .footer_bg_one {
         width: 10vw; /* Modificato da percentuale a viewport width (vw) */
         height: 10vh; /* Modificato da percentuale a viewport height (vh) */
-        position: static;
+        position:relative;
         bottom: -3.5vh; /* Modificato da pixel a viewport height (vh) */
     }
 
     .footer_bg .footer_bg_two {
         width: 5vw; /* Modificato da percentuale a viewport width (vw) */
         height: 5vh; /* Modificato da percentuale a viewport height (vh) */
-        position: static;
+        position: relative;
         bottom: 0vh; /* Modificato da pixel a viewport height (vh) */
     }
 }

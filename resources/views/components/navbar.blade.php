@@ -97,6 +97,15 @@
 
                         <ul class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item fw-bold" href="login.html">Profilo</a></li>
+                            @if(Auth::User()->is_revisor)
+                            <li><a class="dropdown-item fw-bold"  href="{{route('revisor.index')}}">Zona Revisore</a>
+                            </li>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {{app\Models\Advertisement::toBeRevisionedCount()}}
+                               
+                                <span class="visually-hidden">Messaggi non letti</span> 
+                            </span>
+                            @endif
                             <li><a class="dropdown-item fw-bold" id="btn" href="#">logout</a>
                             </li>
                             <form action="{{ route('logout') }}" method="POST" id="form">

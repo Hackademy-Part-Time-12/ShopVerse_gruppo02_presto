@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AdvertisementController;
 
 /*
@@ -22,3 +23,12 @@ Route::get('/nuovo/annuncio',[AdvertisementController::class,'create'])->middlew
 Route::get('/dettaglio/annuncio/{advertisement}',[AdvertisementController::class,'show'])->name('advertisement.show');
 
 Route::get('/tutti/annunci',[AdvertisementController::class,'index'])->name('advertisement.index');
+
+// Rotta Revisore-Home
+Route::get('/revisor/home', [RevisorController::class, 'indexRevisor'])->name('revisor.index');
+
+// Rotta accetta annuncio-Revisore
+Route::patch('/accetta/annuncio/{advertisement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
+
+// Rotta rifiuta annuncio-Revisore
+Route::patch('/rifiuta/annuncio/{advertisement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
