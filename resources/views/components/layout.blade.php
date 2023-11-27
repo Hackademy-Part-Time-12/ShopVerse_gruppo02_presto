@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="\Media\favicon.ico">
 
-    {{-- Scafolding --}}
+    {{-- Scaffolding --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>ShopVerse</title>
 </head>

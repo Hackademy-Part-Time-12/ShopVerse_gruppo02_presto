@@ -18,6 +18,6 @@ class PublicController extends Controller
     }
     public function categoryShow(Category $category) {
 
-        return view('categoryShow',compact('category',));
+        return view('categoryShow',compact('category'));
     }
 }

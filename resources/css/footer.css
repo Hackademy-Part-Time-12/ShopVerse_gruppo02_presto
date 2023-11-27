@@ -129,7 +129,7 @@ body {
 }
 
 .footer_bg {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     background: url("https://svgshare.com/i/1037.svg") no-repeat scroll center 0;
     background-size: cover;
@@ -142,8 +142,9 @@ body {
     width: 200px;
     height: 105px;
     background-size: 100%;
-    position: relative;
+    position: absolute;
     left: -25%;
+
     -webkit-animation: myfirst 22s linear infinite;
     animation: myfirst 22s linear infinite;
 }
@@ -153,7 +154,7 @@ body {
     width: 88px;
     height: 100px;
     background-size: 100%;
-    position: relative;
+    position: absolute;
     left: -25%;
     -webkit-animation: myfirst 30s linear infinite;
     animation: myfirst 30s linear infinite;

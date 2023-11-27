@@ -18,6 +18,7 @@ use App\Http\Controllers\AdvertisementController;
 Route::get('/',[PublicController::class,'home'])->name('home');
 Route::get('/categoria/{category}',[PublicController::class, 'categoryShow'])->name('categoryShow');
 //Rotte per gli annunci
-Route::get('/nuovo/annunci',[AdvertisementController::class,'create'])->middleware('auth')->name('advertisement.create');
+Route::get('/nuovo/annuncio',[AdvertisementController::class,'create'])->middleware('auth')->name('advertisement.create');
 Route::get('/dettaglio/annuncio/{advertisement}',[AdvertisementController::class,'show'])->name('advertisement.show');
+
 Route::get('/tutti/annunci',[AdvertisementController::class,'index'])->name('advertisement.index');
