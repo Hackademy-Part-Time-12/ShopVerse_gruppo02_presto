@@ -4,3 +4,18 @@
   top: 0;
 
 }
+
+.round {
+  
+  width: 40px; /* Regola la larghezza del cerchio */
+  height: 40px; /* Regola l'altezza del cerchio */
+  border-radius: 50%; /* Rende l'elemento un cerchio */
+  overflow: hidden; /* Assicura che l'immagine non sfori dal bordo del cerchio */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra */
+}
+
+.round img {
+  width: 100%; /* Assicura che l'immagine riempia completamente il cerchio */
+  height: 100%; /* Assicura che l'immagine riempia completamente il cerchio */
+  object-fit: cover; /* Mantiene le proporzioni originali dell'immagine */
+}
