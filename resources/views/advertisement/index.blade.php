@@ -33,6 +33,7 @@
                                     </div>
                                 </div>
                             @endforeach
+                            {{ $advertisement->links() }}
                         </div>
                     </div>
                 </div>
