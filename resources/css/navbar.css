@@ -1,49 +1,21 @@
-#mainNavigation a {
-    font-family: 'Mukta', sans-serif;
-    font-size:17px;
-    font-weight: bold;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    text-shadow:2px 2px 3px rgba(246, 58, 58, 0.601);
+.navbar{
 
-  }
-
-  .dropdown-menu {
-    background:#03727d
-  }
-
-  a.dropdown-toggle {
-    color:#dfdfdf !important
-  }
-  a.dropdown-item:hover {
-    color:#03727d !important
-  }
-  .nav-item a{
-    color:#dfdfdf;
-  }
-  .nav-item a:hover {
-    color:#fff
-  }
-  .nav-item{
-
-    min-width:12vw;
-  }
-  #mainNavigation {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
+  position: fixed;
+  top: 0;
+  
+}
 
 
+.linea {
+  
+}
 
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
-    background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-  }
-  #navbarNavDropdown.collapsing .navbar-nav,
-  #navbarNavDropdown.show .navbar-nav{
-    /* background:#037582; */
-    padding:12px;
-  }
+/* Rendi più spesse le linee */
+.border-dark {
 
+}
 
+/* Aggiungi un'ombra alle linee */
+.border-dark{
+ 
+}

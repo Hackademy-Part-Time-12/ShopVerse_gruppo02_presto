@@ -11,13 +11,13 @@ class PublicController extends Controller
 
     public function home () {
 
-        $annunci=Advertisement::take(6)->get()->sortbyDesc('created_at');
+        $annunci=Advertisement::where('is_accepted', true)->take(6)->get()->sortbyDesc('created_at');
 
 
         return view('welcome',compact('annunci'));
     }
     public function categoryShow(Category $category) {
 
-        return view('categoryShow',compact('category',));
+        return view('categoryShow',compact('category'));
     }
 }
