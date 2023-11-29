@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="\Media\favicon.ico">
 
-    {{-- Scafolding --}}
+    {{-- Scaffolding --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>ShopVerse</title>
 </head>
@@ -19,18 +19,27 @@
 <body class="colore">
     <x-pointer/>
     <x-navbar/>
+        {{-- da sistemare visualizzazione messaggio --}}
+    @if (session('access.denied'))
+    <div>
+    <p class="text-danger text-center">{{ session('access.denied') }}</p>
+    </div>
+    @endif
+
+    <div class="col-lg-2 col-md-2 mx-auto my-auto" style="max-width:150px;">
+          <img src="/Media/Logo_ShopVerse_02.svg" alt="" class="img-fluid">
+        </div>
+    
 
     <div class="min-vh-100 mt-5 pt-5">
         <div class="pt-5 mt-5">
             {{ $slot }}
-
         </div>
-
-
+       
     </div>
-
+    <x-footer/>
 </body>
 
 <x-script/>
-<x-footer/>
+
 </html>

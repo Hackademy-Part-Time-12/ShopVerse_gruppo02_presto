@@ -15,18 +15,11 @@ body {
     background: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
 }
 
-.footer_bg {
-    background-size: cover;
-    position: static;
-    bottom: 0;
-    left: 0;
-    margin: 0;
 
-}
 
 .new_footer_area {
     background: #fbfbfd;
-    position: static;
+    position: relative;
     bottom: 0;
     left: 0;
     margin: 0;
@@ -129,7 +122,8 @@ body {
 }
 
 .footer_bg {
-
+    overflow: hidden;
+    position: absolute;
     bottom: 0;
     background: url("https://svgshare.com/i/1037.svg") no-repeat scroll center 0;
     background-size: cover;
@@ -143,7 +137,10 @@ body {
     height: 105px;
     background-size: 100%;
     position: absolute;
+    bottom: 0;
     left: -25%;
+
+
     -webkit-animation: myfirst 22s linear infinite;
     animation: myfirst 22s linear infinite;
 }
@@ -153,7 +150,8 @@ body {
     width: 88px;
     height: 100px;
     background-size: 100%;
-     position: absolute;
+    position: relative;
+    bottom: 0;
     left: -25%;
     -webkit-animation: myfirst 30s linear infinite;
     animation: myfirst 30s linear infinite;
@@ -206,14 +204,14 @@ body {
     .footer_bg .footer_bg_one {
         width: 10vw; /* Modificato da percentuale a viewport width (vw) */
         height: 10vh; /* Modificato da percentuale a viewport height (vh) */
-        position: absolute;
-        bottom: -3.5vh; /* Modificato da pixel a viewport height (vh) */
+        position: relative;
+        bottom: -5vh; /* Modificato da pixel a viewport height (vh) */
     }
 
     .footer_bg .footer_bg_two {
         width: 5vw; /* Modificato da percentuale a viewport width (vw) */
         height: 5vh; /* Modificato da percentuale a viewport height (vh) */
-        position: absolute;
-        bottom: 0vh; /* Modificato da pixel a viewport height (vh) */
+        position: relative;
+        bottom: 2.5vh; /* Modificato da pixel a viewport height (vh) */
     }
 }

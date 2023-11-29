@@ -11,6 +11,6 @@
     </div>
     <div class="">
         <p class="card-footer"><b>Pubblicato il: </b>{{ $advertisement->created_at->format('d/m/y')}}</p>
-
+        
     </div>
   </div>
