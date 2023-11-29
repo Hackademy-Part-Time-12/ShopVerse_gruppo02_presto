@@ -6,7 +6,9 @@
 }
 
 .round {
-  margin-right: 5px;
+  position: relative;
+  margin-left: auto; /* Allinea a destra */
+  margin-top: 5px;
   width: 40px;
   height: 40px;
   border-radius: 50%;

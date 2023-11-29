@@ -11,14 +11,14 @@
         </div>
         {{-- sezione centrale --}}
         <div class="col-lg-2 col-md-2 mx-auto" style="max-width:120px;">
-                 {{-- img gestita nel leyaut --}}
+                 {{-- img gestita nel layout --}}
         </div>
         <div class="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-xs-none me-auto contenitore2">
             <div class="d-flex justify-content-around border-top border-bottom border-dark linea">
                 <div class="customLink"><a class="d-inline-block p-3" href="#">Company</a></div>
                 <div class="customLink"><a class="d-inline-block p-3" href="#">Services</a></div>
                 <!-- Aggiunto il div con la classe 'd-flex' per posizionare l'immagine e il testo sulla stessa riga -->
-                <li class="customLink d-flex align-items-center">
+                <li class="customLink">
                     <!-- Aggiunto il div con la classe 'round' per l'immagine dell'utente -->
                     <div class="round img-fluid"><img class="user_image" src="/Media/user.png" alt=""></div>
                     <!-- Aggiunto il testo "Benvenuto Utente" -->
