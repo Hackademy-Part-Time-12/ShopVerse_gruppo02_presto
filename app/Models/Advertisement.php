@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Advertisement;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Laravel\Scout\Searchable;
@@ -11,23 +12,23 @@ class Advertisement extends Model
 {
     use HasFactory, Searchable;
     protected $fillable = [
-        "title", "body", "price", "cover", "user_id", "category_id",
+        "title","body","price","cover","user_id","category_id",
     ];
 
-   /*  @return array */
-    public function toSearchableArray()
+
+
+    public function toSearchbleArray()
     {
         $category = $this->category;
         $array = [
-            'id' => $this->id,
-            'titile' => $this->title,
+            'id'=> $this->id,
+            'title' => $this->title,
             'body' => $this->body,
-            'category'=>$category,
+            'category' => $category,
         ];
         return $array;
     }
-    public function user()
-    {
+    public function user(){
         return $this->belongsTo(User::class);
     }
     public function category()
