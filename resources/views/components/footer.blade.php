@@ -25,10 +25,14 @@
     <div class="footer_bottom">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-sm-7">
+                <div class="col-lg-4 col-sm-7">
                     <p class="mb-0 f_400 text-left fw-bold copyright" style="color:white; margin-left: -40px; margin-top: -15px;">© 2023 - ShopVerse - </p>
                 </div>
-                <div class="col-lg-6 col-sm-5 text-right d-flex align-items-end justify-content-end">
+                <div class="col-lg-4 col-sm-6">
+                    <p class="mb-0 f_400 text-left fw-bold"> Vuoi lavorare con noi? </p>
+                    <a href="{{route('become.revisor')}}" class="btn text-decoration-none text-light"> Diventa revisore</a>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-right d-flex align-items-end justify-content-end">
                     <p class="mb-0 fw-bold creatori" style="color: white;">
                         Made with <i class="fa-solid fa-heart" style="color: #fe0101;"></i>
                         by <a href="http://shopverse.com" target="_blank"> Lorenzo Montorsi - Salvatore Covelli - Giulia Gaudimundo</a>

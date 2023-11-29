@@ -1,9 +1,9 @@
 <x-layout>
-<div class="container-fluid p-5 bg-success p-5 shadow">
+<div class="container-fluid  p-5 shadow">
     <div class="row">
         <div class="col-12 p-5">
             <h2>
-                {{$announcement_to_check ?'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci'}}
+                {{$announcement_to_check ?'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
             </h2>
         </div>
     </div>

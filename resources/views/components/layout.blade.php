@@ -19,6 +19,12 @@
 <body class="colore">
     <x-pointer/>
     <x-navbar/>
+        {{-- da sistemare visualizzazione messaggio --}}
+    @if (session('access.denied'))
+    <div>
+    <p class="text-danger text-center">{{ session('access.denied') }}</p>
+    </div>
+    @endif
 
     <div class="col-lg-2 col-md-2 mx-auto my-auto" style="max-width:150px;">
           <img src="/Media/Logo_ShopVerse_02.svg" alt="" class="img-fluid">

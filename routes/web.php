@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
@@ -25,10 +26,16 @@ Route::get('/dettaglio/annuncio/{advertisement}',[AdvertisementController::class
 Route::get('/tutti/annunci',[AdvertisementController::class,'index'])->name('advertisement.index');
 
 // Rotta Revisore-Home
-Route::get('/revisor/home', [RevisorController::class, 'indexRevisor'])->name('revisor.index');
+Route::get('/revisor/home', [RevisorController::class, 'indexRevisor'])->middleware('isRevisor')->name('revisor.index');
 
 // Rotta accetta annuncio-Revisore
-Route::patch('/accetta/annuncio/{advertisement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
+Route::patch('/accetta/annuncio/{advertisement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
 
 // Rotta rifiuta annuncio-Revisore
-Route::patch('/rifiuta/annuncio/{advertisement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
+Route::patch('/rifiuta/annuncio/{advertisement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
+
+// Rotta richiesta diventare revisore
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
+// Rendi utente revisore
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
