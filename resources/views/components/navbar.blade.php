@@ -112,9 +112,9 @@
                         </li>
                     </div>
                 </div>
-                {{-- Sezione centrale --}}
+                {{-- Sezione centro --}}
                 <div class="col-lg-2 col-md-2 mx-auto" style="max-width:120px;">
-                    {{-- foto gestita nel leyout --}}
+                    {{-- immagine gestita con leyout --}}
 
                 </div>
                 {{-- Sezione dx --}}
@@ -140,4 +140,5 @@
                 </div>
             </div>
         </div>
+ 
     </div>
