@@ -1,6 +1,6 @@
-    <div class="container-fluid w-100 pt-0 mt-0 navbar z-3" role="navigation">
+<div class="container-fluid w-100 pt-0 mt-0 navbar z-3" role="navigation">
         @auth
-            <div class="row text-center w-100 align-items-center g-0">
+        <div class="row text-center w-100 align-items-center g-0 h-100">
                 {{-- Sezione SX --}}
                 <div class="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-xs-none ms-auto">
                     <div class="d-flex justify-content-around border-top border-bottom border-dark linea">
