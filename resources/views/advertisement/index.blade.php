@@ -52,6 +52,37 @@
 
         @endif
 
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            @forelse($advertisement as $announcement)
+                            <div class="col-12 col-md-4 my-4">
+                                <div class="card shadow" style="width:18 rem;">
+                                <img src="https://picsum.photos/200" class="card-img-top p-3 rounded" alt="...">
+                                <div class="card-body">
+                                    <h5 clas="card-title">{{$announcement->title}}</h5>
+                                    <p class="card-text">{{$announcement->body}}</p>
+                                    <a href="{{route('advertisement.show', compact('announcement'))}}">Visualizza</a>
+                                    <a href="{{route('category.show',['category'=>$announcement->category])}}">Categoria:{{$announcemnet->category->name}}</a>
+                                </div>
+                            </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                @empty
+                    <div class="col-12">
+                        <div class="allert">
+                            <p class="lead">Non ci sono annunci per questa ricerca</p>
+                        </div>
+                    </div>
+                @endforelse
+                {{$advertisement->links()}}
+            </div>
+        </section>
+
     </header>
 
 
