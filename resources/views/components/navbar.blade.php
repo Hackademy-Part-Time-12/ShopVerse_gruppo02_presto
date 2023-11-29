@@ -18,9 +18,10 @@
                         </div>
                     </div>
                 </div>
+                @endauth
                 {{-- Sezione centrale --}}
                 <div class="col-lg-2 col-md-2 mx-auto" style="max-width:120px;">
-                    {{-- foto gestita nel leyout --}}
+                   
 
                 </div>
 
