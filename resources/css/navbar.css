@@ -1,11 +1,12 @@
-.navbar{
+.navbar {
 
   position: fixed;
-  top: 0;
+  top: 10px;
 
 }
 
 .round {
+  margin-right: 5px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -13,27 +14,26 @@
   position: relative;
 }
 
-
-
-.round img {
+.user_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: drop-shadow(0 0 20px rgb(255, 140, 0));
+  /* Modifica il valore del raggio dell'ombra (20px) */
 }
 
 .contenitore {
   background-color: aliceblue;
   border: 2px solid;
   border-image: linear-gradient(45deg, #46c4ea, #005BFD) 1;
-  border-radius: ;
-  
+
 }
 
 .contenitore2 {
   background-color: aliceblue;
   border: 2px solid;
-  border-image: linear-gradient(45deg,#005BFD, #46c4ea  ) 1;
-  
+  border-image: linear-gradient(45deg, #005BFD, #46c4ea) 1;
+
 }
 
 
@@ -46,4 +46,43 @@
 .navbar .row {
   display: flex;
   align-items: stretch;
+}
+
+
+
+
+
+
+.round {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px rgb(245, 6, 6, 0.5);
+  /* Imposta il bordo dell'ombra e la sfocatura */
+}
+
+.round::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  /* Sposta l'immagine verso l'alto per compensare lo spessore del bordo */
+  right: -6px;
+  /* Sposta l'immagine verso destra per compensare lo spessore del bordo */
+  bottom: -6px;
+  /* Sposta l'immagine verso il basso per compensare lo spessore del bordo */
+  left: -6px;
+  /* Sposta l'immagine verso sinistra per compensare lo spessore del bordo */
+  background-image: url('https://i.ibb.co/B69kGJy/user.png');
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.user_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
