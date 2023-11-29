@@ -38,4 +38,9 @@ class RevisorController extends Controller
         Artisan::call('app:MakeUserRevisor',  ["email"=>$user->email]);
         return redirect('/')->with('message', 'Complimenti l\'utente è diventato revisore');
     }
+
+    public function annullaOperazione(Advertisement $advertisement){
+        $advertisement->setAccepted(null);
+        return redirect()->back()->with('message', 'Hai annullato l\'ultima operazione effettuata' );
+    }
 }

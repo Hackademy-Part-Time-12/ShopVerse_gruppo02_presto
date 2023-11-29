@@ -6,10 +6,12 @@
                 <div class="customLink"><a class="d-inline-block p-3" href="#">Product</a></div>
                 <div class="customLink"><a class="d-inline-block p-3" href="#">Pricing</a></div>
             </div>
-        </div>
-        <div class="col-lg-2 col-md-2 mx-auto" style="max-width:120px;">
+    </div> 
+
+        <div class="col-lg-2 col-md-2 mx-auto " style="max-width:120px;">
           
         </div>
+
         <div class="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-xs-none me-auto contenitore2">
             <div class="d-flex justify-content-around border-top border-bottom border-dark linea">
                 <div class="customLink"><a class="d-inline-block p-3" href="#">Company</a></div>
@@ -23,5 +25,6 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>

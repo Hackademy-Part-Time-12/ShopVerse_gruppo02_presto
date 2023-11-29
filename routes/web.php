@@ -39,3 +39,6 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 
 // Rendi utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+// annulla ultima operazione revisore
+Route::patch('/annulla/annuncio/{advertisement}', [RevisorController::class, 'annullaOperazione'])->name ('annulla.operazione');
