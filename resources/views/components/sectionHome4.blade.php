@@ -1,5 +1,6 @@
-<sectionHome4>
-<section class="my-5 w-100 min-vh-100 ms-2 ">
+<x-sectionHome4>
+
+    <section class="my-5 w-100 min-vh-100 ms-2 ">
         <h3 class="fs-2 fw-bold ms-4  gradient">Ultime inserzioni aggiunte</h3>
 
         @if ($annunci->isnotEmpty())
@@ -19,4 +20,5 @@
 
         @endif
     </section>
-</sectionHome4>
+
+</x-sectionHome4>
