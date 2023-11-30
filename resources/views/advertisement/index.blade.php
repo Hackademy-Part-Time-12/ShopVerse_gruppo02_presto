@@ -49,7 +49,6 @@
             <p class="fs-2 text-center">Pubblicane uno: <a href="{{ route('advertisement.create') }}" class="btn-link text-decoration-none">Nuovo Annuncio </a> </p>
         </div>
 
-
         @endif
 
     </header>

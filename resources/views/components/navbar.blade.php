@@ -83,9 +83,10 @@
             <div class="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-xs-none ms-auto shadow contenitore">
 
                 <ul class="d-flex justify-content-around mt-3 linea">
-                    <li class="customLink"><a class="d-inline-block p-3" href="{{ Route('home') }}">Home</a></li>
-                    <li class="customLink"><a class="d-inline-block p-3"
-                            href="{{ Route('advertisement.index') }}">Annunci</a>
+                    <li class="customLink"><a class="d-inline-block p-3" href="{{ Route('home') }}"><b
+                                class="navbarColor">Home</b> </a></li>
+                    <li class="customLink"><a class="d-inline-block p-3" href="{{ Route('advertisement.index') }}"><b
+                                class="navbarColor">Annunci</b> </a>
                     </li>
                     <li class="customLink dropdown">
                         <a class="d-inline-block p-3 dropdown-toggle " href="#" id="categoriesDropdown" role="button"
@@ -98,7 +99,7 @@
                                         href=" {{ route('categoryShow', compact('category')) }} ">{{ $category->name }}</a>
                                 </li>
                                 <li>
-                                    <hr class="dropdown-divider">
+                                    <hr class="dropdown-divider navbarColor">
                                 </li>
                             @endforeach
                         </ul>
@@ -110,7 +111,7 @@
 
             {{-- sezione centrale --}}
             <div class="col-lg-2 col-md-2 mx-auto shadow" style="max-width:120px;">
-                {{-- img gestita nel layout --}}
+
             </div>
             {{-- Sezione DX --}}
 
@@ -118,7 +119,8 @@
 
 
                 <ul class="d-flex justify-content-around mt-3 linea">
-                    <li class="customLink"><a class="d-inline-block p-3" href="{{ Route('advertisement.create') }}">Inserisci annunci</a></li>
+                    <li class="customLink"><a class="d-inline-block p-3"
+                            href="{{ Route('advertisement.create') }}">Inserisci annunci</a></li>
                     <li class="customLink"><a class="d-inline-block p-3" href="#">Contattaci</a></li>
 
                     <li class="customLink ms-2"><a class="d-inline-block p-3"
@@ -130,7 +132,7 @@
                         <!-- Aggiunto il div con la classe 'round' per l'immagine dell'utente -->
 
                         <!-- Aggiunto il testo "Benvenuto Utente" -->
-                      <li class="customLink dropdown  ">
+                    <li class="customLink dropdown  ">
                         <img class="round ms-0 me-2 img-fluid" src="/Media/user.png" alt="">
                         <a class="nav-link dropdown-toggle fw-bold " href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -140,7 +142,8 @@
                         <ul class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item fw-bold" href="login.html">Profilo</a></li>
                             @if (Auth::User()->is_revisor)
-                                <li><a class="dropdown-item fw-bold" href="{{ route('revisor.index') }}">Zona
+                                <li>
+                                    <a class="dropdown-item fw-bold" href="{{ route('revisor.index') }}">Zona
                                         Revisore</a>
                                 </li>
                                 <span
@@ -157,7 +160,7 @@
                             </form>
                             <!-- <li><a class="dropdown-item" href="#">Contact us</a></li> -->
                         </ul>
-                      </li>
+                    </li>
                     </li>
                 </ul>
             </div>
