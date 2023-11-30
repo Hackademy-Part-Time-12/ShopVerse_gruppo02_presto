@@ -1,7 +1,5 @@
 <x-layout>
-
-
-
+    {{-- Header Titolo annuncio --}}
     <header class="container-fluid p-5">
         <div class="row">
             <div class="col-12 p-5">
@@ -9,6 +7,8 @@
             </div>
         </div>
     </header>
+
+    {{-- sezionecard-show con carosello immagini --}}
     <section class="container mb-5 pb-3">
         <div class="row">
             <div class="col-12">
@@ -27,9 +27,8 @@
                             <img src="https://picsum.photos/id/27/1200/300" class="img-fluid p-3 rounded"
                                 alt="">
                         </div>
-
                     </div>
-
+                                            {{-- Bottoni carosello --}}
                     <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -41,6 +40,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+
                 <div class="my-2 card-body ">
                     <h5 class="card-titolo">Titolo:{{ $advertisement->title }}</h5>
                     <p class="card-text"><b>Descrizione:</b> {{ $advertisement->body }} </p>
@@ -55,8 +55,6 @@
                        <b>{{ $advertisement->user->name ?? 'Sconosciuto' }}</b></p>
 
                 </div>
-
-
 
             </div>
         </div>

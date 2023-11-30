@@ -43,7 +43,7 @@
                     <li class="customLink"><a class="d-inline-block p-3" href="#">Contattaci</a></li>
 
                     <li class="customLink ms-2"><a class="d-inline-block p-3"
-                            href="{{ route('become.revisor') }}">Lavora</a>
+                            href="{{ route('become.revisor') }}">Lavora con noi</a>
                     </li>
 
                     <!-- Aggiunto il div con la classe 'd-flex' per posizionare l'immagine e il testo sulla stessa riga -->
@@ -65,6 +65,7 @@
                             <li><a class="dropdown-item fw-bold" href="{{ Route('register') }}">Registrati</a></li>
                             <!-- <li><a class="dropdown-item" href="#">Contact us</a></li> -->
                         </ul>
+                        
                     </li>
                     </li>
                 </ul>
@@ -155,14 +156,20 @@
                             <form action="{{ route('logout') }}" method="POST" id="form">
                                 @csrf
                             </form>
-                            <!-- <li><a class="dropdown-item" href="#">Contact us</a></li> -->
+                            @endauth
+                         <!-- <li><a class="dropdown-item" href="#">Contact us</a></li> -->
+                         
                         </ul>
+                        
                       </li>
                     </li>
+                  
                 </ul>
+               
+                    
             </div>
-
-
+          
         </div>
+        
     </nav>
-@endauth
+
