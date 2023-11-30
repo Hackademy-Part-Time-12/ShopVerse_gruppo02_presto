@@ -42,3 +42,5 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 
 // annulla ultima operazione revisore
 Route::patch('/annulla/annuncio/{advertisement}', [RevisorController::class, 'annullaOperazione'])->name ('annulla.operazione');
+// Ricerca annuncio
+Route::get('/ricerca/annuncio', [PublicController::class, 'searchAdvertisements'])->name('advertisement.search');

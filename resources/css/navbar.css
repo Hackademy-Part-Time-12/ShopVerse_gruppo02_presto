@@ -25,14 +25,15 @@
 }
 
 .contenitore {
-  background-color: aliceblue;
+  background-color:aliceblue;
   border: 2px solid;
-  border-image: linear-gradient(45deg, #46c4ea, #005BFD) 1;
+  border-image:linear-gradient(45deg, #46c4ea, #005BFD) 1;
+ 
 
 }
 
 .contenitore2 {
-  background-color: aliceblue;
+  background-color: aliceblue; 
   border: 2px solid;
   border-image: linear-gradient(45deg, #005BFD, #46c4ea) 1;
 
