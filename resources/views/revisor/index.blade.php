@@ -5,14 +5,14 @@
             <h2>
                 {{$announcement_to_check ?'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
             </h2>
-            <div class="col-12 col-md-6">
+            {{-- <div class="col-12 col-md-6">
                 <form action="{{route('annulla.operazione', ['advertisement'=>$announcement_to_check])}}" method="POST">
                 @csrf
                 @method('PATCH')
                     <button type="submit" class="btn btn-warning shadow">
                     Annulla operazione precedente
                     </button>
-                </form>
+                </form> --}}
         </div>
     </div>
 </div>
@@ -42,7 +42,7 @@
                         </button>
                     </form>
                     </div>
-                   
+
                     </div>
                     <div class="col-12 col-md-6">
                         <form action="{{route('revisor.reject_announcement', ['advertisement'=>$announcement_to_check])}}" method="POST">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
               </div>
-           @endif 
+           @endif
         </div>
     </div>
 </div>

@@ -16,7 +16,7 @@ use App\Http\Controllers\AdvertisementController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-//Rotte  rpincipali
+//Rotte pincipali
 Route::get('/',[PublicController::class,'home'])->name('home');
 Route::get('/categoria/{category}',[PublicController::class, 'categoryShow'])->name('categoryShow');
 //Rotte per gli annunci

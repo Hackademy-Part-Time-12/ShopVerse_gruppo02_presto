@@ -1,5 +1,6 @@
 <section class="container-fluid my-5 ">
-    <div class="row align-self-center">
+
+    <div class="row my-3 align-self-center">
         {{-- immagine di sinistra --}}
         <div class="col-12 col-md-4">
             <img class="img-thumbnail shadow " src="Media\header3.svg" alt="">
