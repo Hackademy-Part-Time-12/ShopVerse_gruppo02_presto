@@ -25,6 +25,7 @@ class PublicController extends Controller
     {
         $advertisement = Advertisement::search($request->searched)->where('is_accepted', true)->paginate(10);
 
-        return view('advertisement.index', compact('advertisement'));
+
+        return view('advertisement.index', compact('advertisement',));
     }
 }

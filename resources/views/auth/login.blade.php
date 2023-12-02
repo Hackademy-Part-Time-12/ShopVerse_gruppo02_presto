@@ -1,8 +1,8 @@
 <x-layout>
     <x-navbar/>
-    <section class="">
-        <section class="sezione tutto my-5 pt-4">
-            
+
+        <section class="sezione tutto ">
+
             <div class="form-box">
                 <div class="form-value">
                     <form action="{{ route('login') }}" method="POST">
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </section>
-    </section>
+   
     <x-script/>
 </x-layout>
 

@@ -18,7 +18,7 @@
             @if (Auth::user())
             <a href="{{ route('advertisement.create') }}"><button class="bn632-hover bn20 ">Inserisci annuncio</button></a>
             @else
-            <a href="{{ route('register') }}"><button class="bn632-hover bn20 ">Registrati</button></a>
+            <a href=""><button class="bn632-hover bn20 ">Registrati</button></a>
 
             @endif
 
@@ -27,6 +27,6 @@
             <img src="Media\header2.svg" class="rounded shadow" alt="">
         </div>
     </div>
-    
+
 
 </section>
