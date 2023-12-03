@@ -10,6 +10,11 @@
     --btn-color:rgb(254, 254, 254);
 
 }
+.color{
+    background-color:#f5d5e29c;
+
+
+ }
 
 .navbarColor {
     color: var(--text-color)!important;

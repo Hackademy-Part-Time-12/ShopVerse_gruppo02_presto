@@ -15,7 +15,7 @@
     <title>ShopVerse</title>
 </head>
 
-<body class="colore">
+<body class="color">
     <x-pointer />
     <x-navbar />
     {{-- da sistemare visualizzazione messaggio --}}
@@ -24,8 +24,8 @@
             <p class="text-danger text-center">{{ session('access.denied') }}</p>
         </div>
     @endif
-    <div class="min-vh-100">
-        <div class="my-4 ">
+    <div class="container-fluid min-vh-100">
+        <div class="my-4 row ">
             {{ $slot }}
         </div>
 
