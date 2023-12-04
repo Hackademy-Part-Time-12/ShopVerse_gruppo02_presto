@@ -26,11 +26,11 @@ class PublicController extends Controller
         $advertisement = Advertisement::search($request->searched)->where('is_accepted', true)->paginate(10);
 
 
-        return view('advertisement.index', compact('advertisement',));
+        return view('advertisement.index', compact('advertisement'));
     }
 
     public function setLanguage($lang){
-        
+
         session()->put('locale',$lang);
         return redirect()->back();
 

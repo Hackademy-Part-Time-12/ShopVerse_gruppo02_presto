@@ -1,6 +1,6 @@
 
-<footer class="new_footer_area bg_color pie" >
-    <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+<footer class="new_footer_area bg_color pie  " >
+    <div class="f_widget company_widget wow fadeInLeft  " data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
         <h3 class="f-title f_600 t_color f_size_18 h3 d-none">Get in Touch</h3>
         <p class="d-none">Don’t miss any updates of our new templates and extensions.!</p>
         <form action="#" class="f_subscribe_two mailchimp d-none" method="post" novalidate="true" _lpchecked="1">
@@ -18,19 +18,19 @@
             </div>
         </div>
     </div>
-    <div class="footer_bg" style="height: 100px; ">
+    <div class="footer_bg  " style="height: 100px; ">
         <div class="footer_bg_one"></div>
         <div class="footer_bg_two"></div>
     </div>
-    <div class="footer_bottom">
-        <div class="container">
+    <div class="footer_bottom  ">
+        <div class="container  ">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-sm-7">
                     <p class="mb-0 f_400 text-left fw-bold copyright" style="color:white; margin-left: -40px; margin-top: -15px;">© 2023 - ShopVerse - </p>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <p class="mb-0 f_400 text-left fw-bold"> Vuoi lavorare con noi? </p>
-                    <a href="{{route('become.revisor')}}" class="btn text-decoration-none text-light"> Diventa revisore</a>
+                    <a href="{{route('become.revisor')}}" class=""> Diventa revisore</a>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-right d-flex align-items-end justify-content-end">
                     <p class="mb-0 fw-bold creatori" style="color: white;">
@@ -42,5 +42,5 @@
         </div>
     </div>
 
-    
+
 </footer>

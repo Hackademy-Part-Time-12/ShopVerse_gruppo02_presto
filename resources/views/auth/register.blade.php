@@ -1,6 +1,4 @@
 <x-layout>
-
-    <x-navbar />
         <section class="sezione tutto mt-5 pt-5">
             <link rel="stylesheet" href="register.css">
             <div class="form-box">
