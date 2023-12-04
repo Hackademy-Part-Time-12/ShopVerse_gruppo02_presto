@@ -25,7 +25,7 @@
 </section>
 <div class="row text-center my-4">
     <div class="search row justify-content-center">
-        <form action="{{route('advertisement.search')}}" method="GET" class="justify-content-center">
+        <form action="{{ route('advertisement.search') }}" method="GET" class="justify-content-center">
             <input type="search" class="searchTerm" name="searched" placeholder="Cosa cerchi?">
             <button type="submit" class="searchButton">
               <i class="fa fa-search"></i>
