@@ -24,22 +24,6 @@
   /* Modifica il valore del raggio dell'ombra (20px) */
 }
 
-.contenitore {
-  background-color:aliceblue;
-  border: 2px solid;
-  border-image:linear-gradient(45deg, #46c4ea, #005BFD) 1;
-
-
-}
-
-.contenitore2 {
-  background-color: aliceblue;
-  border: 2px solid;
-  border-image: linear-gradient(45deg, #005BFD, #46c4ea) 1;
-
-}
-
-
 .customLink {
   display: flex;
   align-items: center;
@@ -50,11 +34,6 @@
   display: flex;
   align-items: stretch;
 }
-
-
-
-
-
 
 .round {
   width: 45px;

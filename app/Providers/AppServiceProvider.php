@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if(Schema::hasTable("categories")){
-            view()->share('categories', Category::all());
+            view()->share('categories', Category::all()); /* categories variabile disponibile in tutte le viste per le categorie */
         }
         Paginator::useBootstrap();
     }

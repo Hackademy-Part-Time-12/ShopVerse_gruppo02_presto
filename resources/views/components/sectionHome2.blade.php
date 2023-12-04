@@ -6,7 +6,7 @@
                     style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)">
                 </div>
                 <div class="card__content">
-                    <p class="card__category">Category</p>
+                    <p class="card__category"><b>Informatica</b> </p>
 
                 </div>
             </a>
@@ -16,7 +16,7 @@
                     style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
                 </div>
                 <div class="card__content">
-                    <p class="card__category">Category</p>
+                    <p class="card__category"><b>Elettronica</b></p>
 
                 </div>
             </a>

@@ -11,23 +11,27 @@
             <h2 class="fs-1 fw-bold  gradient">Vasta scelta di articoli molte sezioni</h2>
 
         </div>
+
         {{-- immagine destra --}}
         <div class="col-12 col-md-4">
             <img class="img-thumbnail shadow " src="Media\header3.svg" alt="">
 
         </div>
     </div>
-    <div class="container-fluid my-2">
-        <div class="row col-12">
-            <div class="col-12 justify-content-center d-flex">
-                <form action="{{ route('advertisement.search') }}" method="GET" class="">
-                    <input name="searched" class="form-controll " type="search" placeholder="Cerca"
-                        aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"> Cerca </button>
-                </form>
-            </div>
-        </div>
-    </div>
+
+
 
 
 </section>
+<div class="row text-center my-4">
+    <div class="search row justify-content-center">
+        <form action="" method="GET" class="justify-content-center">
+            <input type="search" class="searchTerm" name="searched" placeholder="Cosa cerchi?">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+           </button>
+        </form>
+
+    </div>
+ </div>
+

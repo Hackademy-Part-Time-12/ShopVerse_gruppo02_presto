@@ -6,7 +6,7 @@
             </div>
         </div>
     </div>
-    @if ($category->isnotEmpty())
+    @if ($category->isNotEmpty())
     <div class="row">
         <div class="col-12 p-5">
             <h1 class="display-2 text-center">Ecco i nostri annunci</h1>

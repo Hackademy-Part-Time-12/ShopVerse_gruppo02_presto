@@ -57,22 +57,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="customLink dropdown my-3">
-                        <a class="d-inline-block p-3 dropdown-toggle text-decoration-none" href="#" id="categoriesDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <b class="navbarColor">Categorie</b></a>
-
-                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-                            @foreach ($categories as $category)
-                                <li><a class="dropdown-item "
-                                        href=" {{ route('categoryShow', compact('category')) }} "><b class="navbarColor">{{ $category->name }}</b> </a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                            @endforeach
-                        </ul>
-                    </li>
+                    <li class="customLink"><a class="d-inline-block my-3 p-3 text-decoration-none " href="{{ Route('advertisement.create') }}"><b
+                        class="navbarColor">Inserisci annunci</b> </a>
+            </li>
 
                     <li class="customLink"><a class="d-inline-block my-3 p-3 text-decoration-none " href="{{ Route('advertisement.index') }}"><b
                                 class="navbarColor">Annunci</b> </a>

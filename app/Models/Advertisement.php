@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Advertisement;
+
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
