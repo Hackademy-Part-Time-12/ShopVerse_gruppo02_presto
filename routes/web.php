@@ -22,7 +22,6 @@ Route::get('/categoria/{category}',[PublicController::class, 'categoryShow'])->n
 //Rotte per gli annunci
 Route::get('/nuovo/annuncio',[AdvertisementController::class,'create'])->middleware('auth')->name('advertisement.create');
 Route::get('/dettaglio/annuncio/{advertisement}',[AdvertisementController::class,'show'])->name('advertisement.show');
-
 Route::get('/tutti/annunci',[AdvertisementController::class,'index'])->name('advertisement.index');
 
 // Rotta Revisore-Home

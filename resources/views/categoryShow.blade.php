@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                        @foreach ($category as $annunci)
+                        @foreach ($category->advertisements as $annunci)  //possiamo usare anche un forelse 
                             <div class="col-12 col-md-4 my-4">
                                 <div class="card shadow" style="width: 18rem;">
                                     <img src="" alt="" class="card-img-top p-3 rounded">

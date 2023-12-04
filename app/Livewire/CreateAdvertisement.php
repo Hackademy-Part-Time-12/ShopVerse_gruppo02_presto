@@ -23,18 +23,20 @@ class CreateAdvertisement extends Component
     public $category;
     public function store(){
         $this->validate();
-        
+
 
         $category= Category::find($this->category);
-        $category->advertisements()->create([
+        $advertisement= $category->advertisements()->create([
             "title"=> $this->title,
             "price"=> $this->price,
             "body"=> $this->body,
             'user_id' => Auth::user()->id
 
         ]);
+
+        Auth::user()->advertisement()->save($advertisement);
         session()->flash("PostCreate","Articolo aggiunto con successo");
-        $this->reset();
+        $this->reset(); //funzione per resettare i campi del form
     }
     protected $rules=[
         "title"=> "required|min:5|max:30",
