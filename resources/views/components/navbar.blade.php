@@ -16,6 +16,16 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item my-2">
+                       <x-_locale lang="it" nation="it"/>
+                    </li>
+                    <li class="nav-item my-2">
+                        <x-_locale  lang="fr" nation="fr"/>
+                     </li>
+                     <li class="nav-item my-2">
+                        <x-_locale lang="en" nation="gb"/>
+                     </li>
+
+                    <li class="nav-item my-2">
                         <a class="nav-link" aria-current="page" href="{{ route('register') }}"><b class="navbarColor">
                                 Registrati</b></a>
                     </li>

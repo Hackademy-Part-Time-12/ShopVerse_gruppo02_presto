@@ -4,7 +4,7 @@
         @if ($advertisement->isnotEmpty())
         <div class="row">
             <div class="col-12 p-5">
-                <h1 class="display-2 text-center">Ecco i nostri annunci</h1>
+                <h1 class="display-2 text-center">{{__('ui.allAnnouncements')}}</h1>
             </div>
             <section class="container">
                 <div class="row">

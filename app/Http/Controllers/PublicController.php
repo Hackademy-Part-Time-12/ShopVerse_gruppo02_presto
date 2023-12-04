@@ -28,4 +28,11 @@ class PublicController extends Controller
 
         return view('advertisement.index', compact('advertisement',));
     }
+
+    public function setLanguage($lang){
+        
+        session()->put('locale',$lang);
+        return redirect()->back();
+
+    }
 }
