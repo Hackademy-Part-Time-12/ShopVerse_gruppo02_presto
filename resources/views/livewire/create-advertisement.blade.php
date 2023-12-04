@@ -7,6 +7,7 @@
                 <h2 class="h2">Inserisci Annuncio</h2>
                 @if (session('PostCreate'))
                     <p class="text-success fw-bold ">{{ session('PostCreate') }}</p>
+                   
                 @endif
                 {{-- Form title --}}
                 <div class="inputbox">

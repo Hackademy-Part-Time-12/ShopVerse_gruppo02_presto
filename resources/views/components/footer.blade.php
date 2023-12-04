@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <p class="mb-0 f_400 text-left fw-bold"> Vuoi lavorare con noi? </p>
-                    <a href="{{route('become.revisor')}}" class=""> Diventa revisore</a>
+                    <button type="submit"><a href="{{route('become.revisor')}}" class=""> Diventa revisore</a></button>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-right d-flex align-items-end justify-content-end">
                     <p class="mb-0 fw-bold creatori" style="color: white;">

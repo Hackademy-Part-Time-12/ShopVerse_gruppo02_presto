@@ -5,14 +5,6 @@
             <h2>
                 {{$announcement_to_check ?'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
             </h2>
-            {{-- <div class="col-12 col-md-6">
-                <form action="{{route('annulla.operazione', ['advertisement'=>$announcement_to_check])}}" method="POST">
-                @csrf
-                @method('PATCH')
-                    <button type="submit" class="btn btn-warning shadow">
-                    Annulla operazione precedente
-                    </button>
-                </form> --}}
         </div>
     </div>
 </div>

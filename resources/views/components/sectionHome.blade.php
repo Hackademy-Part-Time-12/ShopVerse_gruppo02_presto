@@ -1,4 +1,14 @@
 <section class=" container-fluid my-5 py-2">
+    @if (session('message'))
+    <div class="alert alert-primary my-5" role="alert">
+     <p class=" fw-bold ">{{ session('message') }}</p>
+    </div>
+    @elseif(session('accepted'))
+    <div class="alert alert-primary my-5" role="alert">
+        <p class=" fw-bold ">{{ session('accepted') }}</p>
+       </div>
+    @endif
+
 
     <div class="row justify-content-center my-5 py-1 align-items-center">
         <div class="col-12 col-md-6 text-center my-1">
@@ -21,5 +31,3 @@
 
 
 </section>
-
-
