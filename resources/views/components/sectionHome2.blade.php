@@ -1,5 +1,5 @@
-<section class=" html   body w-100 d-flex justify-content-center ">
-    <section class="hero-section w-100 col-12 row rounded-3   ">
+<section class=" html body p-0 d-flex justify-content-center ">
+    <section class="hero-section col-12 row rounded-3   ">
         <div class="card-grid row col-12 col-md-8 my-1 justify-content-center">
             <a class="card1 col-4 col-md-2 " href="#">
                 <div class="card__background"

@@ -4,9 +4,10 @@ namespace App\Models;
 
 
 
+use App\Models\Image;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Laravel\Scout\Searchable;
 
 
 class Advertisement extends Model
@@ -48,5 +49,9 @@ class Advertisement extends Model
     {
 
         return Advertisement::where('is_accepted', null)->count();
+    }
+    public function images(){
+        return $this->hasMany(Image::class);
+
     }
 }

@@ -17,8 +17,9 @@ class PublicController extends Controller
         return view('welcome',compact('annunci'));
     }
     public function categoryShow(Category $category) {
+        $advertisement = Advertisement::where('is_accepted', true)->paginate(5);
 
-        return view('categoryShow',compact('category'));
+        return view('categoryShow',compact('category','advertisement'));
     }
 
     public function searchAdvertisements (Request $request)

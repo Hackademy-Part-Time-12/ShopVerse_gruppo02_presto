@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('body');
             $table->decimal('price',8,2);
-            
-            $table->unsignedBigInteger('user_id');
+
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
 
 
