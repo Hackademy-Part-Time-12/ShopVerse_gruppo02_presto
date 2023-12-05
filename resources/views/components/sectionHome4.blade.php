@@ -22,6 +22,6 @@
     </section>
    <div class="col-lg-4 col-sm-6">
         <p class="mb-0 f_400 text-left fw-bold"> Vuoi lavorare con noi? </p>
-        <a href="{{route('become.revisor')}}" class=""><button type="submit"> Diventa revisore</button></a>
+        <a href="{{route('become.revisor')}}" class="text-decoration-none"><button type="submit" class="button-53"> Diventa revisore</button></a>
     </div>
 

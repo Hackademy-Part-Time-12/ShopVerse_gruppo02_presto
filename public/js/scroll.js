@@ -1,4 +1,4 @@
-var lastScrollTop = 0;
+/* var lastScrollTop = 0;
 var logoOpacityAnimationInProgress = false;
 var heightAnimationInProgress = false;
 
@@ -123,4 +123,19 @@ function aumentaAltezzaGradualmente(div) {
 
     requestAnimationFrame(animate);
 }
+ */
 
+/* window.addEventListener('DOMContentLoaded', (event) => {
+    var bottone = window.document.getElementById('button-74');
+
+    bottone.addEventListener('click', function(){
+        window.location = "{{route('become.revisor')}}";
+        console.log('funziona!');
+    });
+}); */
+
+document.getElementById('button-74').addEventListener('click', function(){
+    var route = this.getAttribute('data-route');
+    window.location.href = route;
+    console.log('funziona!');
+});
