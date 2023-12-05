@@ -9,7 +9,7 @@
     {{-- sezione Dx --}}
     <nav class="navbar z-1 position-absolute top-0 end-0 position-fixed mx-4 my-1 rounded-2 border border-primary navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid  ">
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -61,7 +61,7 @@
     {{-- sezione Dx --}}
     <nav class="navbar position-absolute top-0 end-0 z-1 position-fixed mx-1 my-1 rounded-2 border border-primary navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid  ">
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
