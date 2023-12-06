@@ -19,14 +19,15 @@ use App\Http\Controllers\AdvertisementController;
 //Rotte pincipali
 Route::get('/',[PublicController::class,'home'])->name('home');
 Route::get('/categoria/{category}',[PublicController::class, 'categoryShow'])->name('categoryShow');
+// Ricerca annuncio
+Route::get('/ricerca/annuncio', [PublicController::class, 'searchAdvertisements'])->name('advertisement.search');
 
 
 //Rotte per gli annunci
 Route::get('/nuovo/annuncio',[AdvertisementController::class,'create'])->middleware('auth')->name('advertisement.create');
 Route::get('/dettaglio/annuncio/{advertisement}',[AdvertisementController::class,'show'])->name('advertisement.show');
 Route::get('/tutti/annunci',[AdvertisementController::class,'index'])->name('advertisement.index');
-// Ricerca annuncio
-Route::get('/ricerca/annuncio', [PublicController::class, 'searchAdvertisements'])->name('advertisement.search');
+
 
 // Rotta Revisore-Home
 Route::get('/revisor/home', [RevisorController::class, 'indexRevisor'])->middleware('isRevisor')->name('revisor.index');

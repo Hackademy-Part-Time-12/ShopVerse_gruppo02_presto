@@ -1,7 +1,7 @@
 <section class=" container my-5 pt-3">
     <div class="row justify-content-center pt-5 border border-primary rounded-3 shadow">
 
-        <h2 class="text-center display-1">Inserisci Annuncio</h2>
+        <h2 class="text-center fs-1 ">Inserisci Annuncio</h2>
 
 
 

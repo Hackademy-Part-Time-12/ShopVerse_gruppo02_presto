@@ -1,7 +1,7 @@
                                                        /* CSS Card */
 
 
-                                                       
+
 .products-items .product-grid {
     font-family: 'Mukta', sans-serif;
     text-align: center;
@@ -12,7 +12,7 @@
 }
 
 .products-items .product-grid:hover {
-    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(253, 253, 253, 0.571) 0px 20px 30px -10px;
 }
 
 .products-items  .product-grid .product-image {
@@ -115,6 +115,7 @@ object-fit: cover;
 .products-items .product-grid .product-links li a:hover:before,
 .products-items .product-grid .product-links li a:hover:after {
     display: block;
+
 }
 
 .products-items .product-grid .product-content {
@@ -150,7 +151,7 @@ object-fit: cover;
 .products-items  .product-grid .price span {
     color: #46c4ea;
     font-weight: 500;
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
 }
 .products-items .product-grid{
     background:#F8F8F8 ;
@@ -159,8 +160,7 @@ object-fit: cover;
     margin-bottom: 50px;
 }
 
-@media screen and (max-width:1200px) {
-    .products-items   .product-grid {
-        margin: 0 0 30px;
-    }
+.bg-home{
+    background-color: #1e4194ff;
 }
+

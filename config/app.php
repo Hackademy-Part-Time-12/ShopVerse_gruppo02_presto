@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 use App\Providers\FortifyServiceProvider;
+use Spatie\Permission\PermissionServiceProvider;
 use TeamTNT\Scout\TNTSearchScoutServiceProvider;
 
 return [
@@ -164,6 +165,7 @@ return [
         FortifyServiceProvider::class,
         TNTSearchScoutServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
+        PermissionServiceProvider::class,
 
         /*
          * Application Service Providers...

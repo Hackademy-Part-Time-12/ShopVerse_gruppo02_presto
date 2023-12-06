@@ -1,10 +1,10 @@
-<div class="container products-items">
 
-        <div class="col-md-3  row col-sm-6 product-height">
-            <div class="product-grid">
-                <div class="product-image">
-                  <img class="pic-1 image" src="">
-                    <span class="product-discount-label">-33%</span>
+
+
+            <div class="col-12 col-md-3 shadow2 mx-1 product-grid my-4">
+                <div class="product-image mx-2">
+                  <img class="pic-1 mt-1 rounded image" src="{{!$advertisement->images()->get()->isEmpty() ? $advertisement->images()->first()->getUrl(300,200) :'https://picsum.photos/200/300'}}">
+                    <span class="product-discount-label">Nuovo</span>
                     <ul class="product-links">
                         {{-- <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li> --}}
 
@@ -17,7 +17,7 @@
                 </div>
                 <div class="product-content">
                     <h3 class="title">{{ $advertisement->title }}</h3>
-                    <div class="price"><span>{{ $advertisement->price }}</span> $66.00</div>
+                    <div class="price"><span>€ {{ $advertisement->price }}</span></div>
                     <div class="">
                         <p class="card-footer"><b>Pubblicato il: </b>{{ $advertisement->created_at->format('d/m/y') }}</p>
 
@@ -26,8 +26,8 @@
                 </div>
 
             </div>
-        </div>
-</div>
+
+
 
 
 

@@ -24,7 +24,7 @@
 
   .hero-section{
     align-items: flex-start;
-    background-image: linear-gradient(15deg, #113D93 0%, #113D93 150%);
+    background-image: linear-gradient(15deg, #2c8f8dff 0%, #2c8f8dff 150%);
     display: flex;
     min-height: 100%;
     justify-content: center;
