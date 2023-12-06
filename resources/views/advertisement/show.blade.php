@@ -11,35 +11,11 @@
     {{-- sezionecard-show con carosello immagini --}}
     <section class="container mb-5 pb-3">
         <div class="row">
-            <div class="col-12">
-                <div id="showCarousel" class="carousel slide" data-ds-ride="carousel">
-                    {{-- Prima slide --}}
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/id/27/1200/300" class="img-fluid p-3 rounded"
-                                alt="">
-                        </div>
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/id/27/1200/300" class="img-fluid p-3 rounded"
-                                alt="">
-                        </div>
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/id/27/1200/300" class="img-fluid p-3 rounded"
-                                alt="">
-                        </div>
-                    </div>
-                                            {{-- Bottoni carosello --}}
-                    <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previus</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#showCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+            <div class="col-6">
+                
+
+            </div>
+            <div class="col-6">
 
                 <div class="my-2 card-body ">
                     <h5 class="card-titolo">Titolo:{{ $advertisement->title }}</h5>

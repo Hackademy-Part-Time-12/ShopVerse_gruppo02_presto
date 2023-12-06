@@ -14,7 +14,7 @@
 
         {{-- immagine destra --}}
         <div class="col-12 col-md-4">
-            <img class="img-thumbnail shadow " src="Media\header3.svg" alt="">
+            <img class="img-thumbnail shadow " src="Media\header4.svg" alt="">
 
         </div>
     </div>

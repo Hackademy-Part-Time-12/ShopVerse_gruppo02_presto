@@ -39,7 +39,7 @@ class CreateAdvertisement extends Component
 
         $this->advertisement =$category->advertisements()->create($this->validate());
         $this->advertisement->user()->associate(Auth::user());
-        $this->advertisement->save();
+
 
         if (count($this->images)) {
             foreach ($this->images as $image) {
@@ -52,6 +52,7 @@ class CreateAdvertisement extends Component
 
       /*   session()->flash("PostCreate","Articolo aggiunto con successo");
         $this->reset(); //funzione per resettare i campi del form*/
+       
     }
 
 
