@@ -17,6 +17,9 @@
 
 <body class="color">
     <x-navbar />
+    
+
+
     {{-- da sistemare visualizzazione messaggio --}}
     @if (session('AccessoNegato'))
         <div class="alert alert-danger my-3  ">
@@ -25,8 +28,8 @@
     @endif
 
     <div class="container-fluid min-vh-100 ">
-        <div class="row ">
-
+        <div class="my-4 row ">
+        
             {{ $slot }}
 
         </div>
@@ -34,6 +37,18 @@
 
     </div>
     <x-footer />
+
+    </div> --}}
+
+
+{{-- SIDEBAR --}}
+
+
+
+
+
+
+
 
 </body>
 
