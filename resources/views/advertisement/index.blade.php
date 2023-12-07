@@ -7,15 +7,15 @@
             </div>
             <section class="container-fluid">
 
-                <div class="products-items row">
-                    <div class="col-md-3 col-sm-4 row product-height">
+                <div class="products-items row product-height">
+                   {{--  <div class="col-md-3 col-sm-4 row "> --}}
                         @forelse ($advertisement as $annunci)
-                            <div class="product-grid row my-2">
-                                <div class="product-image mx-2">
-                                    <img class="pic-1 mt-1 rounded image" src="{{!$annunci->images()->get()->isEmpty() ? $annunci->images()->first()->getUrl(300,200):'https://picsum.photos/200/300'}}">
+                            <div class="product-grid col-12 mx-2 col-md-3 my-2">
+                                <div class="product-image p-3 mx-2">
+                                    <img class="pic-1 rounded image" src="{{!$annunci->images()->get()->isEmpty() ? $annunci->images()->first()->getUrl(300,200):'https://picsum.photos/200/300'}}">
                                     <span class="product-discount-label">Nuovo</span>
                                     <ul class="product-links">
-                                        {{-- <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li> --}}
+                                         <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
 
                                         <li><a href="{{ route('categoryShow', ['category' => $annunci->category]) }}"
                                                 data-tip="Categoria"><i class="fa-solid fa-list"></i></a></li>
@@ -46,7 +46,7 @@
                             </div>
                         @endforelse
                         {{ $advertisement->links() }}
-                    </div>
+                   {{--  </div> --}}
 
                 </div>
             </section>
