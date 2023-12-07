@@ -15,15 +15,12 @@
     <title>ShopVerse</title>
 </head>
 
-<body class="color position-absolute ">
+<body class="color">
     <x-navbar />
-
-
-
     {{-- da sistemare visualizzazione messaggio --}}
-    @if (session('access.denied'))
-        <div>
-            <p class="text-danger text-center">{{ session('access.denied') }}</p>
+    @if (session('AccessoNegato'))
+        <div class="alert alert-danger my-3  ">
+            <p class="text-black text-center">{{ session('AccessoNegato') }}</p>
         </div>
     @endif
 
@@ -46,6 +43,6 @@
     </div> --}}
 </body>
 
-<x-script />
+
 
 </html>

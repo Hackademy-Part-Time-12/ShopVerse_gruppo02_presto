@@ -1,5 +1,5 @@
 <x-layout>
-        <section class="sezione tutto mt-5 pt-5">
+        <section class="sezione w-100  tutto mt-5 pt-5">
             <link rel="stylesheet" href="register.css">
             <div class="form-box">
                 <div class="form-value">
@@ -63,5 +63,5 @@
             </div>
         </section>
 
-        <x-script/>
+      
 </x-layout>

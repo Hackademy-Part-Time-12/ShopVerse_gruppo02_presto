@@ -40,6 +40,6 @@
                     </form>
                 </div>
             </div>
-    <x-script/>
+    
 </x-layout>
 
