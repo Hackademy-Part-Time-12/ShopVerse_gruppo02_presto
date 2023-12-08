@@ -18,6 +18,7 @@ use App\Http\Controllers\AdvertisementController;
 */
 //Rotte pincipali
 Route::get('/',[PublicController::class,'home'])->name('home');
+Route::get('/profilo/index',[PublicController::class,'index'])->name('profile.index');
 Route::get('/categoria/{category}',[PublicController::class, 'categoryShow'])->name('categoryShow');
 // Ricerca annuncio
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAdvertisements'])->name('advertisement.search');

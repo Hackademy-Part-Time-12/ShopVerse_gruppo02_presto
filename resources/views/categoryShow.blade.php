@@ -14,11 +14,9 @@
 
 
     <section class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="row">
+                <div class="row col-8 d-flex justify-content-center">
                     @forelse ($category->advertisements as $annunci)
-                        <div class="col-12 col-md-4 my-4">
+                        <div class="col-12 col-md-3 my-4  ">
                             <div class="card shadow" style="width: 18rem;">
                                 <img src="" alt="" class="card-img-top p-3 rounded">
                                 <div class="card-body">
@@ -47,11 +45,10 @@
                                     class="btn-link text-decoration-none">Nuovo Annuncio </a> </p>
                         </div>
                     @endforelse
-                    {{$advertisement->links()}}
+
 
                 </div>
-            </div>
-        </div>
+                {{$advertisement->links()}}
     </section>
 
 </x-layout>

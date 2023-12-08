@@ -5,7 +5,7 @@
 
     --gradient: linear-gradient(to bottom right, #3b9ae1, #a5f1e9);
     --primary-color: #46c4ea;
-    --secondary-color: #005BFD;
+    --secondary-color:rgb(27, 63, 148);
     --text-color:rgb(3, 36, 125);
     --btn-color:rgb(254, 254, 254);
 
@@ -28,6 +28,7 @@
 .second {
     color: var(--secondary-color);
     font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
 }
 
 .primaryColor {

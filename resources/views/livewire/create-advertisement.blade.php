@@ -1,7 +1,7 @@
 <section class=" container my-5 pt-3">
-    <div class="row justify-content-center pt-5 border border-primary rounded-3 shadow">
+    <div class="row justify-content-center bg-form  pt-5  ">
 
-        <h2 class="text-center fs-1 ">Inserisci Annuncio</h2>
+        <h2 class="text-center fs-1 second ">Inserisci Annuncio</h2>
 
 
 
@@ -20,7 +20,7 @@
             <form class="" wire:submit.prevent="store">
                 @csrf
                 <div class="mb-3 row ">
-                    <label for="title">Titolo annuncio</label>
+                    <label for=" text" class="second">Titolo annuncio</label>
                     <input type="text" wire:model.live="title" id="title"
                         class="@error('text') is-invalid @enderror border form-control">
                     @error('title')
@@ -31,7 +31,7 @@
 
 
                 <div class="mb-3 row">
-                    <label for="price">Prezzo</label>
+                    <label for="price"class="second" >Prezzo</label>
                     <input type="number" wire:model.live="price" id="price"
                         class="@error('text') is-invalid @enderror border form-control">
                     @error('price')
@@ -44,8 +44,8 @@
 
 
                 <div class="mb-3 row ">
-                    <select class=" form-control  " wire:model.defer="category" id="category"> {{-- defer fa in modo che le select non vadano in conflitto --}}
-                        <option value="">Scegli la categoria</option>
+                    <select class=" form-control second " wire:model.defer="category" id="category"> {{-- defer fa in modo che le select non vadano in conflitto --}}
+                        <option value="" class="second">Scegli la categoria</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
@@ -57,9 +57,9 @@
 
                 </div>
                 <div class="mb-3">
-                    <label for="body">Descrizione</label>
+                    <label for="body" class="second">Descrizione</label>
                     <textarea class="form-control border " wire:model.live="body" @error('body') is-invalid @enderror
-                        placeholder='Descrizione' id="body" cols="15" rows="6"></textarea>
+                        placeholder='Descrizione' id="body" cols="19" rows="6"></textarea>
                     @error('body')
                         <p class="text-danger ">{{ $message }}</p>
                     @enderror
@@ -76,7 +76,7 @@
                 @if (!empty($images))
                     <div class="row col">
                         <div class="col">
-                            <p>Anteprima</p>
+                            <p class="second">Anteprima</p>
                             <div class="row border border-4 border-info rounded shadow ">
                                 @foreach ($images as $key => $image)
                                     <div class=" my-3">
@@ -93,8 +93,8 @@
                     </div>
 
                 @endif
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="text-center ">
+                    <button type="submit" class="button-86">Salva</button>
 
                 </div>
 

@@ -9,6 +9,10 @@ use App\Models\Advertisement;
 class PublicController extends Controller
 {
 
+    public function index(){
+        $announcements = Advertisement::all();
+        return view("profile.index",compact("announcements"));
+    }
     public function home () {
 
         $annunci = Advertisement::where('is_accepted', true)->take(6)->get()->sortbyDesc('created_at');

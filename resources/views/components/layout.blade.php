@@ -25,7 +25,7 @@
     @endif
 
     <div class="container-fluid min-vh-100 ">
-        <div class="my-4 row ">
+        <div class="row ">
 
             {{ $slot }}
 
@@ -34,15 +34,7 @@
 
     </div>
     <x-footer />
- {{--    <div class="col-3 z-3 rounded-pill sticky-bottom mx-2 pb-3 ">
-        <button class="btn btn-primary rounded-pill" type="button"
-            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i>
-        </button>
 
-    </div> --}}
 </body>
-
-
 
 </html>
