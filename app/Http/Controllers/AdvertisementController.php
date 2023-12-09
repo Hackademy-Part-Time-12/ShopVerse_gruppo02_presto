@@ -50,7 +50,8 @@ class AdvertisementController extends Controller
      */
     public function edit(Advertisement $advertisement)
     {
-        //
+        $advertisement = $advertisement::all();
+        return view("advertisement.edit", compact("advertisement"));
     }
 
     /**

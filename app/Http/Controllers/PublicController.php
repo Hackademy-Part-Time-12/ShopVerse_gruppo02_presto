@@ -13,6 +13,7 @@ class PublicController extends Controller
         $announcements = Advertisement::all();
         return view("profile.index",compact("announcements"));
     }
+
     public function home () {
 
         $annunci = Advertisement::where('is_accepted', true)->take(6)->get()->sortbyDesc('created_at');
@@ -20,11 +21,14 @@ class PublicController extends Controller
 
         return view('welcome',compact('annunci'));
     }
+
     public function categoryShow(Category $category) {
         $advertisement = Advertisement::where('is_accepted', true)->paginate(5);
 
+
         return view('categoryShow',compact('category','advertisement'));
     }
+    
 
     public function searchAdvertisements (Request $request)
     {

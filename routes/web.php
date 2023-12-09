@@ -19,18 +19,23 @@ use App\Http\Controllers\AdvertisementController;
 //Rotte pincipali
 Route::get('/',[PublicController::class,'home'])->name('home');
 Route::get('/profilo/index',[PublicController::class,'index'])->name('profile.index');
+
 Route::get('/categoria/{category}',[PublicController::class, 'categoryShow'])->name('categoryShow');
+
 // Ricerca annuncio
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAdvertisements'])->name('advertisement.search');
 
 
 //Rotte per gli annunci
 Route::get('/nuovo/annuncio',[AdvertisementController::class,'create'])->middleware('auth')->name('advertisement.create');
+Route::get('/modifica/annuncio/{advertisement}',[AdvertisementController::class,'edit'])->name('advertisement.edit');
 Route::get('/dettaglio/annuncio/{advertisement}',[AdvertisementController::class,'show'])->name('advertisement.show');
 Route::get('/tutti/annunci',[AdvertisementController::class,'index'])->name('advertisement.index');
 
 
-// Rotta Revisore-Home
+
+
+// Rotte Revisore
 Route::get('/revisor/home', [RevisorController::class, 'indexRevisor'])->middleware('isRevisor')->name('revisor.index');
 // Rotta accetta annuncio-Revisore
 Route::patch('/accetta/annuncio/{advertisement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');

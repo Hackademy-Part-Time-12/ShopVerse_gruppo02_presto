@@ -25,6 +25,9 @@
                     <li class="nav-item my-2">
                         <x-_locale lang="en" nation="gb" />
                     </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link my-2" href="{{ route('advertisement.index') }}"><b class="navbarColor">Annunci</b> </a>
+                    </li>
 
                     <li class="nav-item my-2">
                         <a class="nav-link" aria-current="page" href="{{ route('register') }}"><b class="navbarColor">
@@ -33,16 +36,7 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link my-2" href="{{ route('login') }}"><b class="navbarColor">Accedi</b> </a>
                     </li>
-                    {{-- <li class="customLink d-flex align-items-center">
-                        <!-- Aggiunto il div con la classe 'round' per l'immagine dell'utente -->
 
-                        <!-- Aggiunto il testo "Benvenuto Utente" -->
-                     <li class="customLink dropdown  ">
-                        <img class="round ms-o img-fluid" src="/Media/user.png" alt="">
-                    <li class="nav-item mx-2">
-                        <b class="nav-link fw-bold my-2 navbarColor">Benvenuto Utente</b>
-
-                    </li> --}}
 
                 </ul>
             </div>
@@ -69,6 +63,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
+                    <li class="nav-item mt-4">
+                        <x-_locale lang="it" nation="it" />
+                    </li>
+                    <li class="nav-item mt-4">
+                        <x-_locale lang="fr" nation="fr" />
+                    </li>
+                    <li class="nav-item mt-4">
+                        <x-_locale lang="en" nation="gb" />
+                    </li>
                     @if (Route::currentRouteName() == 'advertisement.create')
                         {{-- Sezione Categorie --}}
                         <li class="customLink dropdown">
@@ -116,6 +119,7 @@
                                 href="{{ Route('advertisement.index') }}"><b class="navbarColor">Annunci</b> </a>
                         </li>
                     @endif
+                    
                     @if (Route::currentRouteName() == 'profile.index')
                         @if (Auth::User()->is_revisor)
                         <ul class="customLink  position-relative">
@@ -132,12 +136,11 @@
 
 
 
-                    <li class="customLink d-flex align-items-center">
+
                         <!-- Aggiunto il div con la classe 'round' per l'immagine dell'utente -->
 
                         <!-- Aggiunto il testo "Benvenuto Utente" -->
-                    <li class="customLink dropdown  ">
-                        <img class="round mt-4 me-1 img-fluid" src="/Media/user.png" alt="">
+                    <li class="customLink dropdown mt-2 ">
                         <a class="nav-link mt-3 dropdown-toggle fw-bold " href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <b class="navbarColor">{{ Auth::user()->name }}</b>

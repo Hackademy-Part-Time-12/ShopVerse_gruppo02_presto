@@ -64,8 +64,7 @@ class CreateAdvertisement extends Component {
         $this->reset();
 
 
-        /*   session()->flash("PostCreate","Articolo aggiunto con successo");
-          $this->reset(); //funzione per resettare i campi del form*/
+       
 
     }
 
