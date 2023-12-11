@@ -1,8 +1,5 @@
 <x-layout>
-
-    <x-navbar />
-        <section class="sezione tutto mt-5 pt-5">
-            <link rel="stylesheet" href="register.css">
+        <section class="sezione w-100   pt-5">
             <div class="form-box">
                 <div class="form-value">
                     <form class="" action="{{ route('register') }}" method="POST">
@@ -65,5 +62,5 @@
             </div>
         </section>
 
-        <x-script/>
+
 </x-layout>

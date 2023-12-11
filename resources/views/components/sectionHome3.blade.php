@@ -14,7 +14,7 @@
 
         {{-- immagine destra --}}
         <div class="col-12 col-md-4">
-            <img class="img-thumbnail shadow " src="Media\header3.svg" alt="">
+            <img class="img-thumbnail shadow " src="Media\header4.svg" alt="">
 
         </div>
     </div>
@@ -25,7 +25,7 @@
 </section>
 <div class="row text-center my-4">
     <div class="search row justify-content-center">
-        <form action="" method="GET" class="justify-content-center">
+        <form action="{{ route('advertisement.search') }}" method="GET" class="justify-content-center">
             <input type="search" class="searchTerm" name="searched" placeholder="Cosa cerchi?">
             <button type="submit" class="searchButton">
               <i class="fa fa-search"></i>

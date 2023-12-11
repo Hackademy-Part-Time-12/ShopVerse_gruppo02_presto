@@ -16,23 +16,25 @@
 </head>
 
 <body class="color">
-    <x-pointer />
     <x-navbar />
     {{-- da sistemare visualizzazione messaggio --}}
-    @if (session('access.denied'))
-        <div>
-            <p class="text-danger text-center">{{ session('access.denied') }}</p>
+    @if (session('AccessoNegato'))
+        <div class="alert alert-danger my-3  ">
+            <p class="text-black text-center">{{ session('AccessoNegato') }}</p>
         </div>
     @endif
-    <div class="container-fluid min-vh-100">
-        <div class="my-4 row ">
+
+    <div class="container-fluid min-vh-100 ">
+        <div class="row ">
+
             {{ $slot }}
+
         </div>
+
 
     </div>
     <x-footer />
-</body>
 
-<x-script />
+</body>
 
 </html>

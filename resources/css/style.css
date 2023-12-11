@@ -2,13 +2,18 @@
 
 
 @import'./navbar.css';
-@import'./pointer.css';
 @import'./register.css';
 @import './rootcolors.css';
 @import './button.css';
-@import'./footer.css';
 @import './cardPayment.css';
-@import './test.css'
+@import './test.css';
+@import './bottone.css';
+@import'./cardHome.css';
+@import './HeaderAdvertisements.css';
+@import'./inserisciAnnunci.css';
+@import './btnAnnuncio.css';
+@import'./linecategory.css';
+
 
 
 

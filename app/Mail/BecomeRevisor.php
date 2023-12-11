@@ -30,9 +30,9 @@ class BecomeRevisor extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Grazie per la tua richiesta',
+            subject: 'Richiesta di Revisore',
             from:new Address('no-reply@shopverse.it', 'ShopVerse'),
-            
+
         );
     }
 

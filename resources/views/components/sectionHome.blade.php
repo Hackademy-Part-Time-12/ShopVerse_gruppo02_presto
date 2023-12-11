@@ -1,16 +1,26 @@
 <section class=" container-fluid my-5 py-2">
+    @if (session('message'))
+    <div class="alert alert-primary my-5" role="alert">
+     <p class=" fw-bold ">{{ session('message') }}</p>
+    </div>
+    @elseif(session('accepted'))
+    <div class="alert alert-primary my-5" role="alert">
+        <p class=" fw-bold ">{{ session('accepted') }}</p>
+       </div>
+    @endif
+
 
     <div class="row justify-content-center my-5 py-1 align-items-center">
         <div class="col-12 col-md-6 text-center my-1">
-            <h2 class="fs-1 fw-bold  gradient ">Una vasta scelta di prodotti usati</h2>
-            <p class="fw-bold second ">Scegli anche tu di vendere in totale sicurezza</p>
+            <h2 class="fs-1 fw-bold  gradient ">{{ __('ui.frase1') }}</h2>
+            <p class="fw-bold second ">{{ __('ui.frase2') }}</p>
 
 
             @if (Auth::user())
                 <a href="{{ route('advertisement.create') }}"><button class="bn632-hover bn20 ">Inserisci
                         annuncio</button></a>
             @else
-                <a href="{{ route('register') }}"><button class="bn632-hover bn20 ">Registrati</button></a>
+                <a href="{{ route('register') }}"><button class="bn632-hover bn20 ">{{ __('ui.btn') }}</button></a>
             @endif
 
         </div>
@@ -21,5 +31,3 @@
 
 
 </section>
-
-

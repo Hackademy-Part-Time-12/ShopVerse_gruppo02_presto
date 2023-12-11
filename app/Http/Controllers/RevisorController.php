@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
-   
+
     public function indexRevisor(){
         $announcement_to_check = Advertisement::where('is_accepted', null)->first();
         return view ('revisor.index', compact('announcement_to_check'));
@@ -30,17 +30,14 @@ class RevisorController extends Controller
 
     public function becomeRevisor(){
         Mail::to('admim@shopverse.it')->send(new BecomeRevisor(Auth::user()));
-        
+
         return redirect()->back()->with('message', 'Complimenti hai richiesto di diventare revisore correttamente');
     }
 
     public function makeRevisor(User $user){
         Artisan::call('app:MakeUserRevisor',  ["email"=>$user->email]);
-        return redirect('/')->with('message', 'Complimenti l\'utente è diventato revisore');
+        return redirect('/')->with('accepted', "Complimenti $user->name è diventato revisore");
     }
 
-    public function annullaOperazione(Advertisement $advertisement){
-        $advertisement->setAccepted(null);
-        return redirect()->back()->with('message', 'Hai annullato l\'ultima operazione effettuata' );
-    }
+
 }

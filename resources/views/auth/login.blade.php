@@ -1,5 +1,5 @@
 <x-layout>
-    <x-navbar/>
+
 
         <section class="sezione tutto ">
 
@@ -40,8 +40,6 @@
                     </form>
                 </div>
             </div>
-        </section>
-   
-    <x-script/>
+    
 </x-layout>
 

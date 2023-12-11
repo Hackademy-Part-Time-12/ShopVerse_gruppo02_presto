@@ -1,0 +1,46 @@
+.line{
+   /*  background:
+    linear-gradient(to right, var( --text-color)2px, transparent 2px) 0 0,
+    linear-gradient(to right, var(--text-color)2px, transparent 2px) 0 100%,
+    linear-gradient(to left, var( --text-color)2px, transparent 2px) 100% 0,
+    linear-gradient(to left, var( --text-color)2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, var( --text-color)2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, var( --text-color)2px, transparent 2px) 100% 0,
+    linear-gradient(to top, var( --text-color)2px, transparent 2px) 0 100%,
+    linear-gradient(to top, var( --text-color)2px, transparent 2px) 100% 100%
+;*/
+ color: aliceblue;
+ font-size: medium;
+
+
+transition: 0.5s;
+text-decoration: 50px;
+}
+
+.line:hover{
+    letter-spacing: 1px;
+    border-bottom: 2px solid;
+    border-color:rgb(3, 36, 125);
+
+
+}
+/* .btn-primar {
+    background:
+        linear-gradient(to right, var(--btn-color)2px, transparent 2px) 0 0,
+        linear-gradient(to right, var(--btn-color)2px, transparent 2px) 0 100%,
+        linear-gradient(to left, var(--btn-color)2px, transparent 2px) 100% 0,
+        linear-gradient(to left, var(--btn-color)2px, transparent 2px) 100% 100%,
+        linear-gradient(to bottom, var(--btn-color)2px, transparent 2px) 0 0,
+        linear-gradient(to bottom, var(--btn-color)2px, transparent 2px) 100% 0,
+        linear-gradient(to top, var(--btn-color)2px, transparent 2px) 0 100%,
+        linear-gradient(to top, var(--btn-color)2px, transparent 2px) 100% 100%
+    ;
+
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    transition: 0.4s;
+}
+
+.btn-primar:hover {
+    letter-spacing: 2px;
+} */
