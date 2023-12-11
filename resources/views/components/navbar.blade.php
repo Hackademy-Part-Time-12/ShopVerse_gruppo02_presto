@@ -49,7 +49,7 @@
 @auth
     {{-- Sezione SX --}}
     <a href="{{ route('home') }}">
-        <div class="col-lg-2 position-fixed top-0 z-1 col-md-2 my-auto" style="max-width:150px;">
+        <div class="col-lg-2 col-3 position-fixed top-0 z-1 col-md-2 my-auto" style="max-width:150px;">
             <img src="/Media/Logo_ShopVerse_02.svg" alt="" class="img-fluid">
         </div>
     </a>
@@ -119,7 +119,7 @@
                                 href="{{ Route('advertisement.index') }}"><b class="navbarColor">{{__('ui.navAnnunci')}}</b> </a>
                         </li>
                     @endif
-                    
+
                     @if (Route::currentRouteName() == 'profile.index')
                         @if (Auth::User()->is_revisor)
                         <ul class="customLink  position-relative">
