@@ -17,8 +17,7 @@
 
 
             @if (Auth::user())
-                <a href="{{ route('advertisement.create') }}"><button class="bn632-hover bn20 ">Inserisci
-                        annuncio</button></a>
+                <a href="{{ route('advertisement.create') }}"><button class="bn632-hover bn20 ">{{__('ui.btnLog')}}</button></a>
             @else
                 <a href="{{ route('register') }}"><button class="bn632-hover bn20 ">{{ __('ui.btn') }}</button></a>
             @endif

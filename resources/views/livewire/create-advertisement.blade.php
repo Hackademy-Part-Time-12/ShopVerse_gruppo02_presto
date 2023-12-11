@@ -1,7 +1,7 @@
 <section class=" container my-5 pt-3">
     <div class="row justify-content-center bg-form  pt-5  ">
 
-        <h2 class="text-center fs-1 second ">Inserisci Annuncio</h2>
+        <h2 class="text-center fs-1 second ">{{__('ui.btnLog')}}</h2>
 
 
 
@@ -20,7 +20,7 @@
             <form class="" wire:submit.prevent="store">
                 @csrf
                 <div class="mb-3 row ">
-                    <label for=" text" class="second">Titolo annuncio</label>
+                    <label for=" text" class="second">{{__('ui.advTitolo')}}</label>
                     <input type="text" wire:model.live="title" id="title"
                         class="@error('text') is-invalid @enderror border form-control">
                     @error('title')
@@ -31,7 +31,7 @@
 
 
                 <div class="mb-3 row">
-                    <label for="price"class="second" >Prezzo</label>
+                    <label for="price"class="second" >{{__('ui.advPrezzo')}}</label>
                     <input type="number" wire:model.live="price" id="price"
                         class="@error('text') is-invalid @enderror border form-control">
                     @error('price')
@@ -45,7 +45,7 @@
 
                 <div class="mb-3 row ">
                     <select class=" form-control second " wire:model.defer="category" id="category"> {{-- defer fa in modo che le select non vadano in conflitto --}}
-                        <option value="" class="second">Scegli la categoria</option>
+                        <option value="" class="second">{{__('ui.advCategoria')}}</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
@@ -57,9 +57,9 @@
 
                 </div>
                 <div class="mb-3">
-                    <label for="body" class="second">Descrizione</label>
+                    <label for="body" class="second">{{__('ui.advDescrizione')}}</label>
                     <textarea class="form-control border " wire:model.live="body" @error('body') is-invalid @enderror
-                        placeholder='Descrizione' id="body" cols="19" rows="6"></textarea>
+                        placeholder="{{__('ui.advDescrizione')}}" id="body" cols="19" rows="6"></textarea>
                     @error('body')
                         <p class="text-danger ">{{ $message }}</p>
                     @enderror
@@ -76,7 +76,7 @@
                 @if (!empty($images))
                     <div class="row col">
                         <div class="col">
-                            <p class="second">Anteprima</p>
+                            <p class="second">{{__('ui.advAnteprima')}}</p>
                             <div class="row border border-4 border-info rounded shadow ">
                                 @foreach ($images as $key => $image)
                                     <div class=" my-3">
@@ -85,7 +85,7 @@
                                         </div>
                                         <button type="button"
                                             class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
-                                            wire:click="removeImage({{ $key }})">Cancella</button>
+                                            wire:click="removeImage({{ $key }})">{{__('ui.advCancella')}}</button>
                                     </div>
                                 @endforeach
                             </div>
@@ -94,7 +94,7 @@
 
                 @endif
                 <div class="text-center ">
-                    <button type="submit" class="button-86">Salva</button>
+                    <button type="submit" class="button-86">{{__('ui.advSalva')}}</button>
 
                 </div>
 

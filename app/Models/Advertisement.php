@@ -4,6 +4,7 @@ namespace App\Models;
 
 
 
+use App\Models\User;
 use App\Models\Image;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
@@ -14,7 +15,7 @@ class Advertisement extends Model
 {
     use HasFactory, Searchable;
     protected $fillable = [
-        "title","body","price","cover","user_id","category_id",
+        "title","body","price","cover","user_id","category_id", "category",
     ];
 
 
