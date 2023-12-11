@@ -1,9 +1,6 @@
 <x-layout>
-
     {{-- header Annunci --}}
-    <section class="container-fluid header p-0 ">
-
-
+    <section class="container-fluid headerCategory p-0 ">
         <div class="row">
             <!--Content before waves-->
             <div class="inner-header flex mb-5">
@@ -14,19 +11,17 @@
             <div class=" col-12 row text-center ms-2 my-5 ">
                 <div class="row col-12 justify-content-center">
                     @foreach ($categories as $categories)
-                         <li class=" row col-5 mx-1 col-md-1">
-                            <a class=" line  "
-                                href="{{ route('categoryShow', $categories) }}">{{ $categories->name }}
+                        <li class=" row col-3 mx-2 col-md-2">
+                            <a class=" line  " href="{{ route('categoryShow', $categories) }}">{{ $categories->name }}
                             </a>
                         </li>
-
                     @endforeach
                 </div>
 
 
             </div>
 
-            <section class=" col-11 col-md-9 d-flex justify-content-center container">
+            <section class=" col-11 col-md-9 d-flex justify-content-center container-fluid">
 
                 <div class="products-items w-100 justify-content-center  row product-height">
 
@@ -73,7 +68,7 @@
                         </div>
                     @endforelse
 
-                    {{ $advertisement->links() }}
+                   {{ $advertisement->links() }}
 
 
                 </div>

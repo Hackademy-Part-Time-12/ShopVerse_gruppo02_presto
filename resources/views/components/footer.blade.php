@@ -64,10 +64,10 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2023 Copyright:Lorenzo Montorsi-Salvatore Covelli-Giulia Gaudimundo-Alessio Cannella
+        © 2023 Copyright: Lorenzo Montorsi-Salvatore Covelli-Giulia Gaudimundo-Alessio Canella
 
     </div>
-    
+
 
 </footer>
 

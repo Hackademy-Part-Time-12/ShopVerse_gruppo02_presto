@@ -7,7 +7,7 @@
                 <h1 class="h1">{{ __('ui.allAnnouncements') }}</h1>
             </div>
 
-            <section class=" col-11 col-md-9 d-flex justify-content-center container">
+            <section class=" col-11 col-md-9 d-flex justify-content-center container-fluid">
 
                 <div class="products-items w-100 justify-content-center  row product-height">
 
@@ -18,8 +18,8 @@
                                     src="{{ !$annunci->images()->get()->isEmpty()? $annunci->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
                                 <span class="product-discount-label">Nuovo</span>
                                 <ul class="product-links">
-                                    <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a>
-                                    </li>
+                                   {{--  <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a>
+                                    </li> --}}
 
                                     <li><a href="{{ route('categoryShow', ['category' => $annunci->category]) }}"
                                             data-tip="Categoria"><i class="fa-solid fa-list"></i></a></li>
@@ -31,7 +31,7 @@
                             </div>
                             <div class="product-content mt-1">
                                 <h3 class="title text-black">{{ $annunci->title }}</h3>
-                                <div class="price"><span>{{ $annunci->price }}</span></div>
+                                <div class="price"><span>€ {{ $annunci->price }}</span></div>
                                 <div class="">
                                     <p class="card-footer text-black "><b>Pubblicato il:</b>
                                         {{ $annunci->created_at->format('d/m/y') }}<br>

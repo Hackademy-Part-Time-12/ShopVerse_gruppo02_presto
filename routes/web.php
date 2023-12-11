@@ -27,9 +27,9 @@ Route::get('/ricerca/annuncio', [PublicController::class, 'searchAdvertisements'
 
 
 //Rotte per gli annunci
-Route::get('/nuovo/annuncio',[AdvertisementController::class,'create'])->middleware('auth')->name('advertisement.create');
-Route::get('/modifica/annuncio/{advertisement}',[AdvertisementController::class,'edit'])->name('advertisement.edit');
-Route::get('/dettaglio/annuncio/{advertisement}',[AdvertisementController::class,'show'])->name('advertisement.show');
+Route::get('/annuncio/nuovo',[AdvertisementController::class,'create'])->middleware('auth')->name('advertisement.create');
+Route::get('/annuncio/modifica/{advertisement}',[AdvertisementController::class,'edit'])->name('advertisement.edit');
+Route::get('/annuncio/dettaglio/{advertisement}',[AdvertisementController::class,'show'])->name('advertisement.show');
 Route::get('/tutti/annunci',[AdvertisementController::class,'index'])->name('advertisement.index');
 
 
