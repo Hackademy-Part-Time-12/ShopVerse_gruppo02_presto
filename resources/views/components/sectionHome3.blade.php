@@ -8,7 +8,7 @@
         </div>
         {{-- scritta centrale --}}
         <div class="col-12 col-md-4 my-2 text-center align-self-center">
-            <h2 class="fs-1 fw-bold  gradient">Vasta scelta di articoli molte sezioni</h2>
+            <h2 class="fs-1 fw-bold  gradient">{{__('ui.home3')}}</h2>
 
         </div>
 
@@ -26,7 +26,7 @@
 <div class="row text-center my-4">
     <div class="search row justify-content-center">
         <form action="{{ route('advertisement.search') }}" method="GET" class="justify-content-center">
-            <input type="search" class="searchTerm" name="searched" placeholder="Cosa cerchi?">
+            <input type="search" class="searchTerm" name="searched" placeholder="{{__('ui.ricerca')}}">
             <button type="submit" class="searchButton">
               <i class="fa fa-search"></i>
            </button>

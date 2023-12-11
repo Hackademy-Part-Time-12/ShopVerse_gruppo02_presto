@@ -26,15 +26,15 @@
                         <x-_locale lang="en" nation="gb" />
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link my-2" href="{{ route('advertisement.index') }}"><b class="navbarColor">Annunci</b> </a>
+                        <a class="nav-link my-2" href="{{ route('advertisement.index') }}"><b class="navbarColor">{{__('ui.navAnnunci')}}</b> </a>
                     </li>
 
                     <li class="nav-item my-2">
                         <a class="nav-link" aria-current="page" href="{{ route('register') }}"><b class="navbarColor">
-                                Registrati</b></a>
+                                {{__('ui.btn')}}</b></a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link my-2" href="{{ route('login') }}"><b class="navbarColor">Accedi</b> </a>
+                        <a class="nav-link my-2" href="{{ route('login') }}"><b class="navbarColor">{{__('ui.navAccedi')}}</b> </a>
                     </li>
 
 
@@ -77,7 +77,7 @@
                         <li class="customLink dropdown">
                             <a class="nav-link dropdown-toggle mt-4 me-2 " href="#" id="categoriesDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <b class="navbarColor">Categorie</b></a>
+                                <b class="navbarColor">{{__('ui.navCategorie')}}</b></a>
 
                             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                                 @foreach ($categories as $category)
@@ -92,7 +92,7 @@
                         </li>
                     @else
                         <li class="customLink"><a class="d-inline-block my-3 p-3 text-decoration-none "
-                                href="{{ Route('advertisement.create') }}"><b class="navbarColor">Inserisci annunci</b> </a>
+                                href="{{ Route('advertisement.create') }}"><b class="navbarColor">{{__('ui.btnLog')}}</b> </a>
                         </li>
                     @endif
 
@@ -101,7 +101,7 @@
                         <li class="customLink dropdown">
                             <a class="nav-link dropdown-toggle mt-4 me-2 " href="#" id="categoriesDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <b class="navbarColor">Categorie</b></a>
+                                <b class="navbarColor">{{__('ui.navCategorie')}}</b></a>
 
                             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                                 @foreach ($categories as $category)
@@ -116,7 +116,7 @@
                         </li>
                     @else
                         <li class="customLink"><a class="d-inline-block my-3 me-3 pt-3 text-decoration-none "
-                                href="{{ Route('advertisement.index') }}"><b class="navbarColor">Annunci</b> </a>
+                                href="{{ Route('advertisement.index') }}"><b class="navbarColor">{{__('ui.navAnnunci')}}</b> </a>
                         </li>
                     @endif
                     
@@ -124,7 +124,7 @@
                         @if (Auth::User()->is_revisor)
                         <ul class="customLink  position-relative">
                             <a href="{{ route('revisor.index') }}" class="text-decoration-none mt-4 pt-2 me-4">
-                          <b class="navbarColor">Zona Revisione</b>
+                          <b class="navbarColor">{{__('ui.btnRevisore')}}</b>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {{ App\Models\Advertisement::toBeRevisionedCount() }}
                               <span class="visually-hidden">Messaggi non Letti</span>
@@ -148,14 +148,14 @@
 
                         <ul class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
                             <li>
-                                <a class="dropdown-item fw-bold" href="{{ route('profile.index') }}">Profilo</a>
+                                <a class="dropdown-item fw-bold" href="{{ route('profile.index') }}">{{__('ui.btnProfilo')}}</a>
                             </li>
 
 
 
 
                             <li>
-                                <a class="dropdown-item fw-bold" id="btn" href="#">logout</a>
+                                <a class="dropdown-item fw-bold" id="btn" href="#">Logout</a>
                             </li>
 
                             <form action="{{ route('logout') }}" method="POST" id="form">

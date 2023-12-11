@@ -3,7 +3,7 @@
     <section class="container-fluid my-5">
         <div class="col-12 row my-5">
             <div class="my-5 py-5 text-center">
-                <h1>Benvenuto {{Auth::user()->name }}</h1>
+                <h1>{{__('ui.ciao')}} {{Auth::user()->name }}</h1>
             </div>
 
 
@@ -45,9 +45,9 @@
                     </div>
                 @empty
                     <div class="col-12 my-4">
-                        <p class="fs-1 p-3">Non sono presenti annunci </p>
-                        <p class="fs-2 text-center">Pubblicane uno: <a href="{{ route('advertisement.create') }}"
-                                class="btn-link text-decoration-none">Nuovo Annuncio </a> </p>
+                        <p class="fs-1 p-3">{{__('ui.advNo')}}</p>
+                        <p class="fs-2 text-center">{{__('ui.advNo2')}}<a href="{{ route('advertisement.create') }}"
+                                class="btn-link text-decoration-none">{{__('ui.advNew')}} </a> </p>
                     </div>
                 @endforelse
 

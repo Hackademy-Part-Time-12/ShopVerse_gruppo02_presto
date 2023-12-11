@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h3 class="fs-2 fw-bold ms-4 p-3 gradient">Ultime inserzioni aggiunte</h3>
+    <h3 class="fs-2 fw-bold ms-4 p-3 gradient">{{__('ui.home4')}}</h3>
 </div>
 
 

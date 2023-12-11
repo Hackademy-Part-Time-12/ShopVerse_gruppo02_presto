@@ -4,7 +4,7 @@
         <div class="row">
             <!--Content before waves-->
             <div class="inner-header flex mb-5">
-                <h1 class="h1">{{ __('ui.Categorie') }} {{ $category->name }}</h1>
+                <h1 class="h1">{{ $category->name }}</h1>
             </div>
 
 
@@ -30,7 +30,7 @@
                             <div class="product-image p-3">
                                 <img class="pic-1 rounded image"
                                     src="{{ !$annunci->images()->get()->isEmpty()? $annunci->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
-                                <span class="product-discount-label">Nuovo</span>
+                                <span class="product-discount-label">{{__('ui.btnCardNuovo')}}</span>
                                 <ul class="product-links">
                                     {{-- <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a>
                                     </li> --}}
@@ -62,9 +62,9 @@
                         </div>
                     @empty
                         <div class="col-12 my-4">
-                            <p class="fs-1 p-3 text-start ">Non sono presenti annunci </p>
-                            <p class="fs-2 text-center">Pubblicane uno: <a href="{{ route('advertisement.create') }}"
-                                    class="btn-link text-decoration-none">Nuovo Annuncio </a> </p>
+                            <p class="fs-1 p-3 text-start ">{{__('ui.advNo')}} </p>
+                            <p class="fs-2 text-center">{{__('ui.advNo2')}} <a href="{{ route('advertisement.create') }}"
+                                    class="btn-link text-decoration-none">{{__('ui.advNew')}}</a> </p>
                         </div>
                     @endforelse
 
