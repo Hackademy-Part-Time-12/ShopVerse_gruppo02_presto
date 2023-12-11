@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AdvertisementController;
+use App\Http\Controllers\PayPalController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +56,8 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 Route::post('/lingua/{lang}',[PublicController::class,'setLanguage'])->name('set_language_locale');
 
 
+//PayPal
+Route::get('/paypal/{advertisement}', [PayPalController::class, 'index'])->name('paypal.index');
+Route::get('/paypal/payment/buy/{price}', [PayPalController::class, 'payment'])->name('paypal.payment');
+Route::get('/paypal/payment/success', [PayPalController::class, 'paymentSuccess'])->name('paypal.payment.success');
+Route::get('/paypal/payment/cancel', [PayPalController::class, 'paymentCancel'])->name('paypal.payment/cancel');
