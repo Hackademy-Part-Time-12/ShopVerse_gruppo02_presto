@@ -1,6 +1,6 @@
 <x-layout>
     {{-- header Annunci --}}
-    <section class="container-fluid headerCategory p-0 ">
+    <section class="container-fluid headerCategory p-1 ">
         <div class="row">
             <!--Content before waves-->
             <div class="inner-header flex mb-5">
@@ -30,7 +30,7 @@
                             <div class="product-image p-3">
                                 <img class="pic-1 rounded image"
                                     src="{{ !$annunci->images()->get()->isEmpty()? $annunci->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
-                                <span class="product-discount-label">{{__('ui.btnCardNuovo')}}</span>
+                                <span class="product-discount-label">{{ $annunci->created_at->format('d/m/y') }}<span>
                                 <ul class="product-links">
                                     {{-- <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a>
                                     </li> --}}
