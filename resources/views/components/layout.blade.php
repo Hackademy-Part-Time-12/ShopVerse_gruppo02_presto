@@ -21,11 +21,12 @@
 
 
 
+
     {{-- da sistemare visualizzazione messaggio --}}
     @if (session('AccessoNegato'))
-        <div class="alert alert-danger my-3  ">
-            <p class="text-black text-center">{{ session('AccessoNegato') }}</p>
-        </div>
+    <div class="alert alert-danger my-3  ">
+        <p class="text-black text-center">{{ session('AccessoNegato') }}</p>
+    </div>
     @endif
 
     <div class="container-fluid min-vh-100 ">
@@ -39,6 +40,19 @@
     </div>
 
     <x-footer />
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
