@@ -1,9 +1,8 @@
-
 <footer class="bg-primary text-center text-white">
     <!-- Grid container -->
     <div class="container d-flex justify-content-between  p-4">
-
-
+ 
+ 
         <!-- Section: Form -->
         {{-- <section class=" col-6">
             <form action="">
@@ -16,7 +15,7 @@
                         </p>
                     </div>
                     <!--Grid column-->
-
+ 
                     <!--Grid column-->
                     <div class="col-md-5 col-12">
                         <!-- Email input -->
@@ -26,10 +25,10 @@
                         </div>
                     </div>
                     <!--Grid column-->
-
+ 
                     <!--Grid column-->
                     <div class="col-auto">
-
+ 
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-outline-light mb-4">
                             Subscribe
@@ -41,33 +40,32 @@
             </form>
         </section> --}}
         <!-- Section: Form -->
-
-
+ 
+ 
         <!-- Section: Text -->
-
-
+ 
+ 
             <div class="col-4">
                 <p class="mb-0 f_400 text-left fw-bold">{{__('ui.rvFooter')}}</p>
                 <a href="{{ route('become.revisor') }}" class="text-decoration-none"><button type="submit"
                         class="button-53">{{__('ui.rvFooter2')}}</button></a>
             </div>
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
         <!-- Section: Text -->
-
-
+ 
+ 
     </div>
     <!-- Grid container -->
-
+ 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2023 Copyright: Lorenzo Montorsi-Salvatore Covelli-Giulia Gaudimundo-Alessio Canella
-
+        © 2023 Copyright:Lorenzo Montorsi-Salvatore Covelli-Giulia Gaudimundo-Alessio Cannella
+ 
     </div>
 
 
 </footer>
-

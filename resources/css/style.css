@@ -5,7 +5,6 @@
 @import'./register.css';
 @import './rootcolors.css';
 @import './button.css';
-@import './cardPayment.css';
 @import './test.css';
 @import './bottone.css';
 @import'./cardHome.css';
@@ -14,7 +13,7 @@
 @import './btnAnnuncio.css';
 @import'./linecategory.css';
 
-
+@import'./sidebar.css';
 
 
 

@@ -35,7 +35,7 @@ return[
     "ciao" =>"Salut",
     "IndexRevisore" =>"Voici l'annonce pour examen",
     "noIndexRevisore" =>"Il n'y a aucune annonce à examiner",
-
-
-
+    "Dettaglio" => "Detailes",
+    "Compra" => "Acheter",
+    "Categoria" => "Catégorie ",
 ];

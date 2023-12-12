@@ -1,0 +1,94 @@
+* {
+    
+}
+
+.menu_utility {
+    
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 10vh; /* Adjusted top position for a smaller gap above */
+   
+    bottom: 10vh; /* Adjusted bottom position for a smaller gap below */
+    min-height: 80vh; /* Adjusted min-height for a smaller menu */
+    background: #262433;
+}
+
+.navigation {
+    margin-right: 20px;
+    position: relative;
+    width: 40px; /* Adjusted width for a smaller menu */
+    height: auto; /* Adjusted height for a smaller menu */
+    background: linear-gradient(orange, purple);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s;
+}
+
+.navigation.active {
+    width: 100px;
+    height: 200px;
+    transition-delay: 0s;
+    
+}
+
+.navigation span {
+    position: absolute;
+    
+    width: 7px;
+    height: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translate(calc(12px * var(--x)), calc(12px * var(--y)));
+    transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+
+    
+}
+
+
+.navigation.active span {
+    align-items: center;
+    justify-items: center;
+   
+    top: 15vh;
+    width: 45px;
+    height: 45px;
+    background: #333849;
+    transform: translate(0, -50%) translate(0, calc(60px * var(--i))); /* Modifica la traslazione verticale */
+    transition: transform 0.5s, width 0.5s, height 0.5s, background 1s;
+    transition-delay: calc(0.1s * var(--i)); /*rallenta l'animazione di apertura degli items della nav*/
+}
+
+.navigation span ion-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    font-size: 0em;
+    
+}
+
+.navigation.active span ion-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.35em;
+    color: #fff;
+}
+
+.navigation.active span:hover ion-icon {
+    color: #2dfc52;
+    filter: drop-shadow(0 0 2px #2dfc52) drop-shadow(0 0 5px #2dfc52)
+        drop-shadow(0 0 15px #2dfc52);
+}
