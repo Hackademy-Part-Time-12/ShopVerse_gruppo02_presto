@@ -1,13 +1,13 @@
 <x-layout>
     {{-- header Annunci --}}
     <section class="container-fluid headerCategory p-0 ">
-        <div class="row">
+        <div class="row ">
             <!--Content before waves-->
             <div class="inner-header flex mb-5">
                 <h1 class="h1">{{ $category->name }}</h1>
             </div>
 
-
+           {{-- Sezione menu categorie --}}
             <div class=" col-12 row text-center ms-2 my-5 ">
                 <div class="row col-12 justify-content-center">
                     @foreach ($categories as $categories)
@@ -35,11 +35,13 @@
                                     {{-- <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a>
                                     </li> --}}
 
-                                    <li><a href="{{route('paypal.index', $annunci)}}" data-tip="{{__('ui.Compra')}}"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                    <li><a href="{{ route('paypal.index', $annunci) }}"
+                                            data-tip="{{ __('ui.Compra') }}"><i
+                                                class="fa-solid fa-cart-shopping"></i></a></li>
 
                                     <li>
-                                        <a href="{{ route('advertisement.show', $annunci) }}" data-tip="{{__('ui.Dettaglio')}}"><i
-                                                class="fa fa-search"></i></a>
+                                        <a href="{{ route('advertisement.show', $annunci) }}"
+                                            data-tip="{{ __('ui.Dettaglio') }}"><i class="fa fa-search"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -59,13 +61,14 @@
                         </div>
                     @empty
                         <div class="col-12 my-4">
-                            <p class="fs-1 p-3 text-start ">{{__('ui.advNo')}} </p>
-                            <p class="fs-2 text-center">{{__('ui.advNo2')}} <a href="{{ route('advertisement.create') }}"
-                                    class="btn-link text-decoration-none">{{__('ui.advNew')}}</a> </p>
+                            <p class="fs-1 p-3 text-start ">{{ __('ui.advNo') }} </p>
+                            <p class="fs-2 text-center">{{ __('ui.advNo2') }} <a
+                                    href="{{ route('advertisement.create') }}"
+                                    class="btn-link text-decoration-none">{{ __('ui.advNew') }}</a> </p>
                         </div>
                     @endforelse
 
-                   {{ $advertisement->links() }}
+                    {{ $advertisement->links() }}
 
 
                 </div>
