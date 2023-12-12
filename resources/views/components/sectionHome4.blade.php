@@ -17,7 +17,7 @@
             </div>
 
 
-
+        
         </div>
     @else
         <div class="col-12 my-4">
@@ -27,4 +27,5 @@
         </div>
 
     @endif
+
 </section>
