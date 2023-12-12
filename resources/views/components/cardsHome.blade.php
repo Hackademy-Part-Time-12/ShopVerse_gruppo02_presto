@@ -14,7 +14,7 @@
         </ul>
     </div>
     <div class="product-content">
-        <h3 class="title">{{ $advertisement->title }}</h3>
+        <h3 class="title mt-4">{{ $advertisement->title }}</h3>
         <div class="price"><span>€ {{ $advertisement->price }}</span></div>
         <div class="">
             <p class="card-footer"><b>Pubblicato il: </b>{{ $advertisement->created_at->format('d/m/y') }}</p>

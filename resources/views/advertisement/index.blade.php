@@ -18,12 +18,9 @@
                                     src="{{ !$annunci->images()->get()->isEmpty()? $annunci->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
                                 <span class="product-discount-label">{{ $annunci->created_at->format('d/m/y') }}</span>
                                 <ul class="product-links">
-                                   {{--  <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a>
-                                    </li> --}}
+                                    
 
-                                    <li><a href="{{ route('categoryShow', ['category' => $annunci->category]) }}"
-                                            data-tip="Categoria"><i class="fa-solid fa-list"></i></a></li>
-
+                                    
                                     <li><a href="{{ route('advertisement.show', $annunci) }}" data-tip="Dettaglio"><i
                                                 class="fa fa-search"></i></a>
                                     </li>

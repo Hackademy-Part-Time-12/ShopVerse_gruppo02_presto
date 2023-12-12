@@ -35,10 +35,7 @@
                                     {{-- <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a>
                                     </li> --}}
 
-                                    <li>
-                                        <a href="{{ route('categoryShow', ['category' => $annunci->category]) }}"
-                                            data-tip="Categoria"><i class="fa-solid fa-list"></i></a>
-                                    </li>
+                                    <li><a href="{{route('paypal.index', $annunci)}}" data-tip="Compra"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
                                     <li>
                                         <a href="{{ route('advertisement.show', $annunci) }}" data-tip="Dettaglio"><i
