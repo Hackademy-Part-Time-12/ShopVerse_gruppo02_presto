@@ -1,6 +1,6 @@
 <x-layout>
     {{-- Header Titolo annuncio --}}
-    <header class="container-fluid p-5">
+    <header class="container-fluid p-5 mt-4">
         <div class="row">
             <div class="col-12 p-5">
                 <h1 class="display-2 text-center">Annuncio: {{ $advertisement->title }}</h1>
@@ -12,7 +12,7 @@
     <section class="container mb-5 pb-3">
         <div class="row col-12 align-items-center">
 
-            <div id="showCarousel" class=" col-6 carousel slide " data-bs-ride="carousel">
+            <div id="showCarousel" class=" col-6 carousel slide ms-5 " data-bs-ride="carousel">
 
                 @if ($advertisement->images)
                     <div class="carousel-inner rounded">
@@ -60,7 +60,7 @@
 
 
 
-            <div class="col-5">
+            <div class="col-4 ms-5">
                 <div class="my-2 card-body ">
                     <h5 class="card-titolo">Titolo:{{ $advertisement->title }}</h5>
                     <p class="card-text"><b>Descrizione:</b> {{ $advertisement->body }} </p>
@@ -79,7 +79,23 @@
 
             </div>
         </div>
+        <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
 
     </section>
+    
 
 </x-layout>
