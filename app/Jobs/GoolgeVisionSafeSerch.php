@@ -34,10 +34,11 @@ class GoolgeVisionSafeSerch implements ShouldQueue
             return;
         }
 
-        $image = file_get_contents(storage_path('app/public' . $i->path));
+        $image = file_get_contents(storage_path('app/public/' . $i->path));
         //imposta la variabile di ambiente GOOGLE_APPLICATION_CREDENTIALS
         // al path del credentials file
         putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
+
 
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->safeSearchDetection($image);
@@ -55,11 +56,11 @@ class GoolgeVisionSafeSerch implements ShouldQueue
             'text-secondary fas fa-circle', 'text-success fas fa-circle', 'text-success fas fa-circle',
             'text-warning fas fa-circle', 'text-warning fas fa-circle', 'text-danger fas ga fa-circle',
         ];
-        $i->adult = $likelihoodName['$adult'];
-        $i->medical = $likelihoodName['$medical'];
-        $i->spoof = $likelihoodName['$spoof'];
-        $i->violence = $likelihoodName['$violence'];
-        $i->racy = $likelihoodName['$racy'];
+        $i->adult = $likelihoodName[$adult];
+        $i->medical = $likelihoodName[$medical];
+        $i->spoof = $likelihoodName[$spoof];
+        $i->violence = $likelihoodName[$violence];
+        $i->racy = $likelihoodName[$racy];
         $i->save();
     }
 }

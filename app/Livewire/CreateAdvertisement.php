@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Jobs\GoogleVisionLabelImage;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
@@ -60,6 +61,7 @@ class CreateAdvertisement extends Component {
 
                 dispatch(new ResizeImage($newImage->path,300,200));
                 dispatch(new GoolgeVisionSafeSerch($newImage->id)); // ho scritto male la classe doveva essere GoogleVisionSafeSearch
+                dispatch(new GoogleVisionLabelImage($newImage->id));
             }
             File::deleteDirectory(storage_path("/app/livewire-tmp"));
         }
