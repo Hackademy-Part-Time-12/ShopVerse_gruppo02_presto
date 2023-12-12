@@ -35,4 +35,7 @@ return[
     "ciao" =>"Ciao ",
     "IndexRevisore" => "Ecco l'annuncio da revisionare",
     "noIndexRevisore" =>"Non ci sono annunci da revisionare",
+    "Dettaglio" => "Dettaglio",
+    "Compra" => "Compra",
+    "Categoria" => "Categoria",
 ];

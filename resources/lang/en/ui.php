@@ -35,4 +35,7 @@ return[
     "ciao" =>"Hi ",
     "IndexRevisore" =>"Here is the ad for review",
     "noIndexRevisore" =>"There are no ads to review",
+    "Dettaglio" => "Details",
+    "Compra" => "Buy",
+    "Categoria" => "Categories",
 ];

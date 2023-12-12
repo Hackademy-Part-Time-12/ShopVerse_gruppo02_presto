@@ -35,10 +35,10 @@
                                     {{-- <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a>
                                     </li> --}}
 
-                                    <li><a href="{{route('paypal.index', $annunci)}}" data-tip="Compra"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                    <li><a href="{{route('paypal.index', $annunci)}}" data-tip="{{__('ui.Compra')}}"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
                                     <li>
-                                        <a href="{{ route('advertisement.show', $annunci) }}" data-tip="Dettaglio"><i
+                                        <a href="{{ route('advertisement.show', $annunci) }}" data-tip="{{__('ui.Dettaglio')}}"><i
                                                 class="fa fa-search"></i></a>
                                     </li>
                                 </ul>
