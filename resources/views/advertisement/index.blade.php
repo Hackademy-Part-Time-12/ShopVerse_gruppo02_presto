@@ -18,9 +18,9 @@
                                     src="{{ !$annunci->images()->get()->isEmpty()? $annunci->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
                                 <span class="product-discount-label">{{ $annunci->created_at->format('d/m/y') }}</span>
                                 <ul class="product-links">
-                                    
 
-                                    
+
+
                                     <li><a href="{{ route('advertisement.show', $annunci) }}" data-tip="Dettaglio"><i
                                                 class="fa fa-search"></i></a>
                                     </li>

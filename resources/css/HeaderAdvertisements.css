@@ -81,7 +81,7 @@
   animation-delay: -5s;
   animation-duration: 20s;
 }
-@keyframes move-forever {
+ @keyframes move-forever {
   0% {
    transform: translate3d(-90px,0,0);
   }
@@ -89,7 +89,7 @@
     transform: translate3d(85px,0,0);
   }
 }
-/*Shrinking for mobile*/
+/*Shrinking for mobile */
 @media (max-width: 768px) {
   .waves {
     height:40px;

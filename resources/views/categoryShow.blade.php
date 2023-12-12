@@ -1,6 +1,6 @@
 <x-layout>
     {{-- header Annunci --}}
-    <section class="container-fluid headerCategory ">
+    <section class="container-fluid headerCategory p-0 ">
         <div class="row">
             <!--Content before waves-->
             <div class="inner-header flex mb-5">

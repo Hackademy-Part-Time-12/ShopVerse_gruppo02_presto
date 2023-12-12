@@ -30,7 +30,7 @@
     @endif
 
     <div class="container-fluid min-vh-100 ">
-        <div class="my-4 row ">
+        <div class=" row ">
 
             {{ $slot }}
 
