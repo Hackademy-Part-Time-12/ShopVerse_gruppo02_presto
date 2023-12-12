@@ -71,7 +71,7 @@
 
 @media (max-width: 991px) {
   .contenitoreimmagine {
-   
+    width: 15vh;
     position: absolute;
     overflow: hidden;
   }
