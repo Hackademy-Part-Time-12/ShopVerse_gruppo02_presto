@@ -44,7 +44,7 @@
                                 </ul>
                             </div>
                             <div class="product-content mt-1">
-                                <h3 class="title text-black">{{ $annunci->title }}</h3>
+                                <h3 class="title text-black mt-3">{{ $annunci->title }}</h3>
                                 <div class="price"><span>{{ $annunci->price }}</span></div>
                                 <div class="">
                                     <p class="card-footer text-black "><b>Pubblicato il:</b>
