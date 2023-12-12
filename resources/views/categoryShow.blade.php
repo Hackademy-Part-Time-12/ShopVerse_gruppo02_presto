@@ -35,19 +35,16 @@
                                     {{-- <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a>
                                     </li> --}}
 
-                                    <li>
-                                        <a href="{{ route('categoryShow', ['category' => $annunci->category]) }}"
-                                            data-tip="Categoria"><i class="fa-solid fa-list"></i></a>
-                                    </li>
+                                    <li><a href="{{route('paypal.index', $annunci)}}" data-tip="{{__('ui.Compra')}}"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
                                     <li>
-                                        <a href="{{ route('advertisement.show', $annunci) }}" data-tip="Dettaglio"><i
+                                        <a href="{{ route('advertisement.show', $annunci) }}" data-tip="{{__('ui.Dettaglio')}}"><i
                                                 class="fa fa-search"></i></a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="product-content mt-1">
-                                <h3 class="title text-black">{{ $annunci->title }}</h3>
+                                <h3 class="title text-black mt-3">{{ $annunci->title }}</h3>
                                 <div class="price"><span>{{ $annunci->price }}</span></div>
                                 <div class="">
                                     <p class="card-footer text-black "><b>Pubblicato il:</b>
