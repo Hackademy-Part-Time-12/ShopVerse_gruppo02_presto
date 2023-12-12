@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 p-5">
                 <h2>
-                    {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
+                    {{ $announcement_to_check ? __('ui.indexRevisore') : __('ui.noIndexRevisore')}}
                 </h2>
             </div>
         </div>
@@ -59,8 +59,8 @@
 
                         <div class="card-body ">
                             <h5 class="card-title">{{ $announcement_to_check->title }}</h5>
-                            <p class="card-text"><b>Descrizione:</b><br>{{ $announcement_to_check->body }}</p>
-                            <p class="card-text"><b>Prezzo:</b>{{ $announcement_to_check->price }}</p>
+                            <p class="card-text"><b>{{__('ui.advDescrizione')}}</b><br>{{ $announcement_to_check->body }}</p>
+                            <p class="card-text"><b>{{__('ui.advPrezzo')}}</b>{{ $announcement_to_check->price }}</p>
                         </div>
                         {{-- Dettaglio --}}
                         <div class="row my-2">

@@ -3,7 +3,7 @@
 
     <section class="hero-section col-12 row rounded-3   ">
         <div class="col-6 text-center my-4">
-            <h2 class="fs-1 fw-bold text-color">Molte categorie pensate per te</h2>
+            <h2 class="fs-1 fw-bold text-color">{{__('ui.home2')}}</h2>
 
         </div>
 

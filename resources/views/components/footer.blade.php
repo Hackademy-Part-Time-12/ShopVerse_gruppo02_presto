@@ -5,7 +5,7 @@
 
 
         <!-- Section: Form -->
-        <section class=" col-6">
+        {{-- <section class=" col-6">
             <form action="">
                 <!--Grid row-->
                 <div class="row d-flex justify-content-center">
@@ -39,7 +39,7 @@
                 </div>
                 <!--Grid row-->
             </form>
-        </section>
+        </section> --}}
         <!-- Section: Form -->
 
 
@@ -47,9 +47,9 @@
 
 
             <div class="col-4">
-                <p class="mb-0 f_400 text-left fw-bold"> Vuoi lavorare con noi? </p>
+                <p class="mb-0 f_400 text-left fw-bold">{{__('ui.rvFooter')}}</p>
                 <a href="{{ route('become.revisor') }}" class="text-decoration-none"><button type="submit"
-                        class="button-53"> Diventa revisore</button></a>
+                        class="button-53">{{__('ui.rvFooter2')}}</button></a>
             </div>
 
 
