@@ -2,7 +2,7 @@
     {{-- Sezione SX --}}
 
     <a href="{{ route('home') }}">
-        <div class="col-1 col-lg-2 position-fixed top-0 z-3 my-1">
+        <div class="col-1 col-lg-2 top-0 z-3 my-1 contenitoreimmagine">
             <img src="/Media/Logo_ShopVerse_02.svg" alt="" class="img-fluid">
         </div>
     </a>

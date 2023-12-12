@@ -68,3 +68,19 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 991px) {
+  .contenitoreimmagine {
+   
+    position: absolute;
+    overflow: hidden;
+  }
+}
+
+  @media (min-width: 992px) {
+    .contenitoreimmagine {
+      display: flex;
+      position: fixed;
+      overflow: hidden;
+    }
+}
