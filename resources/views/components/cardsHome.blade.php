@@ -8,9 +8,11 @@
                     <ul class="product-links">
                     <li><a href="{{route('paypal.index', $advertisement)}}" data-tip="{{__('ui.Compra')}}"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
-            <li><a href="{{ route('categoryShow', ['category' => $advertisement->category])}}" data-tip="{{__('ui.Categoria')}}"><i class="fa-solid fa-list"></i></a></li>
+            <li><a href="{{ route('categoryShow', ['category' => $advertisement->category]) }}"
+                    data-tip="{{ __('ui.Categoria') }}"><i class="fa-solid fa-list"></i></a></li>
 
-            <li><a href="{{ route('advertisement.show', $advertisement) }}" data-tip="{{__('ui.Dettaglio')}}"><i class="fa fa-search"></i></a></li>
+            <li><a href="{{ route('advertisement.show', $advertisement) }}" data-tip="{{ __('ui.Dettaglio') }}"><i
+                        class="fa fa-search"></i></a></li>
         </ul>
     </div>
     <div class="product-content">

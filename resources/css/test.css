@@ -41,7 +41,7 @@
    /*  width: 100%; */
   }
 
-  @media(min-width: 540px){
+/*   @media(min-width: 540px){
     .card-grid{
       grid-template-columns: repeat(2, 1fr);
     }
@@ -51,7 +51,7 @@
     .card-grid{
       grid-template-columns: repeat(4, 1fr);
     }
-  }
+  } */
 
   .card1{
     list-style: none;
