@@ -1,7 +1,7 @@
 <x-layout>
     {{-- header Annunci --}}
     <section class="container-fluid header p-0 ">
-        <div class="row">
+        <div class="row p-0">
             <!--Content before waves-->
             <div class="inner-header flex mb-5">
                 <h1 class="h1">{{ __('ui.allAnnouncements') }}</h1>
@@ -9,7 +9,7 @@
 
             <section class=" col-11 col-md-9 d-flex justify-content-center container-fluid">
 
-                <div class="products-items w-100 justify-content-center  row product-height">
+                <div class="products-items  justify-content-center  row product-height">
 
                     @forelse ($advertisement as $annunci)
                         <div class="product-grid mx-1 col-md-5 my-2">
@@ -18,9 +18,9 @@
                                     src="{{ !$annunci->images()->get()->isEmpty()? $annunci->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
                                 <span class="product-discount-label">{{ $annunci->created_at->format('d/m/y') }}</span>
                                 <ul class="product-links">
-                                    
 
-                                    
+
+
                                     <li><a href="{{ route('advertisement.show', $annunci) }}" data-tip="Dettaglio"><i
                                                 class="fa fa-search"></i></a>
                                     </li>

@@ -69,18 +69,4 @@
   object-fit: cover;
 }
 
-@media (max-width: 991px) {
-  .contenitoreimmagine {
-    width: 15vh;
-    position: absolute;
-    overflow: hidden;
-  }
-}
 
-  @media (min-width: 992px) {
-    .contenitoreimmagine {
-      display: flex;
-      position: fixed;
-      overflow: hidden;
-    }
-}
