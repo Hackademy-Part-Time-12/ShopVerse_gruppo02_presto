@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
-/* use App\Jobs\RemoveFaces; */
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 
 
@@ -64,12 +64,12 @@ class CreateAdvertisement extends Component
                 $newImage = $this->advertisement->images()->create(["path" => $image->store("$newFileName", "public")]);
                 dispatch(new WatermarkImmagini($newImage->id));
 
-             /*    RemoveFaces::withChain([
+                RemoveFaces::withChain([
                     new ResizeImage($newImage->path, 300, 200),
                     new GoolgeVisionSafeSerch($newImage->id), // ho scritto male la classe doveva essere GoogleVisionSafeSearch
                     new GoogleVisionLabelImage($newImage->id),
                     new WatermarkImmagini($newImage->id),
-                ])->dispatch($newImage->id); */
+                ])->dispatch($newImage->id);
             }
             File::deleteDirectory(storage_path("/app/livewire-tmp"));
         }
