@@ -36,7 +36,7 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link my-2" href="{{ route('login') }}"><b class="navbarColor">{{__('ui.navAccedi')}}</b> </a>
                     </li>
-
+                    
 
                 </ul>
             </div>
