@@ -39,7 +39,7 @@ class WatermarkImmagini implements ShouldQueue
 
         $image = SpatieImage::load($srcPath);
 
-            $image->watermark(base_path('/Media/Logo_ShopVerse_02.svg'))
+            $image->watermark(base_path('public/Media/Logo_ShopVerse_02.png'))
                 ->watermarkPosition('top-left')
                 
                 ->watermarkWidth($image->getWidth()*0.05,Manipulations::UNIT_PIXELS)
