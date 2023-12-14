@@ -50,7 +50,7 @@ class AdvertisementController extends Controller
      */
     public function edit(Advertisement $advertisement)
     {
-        
+
         return view("advertisement.edit", compact("advertisement"));
     }
 
@@ -65,8 +65,10 @@ class AdvertisementController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Advertisement $advertisement)
+    public function delete(Advertisement $advertisement)
     {
-        //
+        $advertisement->delete();
+        return redirect()->back()->with("delete","Annuncio eliminato con successo");
+
     }
 }

@@ -29,7 +29,7 @@ class CreateAdvertisement extends Component {
     public $body;
 
     #[Rule("required")]
-    public $category;
+    public $category=[];
 
     #[Rule("required|max:1024")]
     public $temporary_images;
@@ -59,12 +59,14 @@ class CreateAdvertisement extends Component {
                 /* $this->advertisement->images()->create(['path' => $image->store('images', 'public')]) */;
                 $newFileName ="advertisements/{$this->advertisement->id}";
                 $newImage = $this->advertisement->images()->create(["path"=> $image->store("$newFileName","public")]);
-                
+
                 RemoveFaces::withChain([
                 new ResizeImage($newImage->path , 300 , 200),
+
                 new GoolgeVisionSafeSerch($newImage->id), // ho scritto male la classe doveva essere GoogleVisionSafeSearch
                 new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
+                
             }
             File::deleteDirectory(storage_path("/app/livewire-tmp"));
         }
@@ -96,7 +98,7 @@ class CreateAdvertisement extends Component {
         'images.image' => "Il immagine deve essere un imagine",
         'images.max' => "L'immagine deve essere massimo di 1mb",
     ];
-    public function updatedTemporaryImages() {
+     public function updatedTemporaryImages() {
         if($this->validate([
             'temporary_images.*' => "image|max:1024",
         ])

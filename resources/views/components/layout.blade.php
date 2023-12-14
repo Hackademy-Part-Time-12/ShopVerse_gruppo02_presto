@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-<<script type="module">
-     
+ <script type="module">
+
 import {cambiabackground} from './resources/cardcategory.js'
- 
+
 </script>
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,8 +98,8 @@ function cambiabackground() {
         case 'Abbigliamento':
                 categoria.style.backgroundImage = "url('https://wallpaperaccess.com/full/1272028.jpg')";
                 break;
-                
-                
+
+
             default:
 
                 // Codice da eseguire se nessun caso corrisponde

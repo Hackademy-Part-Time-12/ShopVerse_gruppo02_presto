@@ -1,6 +1,6 @@
 <x-layout>
 
-    <!-- {{-- <x-HeaderHome/> --}} -->
+    
 
 
     <x-sectionHome />
@@ -25,7 +25,7 @@
 
 
 
- 
+
 
 
 </x-layout>

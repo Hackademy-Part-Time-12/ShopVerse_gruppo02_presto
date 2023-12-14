@@ -84,6 +84,7 @@
 
   .card1:hover .card__background{
     transform: scale(1.05) translateZ(0);
+
   }
 
   .card-grid:hover > .card1:not(:hover) .card__background{
@@ -95,14 +96,20 @@
     padding: var(--spacing-l);
     position: absolute;
     top: 0;
-  }
-
-  .card__category{
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     margin-bottom: var(--spacing-s);
     text-transform: uppercase;
   }
+  .card__content:hover{
+    font-size: 0.9rem;
+  }
+
+
+  /* .card__category{
+
+  } */
+
 
   .card__heading{
     color: var(--text-lighter);

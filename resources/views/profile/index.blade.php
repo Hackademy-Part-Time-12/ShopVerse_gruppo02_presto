@@ -5,6 +5,15 @@
             <div class="my-5 py-5 text-center">
                 <h1>{{__('ui.ciao')}} {{Auth::user()->name }}</h1>
             </div>
+            @if (session('messageImg'))
+            <div class="alert alert-primary ">
+
+                <div class="alert alert-primary">
+                    <p class="text-black fw-bold ">{{ session('messageImg') }}</p>
+                </div>
+            </div>
+        @endif
+
 
 
             <div class="products-items w-100 justify-content-center my-5  row product-height">
@@ -32,7 +41,7 @@
                             <div class="price"><span>{{ $annunci->price }}</span></div>
                             <div class="row justify-content-center">
                                 <p class="btn-link col"><a href="{{route('advertisement.edit',$annunci)}}" class="text-warning fw-bold ">Modifica</a></p>
-                                <p class="btn-link col"><a href="" class="text-danger fw-bold ">Elimina</a></p>
+                                <p class="btn-link col"><a href="{{ route('advertisement.delete', $annunci) }}" class="text-danger fw-bold ">Elimina</a></p>
                               {{--   <p class="card-footer text-black "><b>Pubblicato il:</b>
                                     {{ $annunci->created_at->format('d/m/y') }}<br>
                                     <b>Autore:</b> {{ $annunci->user->name ?? 'Sconosciuto' }}
