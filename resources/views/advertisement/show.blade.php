@@ -131,4 +131,12 @@
     </section>
 
 
+    <style>
+
+body {
+
+    background: linear-gradient(60deg, rgb(219, 212, 248) 0%, rgba(0,172,193,1) 100%);
+
+}
+
 </x-layout>

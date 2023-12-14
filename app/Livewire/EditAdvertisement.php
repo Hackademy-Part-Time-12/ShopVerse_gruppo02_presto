@@ -107,11 +107,6 @@ class EditAdvertisement extends Component
 
         ]);
 
-
-
-
-
-
         if(count($this->images)) {
             foreach($this->images as $image) {
                 /* $this->advertisement->images()->create(['path' => $image->store('images', 'public')]) */;
@@ -120,12 +115,11 @@ class EditAdvertisement extends Component
 
 
 
-              /*    RemoveFaces::withChain([
-                new ResizeImage($newImage->path , 300 , 200),
-
-                 new GoolgeVisionSafeSerch($newImage->id), // ho scritto male la classe doveva essere GoogleVisionSafeSearch
-                new GoogleVisionLabelImage($newImage->id)
-                ])->dispatch($newImage->id); */
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path , 300 , 200),
+                    new GoolgeVisionSafeSerch($newImage->id), // ho scritto male la classe doveva essere GoogleVisionSafeSearch
+                    new GoogleVisionLabelImage($newImage->id)
+                    ])->dispatch($newImage->id);
 
                 dispatch(new ResizeImage($newImage->path , 300 , 200));
 
@@ -137,19 +131,10 @@ class EditAdvertisement extends Component
             $this->images =[];
 
 
-           /*  File::deleteDirectory(storage_path("/app/livewire-tmp")); */
+
         }
         session()->flash('messageEdit', 'Articolo modificato con successo sara pubblicato dopo la revisione');
-
-
-
-
-
-
     }
-
-
-
 
     public function removeImage($key)
     {
@@ -164,11 +149,6 @@ class EditAdvertisement extends Component
            $this->old_image->forget($key);
         }
     }
-
-
-
-
-
 
     public function render()
     {

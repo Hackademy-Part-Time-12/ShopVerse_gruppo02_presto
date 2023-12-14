@@ -4,19 +4,22 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+/* use App\Jobs\RemoveFaces; */
 use App\Jobs\RemoveFaces;
+
+
 use App\Jobs\ResizeImage;
-
-
 use App\Models\Advertisement;
 use Livewire\Attributes\Rule;
 use Livewire\WithFileUploads;
+use App\Jobs\WatermarkImmagini;
 use App\Jobs\GoolgeVisionSafeSerch;
 use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
-class CreateAdvertisement extends Component {
+class CreateAdvertisement extends Component
+{
     use WithFileUploads;
 
     #[Rule("required|min:5|max:30")]
@@ -39,16 +42,17 @@ class CreateAdvertisement extends Component {
 
     public $advertisement;
 
-    public function store() {
+    public function store()
+    {
         $this->validate();
 
 
         $category = Category::find($this->category);
 
         $this->advertisement = $category->advertisements()->create([
-            "title"=> $this->title,
-            "price"=> $this->price,
-            "body"=> $this->body,
+            "title" => $this->title,
+            "price" => $this->price,
+            "body" => $this->body,
             'user_id' => Auth::user()->id
         ]);
         $this->advertisement->user()->associate(Auth::user());
@@ -62,20 +66,14 @@ class CreateAdvertisement extends Component {
 
                 RemoveFaces::withChain([
                 new ResizeImage($newImage->path , 300 , 200),
-
                 new GoolgeVisionSafeSerch($newImage->id), // ho scritto male la classe doveva essere GoogleVisionSafeSearch
                 new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
-                
             }
             File::deleteDirectory(storage_path("/app/livewire-tmp"));
         }
         session()->flash('messageImg', 'Articolo inserito con successo sara pubblicato dopo la revisione');
         $this->reset();
-
-
-
-
     }
 
 
@@ -101,16 +99,15 @@ class CreateAdvertisement extends Component {
      public function updatedTemporaryImages() {
         if($this->validate([
             'temporary_images.*' => "image|max:1024",
-        ])
-        ) {
-            foreach($this->temporary_images as $image) {
+        ])) {
+            foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
         }
-
     }
-    public function removeImage($key) {
-        if(in_array($key, array_keys($this->images))) {
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
             unset($this->images[$key]);
         }
     }
@@ -118,7 +115,8 @@ class CreateAdvertisement extends Component {
 
 
 
-    public function render() {
+    public function render()
+    {
 
 
         return view('livewire.create-advertisement');

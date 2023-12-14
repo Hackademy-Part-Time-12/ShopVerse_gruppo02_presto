@@ -38,4 +38,6 @@ return[
     "Dettaglio" => "Details",
     "Compra" => "Buy",
     "Categoria" => "Categories",
+    "Paga" => "Pay",
+    "Con_Paypal" => "With Paypal"
 ];
