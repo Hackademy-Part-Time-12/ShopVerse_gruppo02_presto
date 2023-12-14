@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<<script type="module">
+<script type="module">
 
 import {cambiabackground} from './resources/cardcategory.js'
 
