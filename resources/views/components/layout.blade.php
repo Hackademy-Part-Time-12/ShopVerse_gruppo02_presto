@@ -36,7 +36,7 @@ import {cambiabackground} from './resources/cardcategory.js'
     @endif
 
     <div class="container-fluid min-vh-100 ">
-        <div class=" row ">
+        <div class=" row justify-content-center ">
 
             {{ $slot }}
 

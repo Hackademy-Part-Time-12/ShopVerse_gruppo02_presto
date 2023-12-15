@@ -16,19 +16,21 @@ class PublicController extends Controller
 
     public function home () {
 
-        $annunci = Advertisement::where('is_accepted', true)->take(6)->get()->sortbyDesc('created_at');
+        $annunci = Advertisement::where('is_accepted', true)->take(5)->get()->sortbyDesc('created_at');
 
 
         return view('welcome',compact('annunci'));
     }
 
     public function categoryShow(Category $category) {
-        $advertisement = Advertisement::where('is_accepted', true)->paginate(5);
+        $advertisement = Advertisement::where('is_accepted', true)->paginate(5) ;
+        $annunci =Category::paginate(5) ;
 
 
-        return view('categoryShow',compact('category','advertisement'));
+
+        return view('categoryShow',compact('category','advertisement','annunci'));
     }
-    
+
 
     public function searchAdvertisements (Request $request)
     {

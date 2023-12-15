@@ -7,11 +7,11 @@
                 <h1 class="h1">{{ $category->name }}</h1>
             </div>
 
-           {{-- Sezione menu categorie --}}
+            {{-- Sezione menu categorie --}}
             <div class=" col-12 row text-center ms-2 my-5 ">
                 <div class="row col-12 justify-content-center">
                     @foreach ($categories as $categories)
-                        <li class=" row col-3 mx-2 col-md-2">
+                        <li class=" row col-4 mx-2 col-md-2">
                             <a class=" line  " href="{{ route('categoryShow', $categories) }}">{{ $categories->name }}
                             </a>
                         </li>
@@ -37,7 +37,8 @@
 
                                     <li><a href="{{ route('paypal.index', $annunci) }}"
                                             data-tip="{{ __('ui.Compra') }}"><i
-                                                class="fa-solid fa-cart-shopping"></i></a></li>
+                                                class="fa-solid fa-cart-shopping"></i></a>
+                                    </li>
 
                                     <li>
                                         <a href="{{ route('advertisement.show', $annunci) }}"
@@ -68,7 +69,7 @@
                         </div>
                     @endforelse
 
-                    {{ $advertisement->links() }}
+                    {{--  {{ $annunci->links() }} --}}
 
 
                 </div>

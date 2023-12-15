@@ -1,4 +1,4 @@
-<div class="col-12 col-lg-4 col-sm-5 shadow2 mx-1 product-grid my-4">
+<div class="col-9 col-md-2 shadow2 mx-1 product-grid my-4">
     <div class="product-image p-2">
         <img class="pic-1 mt-1 rounded image"
             src="{{ !$advertisement->images()->get()->isEmpty()? $advertisement->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
