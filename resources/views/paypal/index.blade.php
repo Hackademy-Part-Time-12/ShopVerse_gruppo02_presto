@@ -30,7 +30,10 @@
 
 
 <div class="card" style="margin-top: 15vh; max-width: 940px;">
-<p class="mt-4"><a href="{{url()->previous()}}"> <i class="btn fa-solid fa-arrow-left-long fa-2xl"></i></a>{{ __('ui.Torna_Indietro') }}</p>
+    <div class="d-flex mt-3">
+       <div class="arrow left"> <a href="{{url()->previous()}}"></a></div>
+       <div class="testo"><a class="text-decoration-none text-black" href="{{url()->previous()}}">{{ __('ui.Torna_Indietro') }}</a></div>
+    </div>
     <img style="border-radius: 10px; box-shadow: 0px 0px 10px burlywood; " src="{{ !$advertisement->images()->get()->isEmpty() ? $advertisement->images()->first()->getUrl(900, 500) : 'https://picsum.photos/900/500' }}" class="mx-auto d-block rounded-start mt-4" alt="Immagine Inserzione">
     <div class="card-body">
         <h5 class="card-title text-center"> {{ $advertisement->title }}</h5>
@@ -114,6 +117,56 @@
             min-height: 100px;
             max-height: 150px;
         }
+
+
+
+
+    .arrow {
+    position: relative;
+    margin-left: 20px;
+    top: 50%;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+    border-top: .4rem solid black;
+    border-right: .4rem solid black;
+    box-shadow: 0 0 0 lightgray;
+    transform: translate3d(0, -50%, 0) rotate(-135deg);
+    transition: all 200ms ease;
+}
+
+.arrow:hover {
+    border-top: .4rem solid orange;
+    border-right: .4rem solid orange;
+    box-shadow: .2rem -.2rem 0 black;
+    left: -.2rem;
+}
+.arrow.left {
+  left: 0;
+  -webkit-transform: translate3d(0, -50%, 0) rotate(-135deg);
+          transform: translate3d(0, -50%, 0) rotate(-135deg);
+}
+.arrow.right {
+  right: 0;
+  -webkit-transform: translate3d(0, -50%, 0) rotate(45deg);
+          transform: translate3d(0, -50%, 0) rotate(45deg);
+}
+
+.testo{
+    color: black;
+}
+
+.testo:hover {
+    color: yellow;
+}
+
+.arrow:hover.left {
+  left: -.2rem;
+}
+.arrow:hover.right {
+  right: -.2rem;
+}
     </style>
 
 </x-layout>
