@@ -1,7 +1,12 @@
-<section class=" container my-5 pt-3">
-    <div class="row justify-content-center bg-form  pt-5  ">
+<section class=" container d-flex my-5 pt-3">
+   <div class="col-3">
+    <button class="button-17" role="button">Button 17</button>
+
+   </div>
+    <div class="row col-8 justify-content-center bg-form  pt-5  ">
 
         <h2 class="text-center fs-1 second ">{{__('ui.btnLog')}}</h2>
+
 
 
 
@@ -13,7 +18,9 @@
                     <div class="alert alert-primary">
                         <p class="text-black fw-bold ">{{ session('messageImg') }}</p>
                     </div>
+                </div>
             @endif
+
 
 
 
@@ -56,6 +63,11 @@
                     @enderror
 
                 </div>
+
+
+
+
+
                 <div class="mb-3">
                     <label for="body" class="second">{{__('ui.advDescrizione')}}</label>
                     <textarea class="form-control border " wire:model.live="body" @error('body') is-invalid @enderror

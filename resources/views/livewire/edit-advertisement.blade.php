@@ -6,17 +6,17 @@
 
 
     <div class="container col-7 my-5">
-        @if (session('messageImg'))
+        @if (session('messageEdit'))
             <div class="alert alert-primary ">
 
                 <div class="alert alert-primary">
-                    <p class="text-black fw-bold ">{{ session('messageImg') }}</p>
+                    <p class="text-black fw-bold ">{{ session('messageEdit') }}</p>
                 </div>
         @endif
 
 
 
-        <form class="" wire:submit.prevent="">
+        <form class="" wire:submit.prevent="update">
             @csrf
             <div class="mb-3 row ">
                 <label for=" text" class="second">Titolo annuncio</label>
@@ -39,35 +39,22 @@
 
             </div>
 
-            <div class="mb-3 row ">
-                <select class=" form-control second " wire:model.defer="category[]" id="category"> {{-- defer fa in modo che le select non vadano in conflitto --}}
-                    <option value="" class="second">Categoria attuale</option>
-                    @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
-                </select>
 
-                @error('category')
-                    <p class="text-danger ">{{ $message }}</p>
-                @enderror
-
-            </div>
 
 
 
 
             <div class="mb-3 row ">
-                <select class=" form-control second " wire:model.defer="category" id="category"> {{-- defer fa in modo che le select non vadano in conflitto --}}
-                    <option value="" class="second">Scegli la categoria</option>
-                    @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
-                </select>
+                    <select class=" form-control second " wire:model="category" id="category"> {{-- defer fa in modo che le select non vadano in conflitto --}}
+                        <option value="" class="second">Scegli la categoria</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
 
-                @error('category')
-                    <p class="text-danger ">{{ $message }}</p>
-                @enderror
-
+                    @error('category')
+                        <p class="text-danger ">{{ $message }}</p>
+                    @enderror
             </div>
 
             <div class="mb-3">
@@ -79,11 +66,25 @@
                 @enderror
             </div>
             {{-- @dd($image) --}}
-
+            @if ($old_image->isNotEmpty())
             <div class="mb-3">
                 <label for="" class="second">Immagini attuali</label>
-                <img src="{{ !$advertisements->images()->get()->isEmpty()? $advertisements->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}" alt="">
+               @foreach ($old_image as $key => $image )
+
+                <div class=" my-3">
+                    <div class="col-12 mx-auto text-center ">
+                        <img src=" {{$image->getUrl(300, 200)}}" class="img-fluid col-4 shadow rounded" alt="">
+                    </div>
+                    <button type="button"
+                        class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
+                        wire:click="removeImageOld({{ $key }})">Cancella</button>
+                </div>
+                @endforeach
             </div>
+
+            @endif
+
+
 
             <div class="mb-3">
                 <input type="file" wire:model="temporary_images" name="images" multiple
@@ -93,7 +94,8 @@
                 @enderror
 
             </div>
-            @if (!empty($images))
+
+            @if ($images)
                 <div class="row col">
                     <div class="col">
                         <p class="second">Anteprima</p>

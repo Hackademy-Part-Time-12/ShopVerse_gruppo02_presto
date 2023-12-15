@@ -33,6 +33,7 @@ Route::get('/ricerca/annuncio', [PublicController::class, 'searchAdvertisements'
 Route::get('/annuncio/nuovo',[AdvertisementController::class,'create'])->middleware('auth')->name('advertisement.create');
 Route::get('/annuncio/modifica/{advertisement}',[AdvertisementController::class,'edit'])->name('advertisement.edit');
 Route::get('/annuncio/dettaglio/{advertisement}',[AdvertisementController::class,'show'])->name('advertisement.show');
+Route::get('/annuncio/elimina/{advertisement}',[AdvertisementController::class,'delete'])->name('advertisement.delete');
 Route::get('/tutti/annunci',[AdvertisementController::class,'index'])->name('advertisement.index');
 
 

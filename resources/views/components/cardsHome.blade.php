@@ -2,7 +2,7 @@
     <div class="product-image p-2">
         <img class="pic-1 mt-1 rounded image"
             src="{{ !$advertisement->images()->get()->isEmpty()? $advertisement->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
-        <span class="product-discount-label">{{ $advertisement->created_at->format('d/m/y') }}</span>
+        <span class="product-discount-label">{{ $advertisement->category->name}}</span>
         <ul class="product-links">
             <li><a href="{{ route('paypal.index', $advertisement) }}" data-tip="{{ __('ui.Compra') }}"><i
                         class="fa-solid fa-cart-shopping"></i></a></li>

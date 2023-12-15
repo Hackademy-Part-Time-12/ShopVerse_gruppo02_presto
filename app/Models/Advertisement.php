@@ -15,7 +15,7 @@ class Advertisement extends Model
 {
     use HasFactory, Searchable;
     protected $fillable = [
-        "title","body","price","cover","user_id","category_id", "category",
+        "title","body","price","cover","user_id","category_id", "category",'is_accepted'
     ];
 
 

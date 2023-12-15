@@ -1,8 +1,11 @@
+
+{{-- Sezione Ospite --}}
+
 @guest
     {{-- Sezione SX --}}
 
     <a href="{{ route('home') }}">
-        <div class="col-1 col-lg-2 top-0 z-3 my-1 contenitoreimmagine">
+        <div class="col-1 col-lg-2 position-fixed-md top-0 z-3 my-1">
             <img src="/Media/Logo_ShopVerse_02.svg" alt="" class="img-fluid">
         </div>
     </a>
@@ -36,7 +39,7 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link my-2" href="{{ route('login') }}"><b class="navbarColor">{{__('ui.navAccedi')}}</b> </a>
                     </li>
-
+                    
 
                 </ul>
             </div>
