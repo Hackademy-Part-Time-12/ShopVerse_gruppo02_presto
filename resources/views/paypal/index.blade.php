@@ -11,7 +11,7 @@
             
             <div class="col-md-5">
                 <div class="card-body d-flex flex-column justify-content-between text-end" style="height: 100%;">
-               <p> <a href=""> <i class="btn fa-solid fa-arrow-left-long fa-2xl"></i></a></p>
+                
                
                     <h5 class="card-title">{{ $advertisement->title }}</h5>
                     <p class="card-text">{{ $advertisement->body }}</p>
@@ -30,6 +30,7 @@
 
 
 <div class="card" style="margin-top: 15vh; max-width: 940px;">
+<p class="mt-4"><a href="{{url()->previous()}}"> <i class="btn fa-solid fa-arrow-left-long fa-2xl"></i></a>{{ __('ui.Torna_Indietro') }}</p>
     <img style="border-radius: 10px; box-shadow: 0px 0px 10px burlywood; " src="{{ !$advertisement->images()->get()->isEmpty() ? $advertisement->images()->first()->getUrl(900, 500) : 'https://picsum.photos/900/500' }}" class="mx-auto d-block rounded-start mt-4" alt="Immagine Inserzione">
     <div class="card-body">
         <h5 class="card-title text-center"> {{ $advertisement->title }}</h5>
