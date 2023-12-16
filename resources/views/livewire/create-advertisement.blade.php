@@ -1,6 +1,6 @@
 <section class=" container my-5">
     <div class="col-2 mt-3 text-start ">
-        <a href=""> <button class="button-17" role="button">Indietro</button></a>
+        <a href="{{url()->previous()}}"> <button class="button-17" role="button">Indietro</button></a>
 
 
     </div>

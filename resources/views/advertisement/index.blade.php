@@ -9,7 +9,7 @@
 
             <section class=" col-11 col-md-9 d-flex justify-content-center container-fluid">
 
-                <div class="products-items  justify-content-center  row product-height">
+                <div class="products-items w-100 justify-content-center  row product-height">
 
                     @forelse ($advertisement as $annunci)
                         <div class="product-grid mx-1 col-9 col-md-3 my-2">
