@@ -91,13 +91,10 @@ class PayPalController extends Controller
         $response = $provider->capturePaymentOrder($request['token']);
   
         if (isset($response['status']) && $response['status'] == 'COMPLETED') {
-            return redirect()
-                ->route('paypal.index')
-                ->with('success', 'Transaction complete.');
+            return redirect()->route('home')->with('paypalSuccess','Transazione Completa');
+           
         } else {
-            return redirect()
-                ->route('paypal.index')
-                ->with('error', $response['message'] ?? 'Something went wrong.');
+            return redirect()->route('home')->with('paypalError','Transazione Fallita');
         }
     }
 }
