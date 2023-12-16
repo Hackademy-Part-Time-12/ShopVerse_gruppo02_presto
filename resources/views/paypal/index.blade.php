@@ -4,22 +4,22 @@
     <div class="card mb-3" style="max-width: 1024px; max-height: 2000px; margin: 0 auto; position: relative;">
         <div class="row g-0">
             <div class="col-md-7" style="border: none;">
-                
+
                 <img style="border-radius: 10px; box-shadow: 0px 0px 10px burlywood; " src="{{ !$advertisement->images()->get()->isEmpty() ? $advertisement->images()->first()->getUrl(300, 200) : 'https://picsum.photos/200/300' }}" class="mx-auto d-block rounded-start" alt="Immagine Inserzione">
-                    
+
             </div>
-            
+
             <div class="col-md-5">
                 <div class="card-body d-flex flex-column justify-content-between text-end" style="height: 100%;">
-                
-               
+
+
                     <h5 class="card-title">{{ $advertisement->title }}</h5>
                     <p class="card-text">{{ $advertisement->body }}</p>
                     <p class="card-text">{{$advertisement->price}}€</p>
                     <div class="mt-auto d-flex justify-content-between">
                         <a href="{{ route('advertisement.show', $advertisement) }}" data-tip="{{ __('ui.Dettaglio') }}" class="btn btn-primary btn-sm me-2"><i class="fa fa-search"></i></a>
                         <a href="{{ route('paypal.payment', ['price'=>$advertisement->price]) }}" class="btn btn-warning btn-sm ms-2" style="font-size:small;" >{{ __('ui.Paga') }}  {{ __('ui.Con_Paypal') }} </a>
-                        
+
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
 
 <div class="card" style="margin-top: 15vh; max-width: 940px;">
     <div class="d-flex mt-3">
-       <div class="arrow left"> <a href="{{url()->previous()}}"></a></div>
+        <a href="{{url()->previous()}}"><div class="arrow left"></div></a>
        <div class="testo"><a class="text-decoration-none text-black" href="{{url()->previous()}}">{{ __('ui.Torna_Indietro') }}</a></div>
     </div>
     <img style="border-radius: 10px; box-shadow: 0px 0px 10px burlywood; " src="{{ !$advertisement->images()->get()->isEmpty() ? $advertisement->images()->first()->getUrl(900, 500) : 'https://picsum.photos/900/500' }}" class="mx-auto d-block rounded-start mt-4" alt="Immagine Inserzione">
