@@ -27,8 +27,8 @@
 
                     @forelse ($category->advertisements as $annunci)
                         <div class="product-grid mx-1 col-md-5 my-2">
-                            <div class="product-image p-3">
-                                <img class="pic-1 rounded image"
+                            <div class="product-image p-3" >
+                                <img class="pic-1 rounded image" 
                                     src="{{ !$annunci->images()->get()->isEmpty()? $annunci->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
                                 {{-- <span class="product-discount-label">{{ $annunci->category->name }}</span> --}}
                                 <ul class="product-links">
