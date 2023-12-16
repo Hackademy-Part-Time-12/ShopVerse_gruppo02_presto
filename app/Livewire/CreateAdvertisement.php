@@ -67,6 +67,9 @@ class CreateAdvertisement extends Component
                     new GoogleVisionLabelImage($newImage->id),
                     new WatermarkImmagini($newImage->id),
                 ])->dispatch($newImage->id);
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 900, 500),
+                ])->dispatch($newImage->id);
             }
             File::deleteDirectory(storage_path("/app/livewire-tmp"));
         }

@@ -10,7 +10,7 @@ class PublicController extends Controller
 {
 
     public function index(){
-        $announcements = Advertisement::all();
+        $announcements = Advertisement::where('is_accepted',true)->get();
         return view("profile.index",compact("announcements"));
     }
 
@@ -23,12 +23,12 @@ class PublicController extends Controller
     }
 
     public function categoryShow(Category $category) {
-        $advertisement = Advertisement::where('is_accepted', true)->paginate(5) ;
-        $annunci =Category::paginate(5) ;
+        $advertisement = Advertisement::where('is_accepted', true)->paginate(6) ;
 
 
 
-        return view('categoryShow',compact('category','advertisement','annunci'));
+
+        return view('categoryShow',compact('category','advertisement'));
     }
 
 

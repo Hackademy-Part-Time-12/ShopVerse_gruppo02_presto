@@ -69,7 +69,7 @@
                         </div>
                     @endforelse
 
-                    {{--  {{ $annunci->links() }} --}}
+                     {{ $advertisement->links() }}
 
 
                 </div>
