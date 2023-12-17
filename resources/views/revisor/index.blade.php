@@ -10,55 +10,46 @@
     </div>
     @if ($announcement_to_check)
         <div class="container d-flex justify-content-center p-3">
-            <div class="row col-8 justify-content-center  ">
-                <div class=" row col-4 justify-content-center   ">
+            <div class="row col-12 justify-content-center ">
+                <div class=" row col-10  justify-content-center ">
                     <div class="card row shadow">
 
-                        <div id="showCarousel" class="col-12 carousel slide" data-bs-ride="carousel">
+                        <div  class="col-12" >
 
                             @if ($announcement_to_check->images)
-                                <div class="carousel-inner row">
+                                <div class="row">
 
                                     @foreach ($announcement_to_check->images as $image)
-                                        <div
-                                            class=" col-12 carousel-item @if ($loop->first) active @endif">
-                                            <img src="{{ $image->getUrl(300, 200) }}" class="img-fluid p-3  rounded"
+                                        <div class="col-12 col-md-4 ">
+                                            <img src="{{ $image->getUrl(300, 200) }}" class="img-fluid p-3 rounded"
                                                 alt="">
+                                                <div class="col-12 col-md-4 my-2 mx-2 justify-content-around d-flex">
+                                                    <div class="card-body">
+                                                       <h5 class="tc-accent">Revisione Immagini</h5>
+                                                       <p> Adulti <span class=" {{ $image->adult }}"></span> </p>
+                                                       <p> Satira <span class=" {{ $image->spoof }}"></span> </p>
+                                                       <p> Medicina <span class=" {{ $image->medical }}"></span> </p>
+                                                       <p> Violenza <span class=" {{ $image->violence }}"></span> </p>
+                                                       <p> Contenuto Ammiccante <span class="{{ $image->racy }}"></span> </p>
+                                                    </div>
+                                               </div>
+                                               <div class=" col-12 me-5 ">
+                                                    <h5 class='tc-accent mt-3'>Tags</h5>
+                                                <div class="p-2">
+                                                    @if ($image->labels)
+                                                        @foreach ($image->labels as $label)
+                                                            <p class="d-inline"> {{ $label }},</p>
+                                                        @endforeach
+                                                    @endif
+        
+                                                </div>
+        
+                                            </div>
 
                                         </div>
                                     @endforeach
-                                    <div class=" col-12 me-5 border-end">
-                                        <h5 class='tc-accent mt-3'>Tags</h5>
-                                        <div class="p-2">
-                                            @if ($image->labels)
-                                                @foreach ($image->labels as $label)
-                                                    <p class="d-inline"> {{ $label }},</p>
-                                                @endforeach
-                                            @endif
-
-                                        </div>
-
-                                    </div>
-                                    <div class=" container ">
-                                        <div class="row">
-                                            @foreach ($announcement_to_check->images as $image)
-                                            <div class="col-12 col-md-4">
-                                                 <div class="card-body">
-                                                    <h5 class="tc-accent">Revisione Immagini</h5>
-                                                    <p> Adulti <span class=" {{ $image->adult }}"></span> </p>
-                                                    <p> Satira <span class=" {{ $image->spoof }}"></span> </p>
-                                                    <p> Medicina <span class=" {{ $image->medical }}"></span> </p>
-                                                    <p> Violenza <span class=" {{ $image->violence }}"></span> </p>
-                                                    <p> Contenuto Ammiccante <span class="{{ $image->racy }}"></span> </p>
-                                                 </div>
-                                               
-
-                                            </div>
-
-                                            @endforeach
-
-                                        </div>
-                                    </div>
+                                    
+                                    
                                 </div>
                             @else
                                 <div class="carousel-inner">
@@ -77,38 +68,24 @@
 
                                 </div>
                             @endif
-                            <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previus</span>
-
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#showCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previus</span>
-
-                            </button>
+                            
                         </div>
 
-                        <div class="card-body">
-                            <h5 class="card-title"> {{ $announcement_to_check->title }}</h5>
+                        <div class="card-body border roudend-1 shadow">
+                            <h5 class="card-title"> Titolo<br> {{ $announcement_to_check->title }}</h5>
                             <p class="card-text">
                                 <b>{{ __('ui.advDescrizione') }}</b><br>{{ $announcement_to_check->body }}
                             </p>
-                            <p class="card-text"><b>{{ __('ui.advPrezzo') }}</b>{{ $announcement_to_check->price }}
+                            <p class="card-text"><b>{{ __('ui.advPrezzo') }}</b> {{ $announcement_to_check->price }} €
                             </p>
-                        </div>
-                        {{-- Dettaglio --}}
-                        <div class="row my-2">
                             <a href="{{ route('advertisement.show', ['advertisement' => $announcement_to_check]) }}"
                                 class="link text-decoration-none ">Dettagli</a>
-                            {{-- <a href="{{ route('categoryShow',['category'=>$announcement_to_check->advertisement->category])}}" class="link text-decoration-none "><b>Categoria: </b>{{ $announcement_to_check->category->name }}</a> --}}
                         </div>
+                       
                         {{-- bottone accetta/Rifiuta --}}
-                        <div class="row justify-content-between my-3">
-                            <div class="col-4">
-                                <form
+                        <div class="row text-center my-3">
+                            <div class="col-4 d-flex">
+                                <form class="p-1"
                                     action="{{ route('revisor.accept_announcement', ['advertisement' => $announcement_to_check]) }}"
                                     method="POST">
                                     @csrf
@@ -117,9 +94,7 @@
                                         Accetta
                                     </button>
                                 </form>
-                            </div>
-                            <div class="col-4">
-                                <form
+                                <form class="p-1"
                                     action="{{ route('revisor.reject_announcement', ['advertisement' => $announcement_to_check]) }}"
                                     method="POST">
 
@@ -130,6 +105,7 @@
                                     </button>
                                 </form>
                             </div>
+                            
 
                         </div>
 
@@ -138,8 +114,7 @@
             </div>
         </div>
     @endif
-    </div>
-    </div>
+ 
 
 
 </x-layout>
