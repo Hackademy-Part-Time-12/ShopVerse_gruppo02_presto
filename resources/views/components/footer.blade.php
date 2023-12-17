@@ -50,6 +50,12 @@
                 <a href="{{ route('become.revisor') }}" class="text-decoration-none"><button type="submit"
                         class="button-53">{{__('ui.rvFooter2')}}</button></a>
             </div>
+            <div class="col-6">
+                <h6>Contattaci:</h6>
+                <i class="fa-regular fa-envelope">  Shopverse@verse.com</i><br>
+                <i class="fa-brands fa-instagram">  @shopverse</i><br>
+                <i class="fa-solid fa-phone">   9384 900900</i>
+            </div>
  
  
  
@@ -63,7 +69,7 @@
  
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2023 Copyright:Lorenzo Montorsi-Salvatore Covelli-Giulia Gaudimundo-Alessio Cannella
+        © 2023 Copyright: Lorenzo Montorsi - Salvatore Covelli - Giulia Gaudimundo - Alessio Canella.
  
     </div>
 
