@@ -24,7 +24,7 @@ class PublicController extends Controller
     }
 
     public function categoryShow(Category $category) {
-        $advertisement = Advertisement::where('is_accepted', true)->paginate(6) ;
+        $advertisement = Advertisement::where('is_accepted', true)->where('category_id',$category->id)->paginate(6) ;
 
 
 

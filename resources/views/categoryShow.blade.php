@@ -10,9 +10,9 @@
             {{-- Sezione menu categorie --}}
             <div class=" col-12 row text-center ms-2 my-5 ">
                 <div class="row col-12 justify-content-center">
-                    @foreach ($categories as $categories)
+                    @foreach ($categories as $category)
                         <li class=" row col-4 mx-2 col-md-2">
-                            <a class=" line  " href="{{ route('categoryShow', $categories) }}">{{ $categories->name }}
+                            <a class=" line  " href="{{ route('categoryShow', $category) }}">{{ $category->name }}
                             </a>
                         </li>
                     @endforeach
@@ -24,7 +24,7 @@
             <section class=" col-11 col-md-9 d-flex justify-content-center container-fluid">
 
                 <div class="products-items w-100 justify-content-center  row product-height">
-                    @forelse ($category->advertisements as $annunci)
+                    @forelse ($advertisement as $annunci)
                         <div class="product-grid mx-1 col-md-5 my-2">
                             <div class="product-image p-3" >
                                 <img class="pic-1 rounded image"
