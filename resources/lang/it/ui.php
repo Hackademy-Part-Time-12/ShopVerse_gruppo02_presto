@@ -40,5 +40,6 @@ return[
     "Categoria" => "Categoria",
     "Paga" => "Paga",
     "Con_Paypal" => "Con Paypal",
-    "Torna_Indietro" => "Torna Indietro"
+    "Torna_Indietro" => "Torna Indietro",
+    "Contattaci" => "Contattaci"
 ];

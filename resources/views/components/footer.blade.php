@@ -51,7 +51,7 @@
                         class="button-53">{{__('ui.rvFooter2')}}</button></a>
             </div>
             <div class="col-6">
-                <h6>Contattaci:</h6>
+                <h6>{{__("ui.Contattaci")}}</h6>
                 <i class="fa-regular fa-envelope">  Shopverse@verse.com</i><br>
                 <i class="fa-brands fa-instagram">  @shopverse</i><br>
                 <i class="fa-solid fa-phone">   9384 900900</i>
