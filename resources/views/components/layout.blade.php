@@ -17,7 +17,7 @@
     <title>ShopVerse</title>
 </head>
 
-<body class="color home" onload="cambiabackground()">
+<body class="color home"  onload="cambiabackground()">
     <x-navbar />
 
 
@@ -30,8 +30,8 @@
         </div>
     @endif
 
-    <div class="container-fluid min-vh-100 ">
-        <div class=" row justify-content-center ">
+    <div class="container-fluid min-vh-100">
+        <div class=" row justify-content-center">
 
             {{ $slot }}
 
@@ -44,5 +44,5 @@
 
 
 </body>
-<script type="text/javascript" src="{{ URL::asset('js/cardHome.js') }}"></script>
+ <script type="text/javascript" src="{{ URL::asset('js/cardHome.js') }}"></script>
 </html>

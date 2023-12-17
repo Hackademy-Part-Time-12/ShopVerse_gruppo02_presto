@@ -29,7 +29,7 @@ return[
     "btnCardNuovo"=>"Nuovo",
     "advNo"=>"Non sono presenti annunci",
     "advNo2"=>"Pubblicane uno:",
-    "advNew"=>"Nuovo Annuncio ",
+    "advNew"=>"Clicca qui ",
     "btnProfilo"=>"Profilo",
     "btnRevisore"=>"Zona Revisione",
     "ciao" =>"Ciao ",

@@ -11,7 +11,7 @@ class PayPalController extends Controller
     /**
      * Write code on Method
      *
-     * @return response()
+     *
      */
     public function index(Advertisement $advertisement)
     {
@@ -22,7 +22,7 @@ class PayPalController extends Controller
     /**
      * Write code on Method
      *
-     * @return response()
+     *
      */
     public function payment($price)
     {
@@ -69,19 +69,18 @@ class PayPalController extends Controller
     /**
      * Write code on Method
      *
-     * @return response()
+     *
      */
     public function paymentCancel()
     {
-        return redirect()
-              ->route('paypal')
-              ->with('error', $response['message'] ?? 'You have canceled the transaction.');
+
+        return redirect()->route('home')->with('paypalCancel','Transazione Cancellata');
     }
 
     /**
      * Write code on Method
      *
-     * @return response()
+     *
      */
     public function paymentSuccess(Request $request)
     {
@@ -92,7 +91,7 @@ class PayPalController extends Controller
 
         if (isset($response['status']) && $response['status'] == 'COMPLETED') {
             return redirect()->route('home')->with('paypalSuccess','Transazione Completa');
-           
+
         } else {
             return redirect()->route('home')->with('paypalError','Transazione Fallita');
         }

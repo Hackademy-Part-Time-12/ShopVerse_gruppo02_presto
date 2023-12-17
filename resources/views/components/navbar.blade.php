@@ -5,7 +5,7 @@
     {{-- Sezione SX --}}
 
     <a href="{{ route('home') }}">
-        <div class="col-2 col-lg-3 position-fixed top-0 z-3 my-1">
+        <div class="col-lg-3 col-2 position-fixed top-0 z-1 col-md-2" style="max-width:150px;">
             <img src="/Media/Logo_ShopVerse_02.svg" alt="" class="img-fluid">
         </div>
     </a>

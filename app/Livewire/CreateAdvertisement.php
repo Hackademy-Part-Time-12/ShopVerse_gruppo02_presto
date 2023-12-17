@@ -63,10 +63,11 @@ class CreateAdvertisement extends Component
 
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path, 300, 200),
-                    new GoolgeVisionSafeSerch($newImage->id), // ho scritto male la classe doveva essere GoogleVisionSafeSearch
-                    new GoogleVisionLabelImage($newImage->id),
+                    /* new GoolgeVisionSafeSerch($newImage->id), // ho scritto male la classe doveva essere GoogleVisionSafeSearch
+                    new GoogleVisionLabelImage($newImage->id), */
                     new WatermarkImmagini($newImage->id),
                 ])->dispatch($newImage->id);
+
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path, 900, 500),
                 ])->dispatch($newImage->id);

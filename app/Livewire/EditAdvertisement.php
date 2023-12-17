@@ -39,6 +39,8 @@ class EditAdvertisement extends Component
 
     #[Rule("required|max:1024")]
     public $images = [];
+
+    #[Rule("required|max:1024")]
     public $old_image;
 
     public $advertisement;
@@ -49,6 +51,7 @@ class EditAdvertisement extends Component
         "price" => "required",
         "category" => "required",
         'body' => 'required|min:10|max:1500',
+        'old_image'=> 'required|max:1024',
     ];
     protected $messages = [
         'required' => 'Campo richiesto',
@@ -117,8 +120,8 @@ class EditAdvertisement extends Component
 
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path , 300 , 200),
-                    new GoolgeVisionSafeSerch($newImage->id), // ho scritto male la classe doveva essere GoogleVisionSafeSearch
-                    new GoogleVisionLabelImage($newImage->id)
+                   /*  new GoolgeVisionSafeSerch($newImage->id), // ho scritto male la classe doveva essere GoogleVisionSafeSearch
+                    new GoogleVisionLabelImage($newImage->id) */
                     ])->dispatch($newImage->id);
 
                 dispatch(new ResizeImage($newImage->path , 300 , 200));

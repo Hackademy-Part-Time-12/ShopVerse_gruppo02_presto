@@ -1,9 +1,9 @@
 <x-layout>
     {{-- header Annunci --}}
-    <section class="container-fluid headerCategory p-0 ">
-        <div class="row ">
+    <section class="container-fluid headerCategory p-0">
+        <div class="row">
             <!--Content before waves-->
-            <div class="inner-header flex mb-5">
+            <div class="inner-header col flex mb-5">
                 <h1 class="h1">{{ $category->name }}</h1>
             </div>
 
@@ -24,11 +24,10 @@
             <section class=" col-11 col-md-9 d-flex justify-content-center container-fluid">
 
                 <div class="products-items w-100 justify-content-center  row product-height">
-
                     @forelse ($category->advertisements as $annunci)
                         <div class="product-grid mx-1 col-md-5 my-2">
                             <div class="product-image p-3" >
-                                <img class="pic-1 rounded image" 
+                                <img class="pic-1 rounded image"
                                     src="{{ !$annunci->images()->get()->isEmpty()? $annunci->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
                                 {{-- <span class="product-discount-label">{{ $annunci->category->name }}</span> --}}
                                 <ul class="product-links">
@@ -69,20 +68,30 @@
                         </div>
                     @endforelse
 
-                     {{ $advertisement->links() }}
+                    {{ $advertisement->links() }}
 
 
                 </div>
+
+
+
             </section>
+
+
+          {{--   <div class="col-2 mt-3 ">
+                <a href="{{url()->previous()}}"> <button class="button-17" role="button">Indietro</button></a>
+
+
+            </div> --}}
             <!--Waves Container-->
-            <div>
+            <div class="">
                 <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                     <defs>
                         <path id="gentle-wave"
                             d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                     </defs>
-                    <g class="parallax">
+                    <g class="parallax ">
                         <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
                         <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
                         <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />

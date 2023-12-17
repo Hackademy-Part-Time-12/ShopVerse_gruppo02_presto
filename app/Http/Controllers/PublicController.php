@@ -9,6 +9,7 @@ use App\Models\Advertisement;
 class PublicController extends Controller
 {
 
+
     public function index(){
         $announcements = Advertisement::where('is_accepted',true)->get();
         return view("profile.index",compact("announcements"));

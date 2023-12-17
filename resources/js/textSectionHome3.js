@@ -58,26 +58,28 @@ class TextScramble {
 
 const phrases = [
     'ShopVerse',
-    'Tutto cio',
+    'Tutto quello',
     'che cerchi a',
-    'portata di un click',
+    'portata di click',
     'Esperienza',
-    'Fiducia',
-    'Onesta'
+    'Sicurezza',
+    'Affidabilitá'
 ]
 
-const el = document.getElementById('te')
-const fx = new TextScramble(el)
 
-let counter = 0;
-    const next = () => {
-        fx.setText(phrases[counter]).then(() => {
-            setTimeout(next, 800)
-        })
-        counter = (counter + 1) % phrases.length
-    }
+    const el = document.getElementById('te')
+    const fx = new TextScramble(el)
 
-    next()
+    let counter = 0;
+        const next = () => {
+            fx.setText(phrases[counter]).then(() => {
+                setTimeout(next, 800)
+            })
+            counter = (counter + 1) % phrases.length
+        }
+
+        next()
+
 
 
 

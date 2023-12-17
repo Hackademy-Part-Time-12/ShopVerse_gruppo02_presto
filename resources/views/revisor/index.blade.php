@@ -12,7 +12,7 @@
         <div class="container d-flex justify-content-center p-3">
             <div class="row col-8 justify-content-center  ">
                 <div class=" row col-4 justify-content-center   ">
-                    <div class="card row shadow">
+                    <div class="card  shadow">
 
                         <div id="showCarousel" class="col-12 carousel slide" data-bs-ride="carousel">
 
@@ -22,14 +22,16 @@
                                     @foreach ($announcement_to_check->images as $image)
                                         <div
                                             class=" col-12 carousel-item @if ($loop->first) active @endif">
-                                            <img src="{{ $image->getUrl(300, 200) }}" class="img-fluid p-3  rounded"
+                                            <img src="{{ $image->getUrl(300, 200)?$image->getUrl(300, 200):'https://picsum.photos/200/300' }}" class="img-fluid p-3  rounded"
                                                 alt="">
 
                                         </div>
                                     @endforeach
-                                    <div class=" col-12 me-5 border-end">
-                                        <h5 class='tc-accent mt-3'>Tags</h5>
-                                        <div class="p-2">
+                                </div>
+
+                                    <div class="border-end">
+                                        <h5 class='tc-accent'>Tags</h5>
+                                        <div class="">
                                             @if ($image->labels)
                                                 @foreach ($image->labels as $label)
                                                     <p class="d-inline"> {{ $label }},</p>
@@ -39,6 +41,7 @@
                                         </div>
 
                                     </div>
+
                                     <div class=" container ">
                                         <div class="row">
                                             @foreach ($announcement_to_check->images as $image)
@@ -51,7 +54,7 @@
                                                     <p> Violenza <span class=" {{ $image->violence }}"></span> </p>
                                                     <p> Contenuto Ammiccante <span class="{{ $image->racy }}"></span> </p>
                                                  </div>
-                                               
+
 
                                             </div>
 
@@ -59,7 +62,7 @@
 
                                         </div>
                                     </div>
-                                </div>
+
                             @else
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">

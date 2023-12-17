@@ -21,9 +21,9 @@
         </div>
     @else
         <div class="col-12 my-4">
-            <p class="fs-1 ms-3">Non sono presenti annunci </p>
-            <p class="fs-2 text-center ">Pubblicane uno: <a href="{{ route('advertisement.create') }}"
-                    class="btn-link text-decoration-none">Nuovo Annuncio </a> </p>
+            <p class="fs-1 text-center text-light ">{{__('ui.advNo') }}</p>
+            <p class="fs-2 text-center text-light  ">{{__('ui.advNo2') }} <a href="{{ route('advertisement.create') }}"
+                    class="text-light text-decoration-none">{{__('ui.advNew') }}</a> </p>
         </div>
 
     @endif

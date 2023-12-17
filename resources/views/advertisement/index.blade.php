@@ -1,7 +1,7 @@
 <x-layout>
     {{-- header Annunci --}}
     <section class="container-fluid header p-0 ">
-         <div class="row p-0">
+         <div class="row ">
             <!--Content before waves-->
             <div class="inner-header flex mb-5">
                 <h1 class="h1">{{ __('ui.allAnnouncements') }}</h1>
@@ -18,6 +18,8 @@
                                     src="{{ !$annunci->images()->get()->isEmpty()? $annunci->images()->first()->getUrl(300, 200): 'https://picsum.photos/200/300' }}">
                                 <span class="product-discount-label">{{ $annunci->category->name }}</span>
                                 <ul class="product-links">
+                                    <li><a href="{{ route('paypal.index', $annunci) }}" data-tip="{{ __('ui.Compra') }}"><i
+                                        class="fa-solid fa-cart-shopping"></i></a></li>
 
                                     <li><a href="{{ route('categoryShow', ['category' => $annunci->category]) }}"
                                         data-tip="{{ __('ui.Categoria') }}"><i class="fa-solid fa-list"></i></a></li>
@@ -42,14 +44,14 @@
 
                         </div>
                     @empty
-                        <div class="col-12 my-4">
-                            <p class="fs-1 p-3">Non sono presenti annunci </p>
-                            <p class="fs-2 text-center">Pubblicane uno: <a href="{{ route('advertisement.create') }}"
-                                    class="btn-link text-decoration-none">Nuovo Annuncio </a> </p>
-                        </div>
+                    <div class="col-12 my-4">
+                        <p class="fs-1 text-center text-light ">{{__('ui.advNo') }}</p>
+                        <p class="fs-2 text-center text-light  ">{{__('ui.advNo2') }} <a href="{{ route('advertisement.create') }}"
+                                class="text-light text-decoration-none">{{__('ui.advNew') }}</a> </p>
+                    </div>
                     @endforelse
                     {{ $advertisement->links() }}
-                    {{--  </div> --}}
+
 
                 </div>
             </section>
