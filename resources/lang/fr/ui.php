@@ -40,5 +40,6 @@ return[
     "Categoria" => "Catégorie ",
     "Paga" => "Payez",
     "Con_Paypal" => "Avec Paypal",
-    "Torna_Indietro" => "Revenir"
+    "Torna_Indietro" => "Revenir",
+    "Contattaci" => "Contactez-nous"
 ];
