@@ -9,6 +9,16 @@
        </div>
     @endif
 
+    @if (session('paypalSuccess'))
+    <div class="alert alert-primary my-5" role="alert">
+     <p class=" fw-bold ">{{ session('paypalSuccess') }}</p>
+    </div>
+    @elseif(session('paypalError'))
+    <div class="alert alert-primary my-5" role="alert">
+     <p class=" fw-bold ">{{ session('paypalError') }}</p>
+    </div>
+    @endif
+
 
     <div class="row justify-content-center my-5 py-1 align-items-center">
         <div class="col-12 col-md-6 text-center my-1">

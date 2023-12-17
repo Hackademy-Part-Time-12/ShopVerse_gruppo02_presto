@@ -1,14 +1,16 @@
+
+{{-- Sezione Ospite --}}
+
 @guest
     {{-- Sezione SX --}}
 
     <a href="{{ route('home') }}">
-        <div class="col-1 col-lg-2 top-0 z-3 my-1 contenitoreimmagine">
+        <div class="col-2 col-lg-3 position-fixed top-0 z-3 my-1">
             <img src="/Media/Logo_ShopVerse_02.svg" alt="" class="img-fluid">
         </div>
     </a>
     {{-- sezione Dx --}}
-    <nav
-        class="navbar z-1 position-absolute top-0 end-0 position-fixed mx-1 my-1 rounded-2 border border-primary navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar z-1 position-absolute top-0 end-0 position-fixed  my-1 rounded-2 border border-primary navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid  ">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,13 +51,12 @@
 @auth
     {{-- Sezione SX --}}
     <a href="{{ route('home') }}">
-        <div class="col-lg-2 col-3 position-fixed top-0 z-1 col-md-2 my-auto" style="max-width:150px;">
+        <div class="col-lg-3 col-2 position-fixed top-0 z-1 col-md-2" style="max-width:150px;">
             <img src="/Media/Logo_ShopVerse_02.svg" alt="" class="img-fluid">
         </div>
     </a>
     {{-- sezione Dx --}}
-    <nav
-        class="navbar position-absolute top-0 end-0 z-1 position-fixed mx-1 my-1 rounded-2 border border-primary navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar position-fixed top-0 end-0 position-fixed z-1   my-1 rounded-2 border border-primary navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid  ">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

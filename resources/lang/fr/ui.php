@@ -9,7 +9,7 @@ return[
     "frase2"=> "Vous aussi, vous pouvez choisir de vendre en toute sécurité",
     "btn"=> "Se connecter",
     "Categoria"=> "Vous êtes dans la catégorie",
-    "btnLog"=> "Insérer une annonce",
+    "btnLog"=> "Insérez une annonce",
     "navAnnunci"=>"Les publicités",
     "navAccedi"=>"Connectez-vous",
     "navCategorie"=>"Catégories",
@@ -38,4 +38,7 @@ return[
     "Dettaglio" => "Detailes",
     "Compra" => "Acheter",
     "Categoria" => "Catégorie ",
+    "Paga" => "Payez",
+    "Con_Paypal" => "Avec Paypal",
+    "Torna_Indietro" => "Revenir"
 ];

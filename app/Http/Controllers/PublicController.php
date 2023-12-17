@@ -10,25 +10,27 @@ class PublicController extends Controller
 {
 
     public function index(){
-        $announcements = Advertisement::all();
+        $announcements = Advertisement::where('is_accepted',true)->get();
         return view("profile.index",compact("announcements"));
     }
 
     public function home () {
 
-        $annunci = Advertisement::where('is_accepted', true)->take(6)->get()->sortbyDesc('created_at');
+        $annunci = Advertisement::where('is_accepted', true)->take(5)->get()->sortbyDesc('created_at');
 
 
         return view('welcome',compact('annunci'));
     }
 
     public function categoryShow(Category $category) {
-        $advertisement = Advertisement::where('is_accepted', true)->paginate(5);
+        $advertisement = Advertisement::where('is_accepted', true)->paginate(6) ;
+
+
 
 
         return view('categoryShow',compact('category','advertisement'));
     }
-    
+
 
     public function searchAdvertisements (Request $request)
     {

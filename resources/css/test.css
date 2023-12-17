@@ -24,7 +24,7 @@
 
   .hero-section{
     align-items: flex-start;
-    background-image: linear-gradient(15deg, #2c8f8dff 0%, #2c8f8dff 150%);
+    background-image: linear-gradient(15deg, rgb(20, 232, 229) 0%, #2c8f8dff 150%);
     display: flex;
     min-height: 100%;
     justify-content: center;
@@ -84,6 +84,7 @@
 
   .card1:hover .card__background{
     transform: scale(1.05) translateZ(0);
+
   }
 
   .card-grid:hover > .card1:not(:hover) .card__background{
@@ -95,14 +96,20 @@
     padding: var(--spacing-l);
     position: absolute;
     top: 0;
-  }
-
-  .card__category{
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     margin-bottom: var(--spacing-s);
     text-transform: uppercase;
   }
+  .card__content:hover{
+    font-size: 0.9rem;
+  }
+
+
+  /* .card__category{
+
+  } */
+
 
   .card__heading{
     color: var(--text-lighter);
@@ -146,6 +153,30 @@
     font-size: 20px;
   }
 
+
+
+
+
+
+
+
+  .container1{
+    height: 100%;
+  width :100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  }
+
+.text{
+     font-weight: 400;
+  font-size: 40px;
+  color: #FAFAFA;
+}
+
+.dud{
+     color:#757575;
+}
 
 
 
