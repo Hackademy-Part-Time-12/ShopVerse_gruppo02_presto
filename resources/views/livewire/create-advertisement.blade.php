@@ -1,32 +1,21 @@
 <section class=" container my-5">
-    <div class="col-2 mt-3 text-start ">
-        <a href="{{url()->previous()}}"> <button class="button-17" role="button">Indietro</button></a>
+    {{-- tasto torna indietro --}}
+    <div class="col-2 mt-5 text-start ">
+        <a href="{{ url()->previous() }}"> <button class="button-17" role="button">Indietro</button></a>
 
 
     </div>
+    {{-- Messaggio flash di avvenuta modifica --}}
+    @if (session('messageImg'))
+        <div class="alert alert-primary my-4">
+            <p class="text-black fw-bold  ">{{ session('messageImg') }}</p>
+        </div>
+    @endif
 
 
-    <div class="row col-12 justify-content-center bg-form ms-5 pt-5  ">
-
+    <div class="row col-12 justify-content-center bg-form  pt-5  ">
         <h2 class="text-center fs-1 second ">{{ __('ui.btnLog') }}</h2>
-
-
-
-
-
         <div class="container justify-content-center  col-7 my-5">
-            @if (session('messageImg'))
-                <div class="alert alert-primary ">
-
-                    <div class="alert alert-primary">
-                        <p class="text-black fw-bold ">{{ session('messageImg') }}</p>
-                    </div>
-                </div>
-            @endif
-
-
-
-
             <form class="" wire:submit.prevent="store">
                 @csrf
                 <div class="mb-3 row ">
@@ -97,8 +86,8 @@
                                 @foreach ($images as $key => $image)
                                     <div class="col-md-3 mx-auto my-3">
                                         <div class=" text-center  img-preview mx-auto shadow">
-                                             <img src="{{ $image->temporaryUrl() }}"
-                                                class="img-thumbnail " alt="">
+                                            <img src="{{ $image->temporaryUrl() }}" class="img-thumbnail "
+                                                alt="">
                                         </div>
                                         <button type="button"
                                             class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
@@ -129,4 +118,3 @@
 
 
 </section>
-

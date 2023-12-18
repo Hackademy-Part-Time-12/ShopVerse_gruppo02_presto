@@ -11,7 +11,7 @@
     @if ($announcement_to_check)
         <div class="container d-flex justify-content-center p-3">
             <div class="row col-12 justify-content-center ">
-                <div class=" row col-10  justify-content-center ">
+                <div class=" row col-12 col-md-5 justify-content-center ">
                     <div class="card row shadow">
 
                         <div class="col-12">

@@ -3,6 +3,7 @@
     <section class="container-fluid header p-0 ">
         <div class="row p-0">
             <section class="container-fluid mt-4">
+
                 <div class="row">
                     <div class="col-12">
                         <h1 class="display-2 text-center">{{ $advertisement->title }}</h1>
@@ -64,7 +65,7 @@
                     </div>
                 </div>
 
-                    <div class="col-12 col-md-5 text-start ">
+                    <div class="col-12 col-md-3 text-start rounded-3 bg-light text-black shadow  ">
                         <h5 class="fw-light p-2 "><b>Tipo annuncio:</b><a class="text-decoration-none"
                                 href="{{ route('categoryShow', ['category' => $advertisement->category]) }}">{{ $advertisement->category->name }}</a>
                         </h5>
@@ -72,16 +73,24 @@
                             {{ $advertisement->created_at->format('d/m/y') }}
                         </h5>
                         <h5 class="fw-light p-2"><b>Autore:</b> {{ $advertisement->user->name ?? 'Sconosciuto' }}</h5>
-                        <div class="col-12 col-md-5 text-start mt-5">
-                            <h3><b>Descrizione</b></h3>
-                            <p>{{$advertisement->body }}</p>
 
 
-                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 text-start mt-5 bg-light text-black rounded-3 shadow ">
+                        <h3><b>Descrizione</b></h3>
+                        <p>{{$advertisement->body }}</p>
+
 
                     </div>
 
             </header>
+
+            {{-- tasto torna indietro --}}
+            <div class="col-2 mt-3 ms-2 text-start ">
+                <a href="{{ url()->previous() }}"> <button class="button-17" role="button">Indietro</button></a>
+
+
+            </div>
 
             <!--Waves Container-->
             <div class="">
@@ -106,7 +115,7 @@
 
         <!--Content starts-->
         <div class="content flex">
-           
+
 
         </div>
 

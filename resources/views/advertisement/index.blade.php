@@ -8,6 +8,11 @@
             </div>
 
             <section class=" col-11 col-md-9 d-flex justify-content-center container-fluid">
+                <div class="col-2 mt-3 text-start ">
+                    <a href="{{ url()->previous() }}"> <button class="button-17" role="button">Indietro</button></a>
+
+
+                </div>
 
                 <div class="products-items w-100 justify-content-center  row product-height">
 
